@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pulsara.ai/sitemap.xml
+
+# Optional crawl delay (disabled by default)
+# Crawl-delay: 10
+
+
