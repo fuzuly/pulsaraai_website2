@@ -14,6 +14,7 @@ import Products from './pages/Products.jsx';
 import Solutions from './pages/Solutions.jsx';
 import Services from './pages/Services.jsx';
 import Company from './pages/Company.jsx';
+import GoogleCloud from './pages/GoogleCloud.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1467,6 +1468,13 @@ function BusinessApp() {
               <>
                 <Navbar />
                 <Services />
+                <Footer />
+              </>
+            } />
+            <Route path="/google-cloud" element={
+              <>
+                <Navbar />
+                <GoogleCloud />
                 <Footer />
               </>
             } />
