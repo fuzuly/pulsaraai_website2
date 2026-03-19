@@ -24,7 +24,7 @@ const Navbar = () => {
     { name: t.nav.solutions, path: '/solutions' },
     { name: t.nav.products, path: '/products' },
     { name: t.nav.services, path: '/services' },
-    { name: t.nav.googleCloud, path: '/google-cloud' },
+    { name: t.nav.partnerships, path: '/ortakliklar' },
     { name: t.nav.company, path: '/company' },
 
     { name: t.nav.contact, path: '/contact' },

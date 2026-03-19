@@ -14,7 +14,7 @@ import Products from './pages/Products.jsx';
 import Solutions from './pages/Solutions.jsx';
 import Services from './pages/Services.jsx';
 import Company from './pages/Company.jsx';
-import GoogleCloud from './pages/GoogleCloud.jsx';
+import Ortakliklar from './pages/Ortakliklar.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1471,10 +1471,10 @@ function BusinessApp() {
                 <Footer />
               </>
             } />
-            <Route path="/google-cloud" element={
+            <Route path="/ortakliklar" element={
               <>
                 <Navbar />
-                <GoogleCloud />
+                <Ortakliklar />
                 <Footer />
               </>
             } />
