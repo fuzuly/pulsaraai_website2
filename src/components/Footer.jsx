@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import pulsaraLogo from '../assets/pulsara1.png';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
-import ReferencesSection from './ReferencesSection';
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -57,8 +56,6 @@ const Footer = () => {
   ];
 
   return (
-    <>
-    <ReferencesSection />
     <footer className="bg-slate-50 border-t border-slate-200">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
@@ -119,7 +116,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    </>
   );
 };
 
