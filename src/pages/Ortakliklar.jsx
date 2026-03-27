@@ -235,7 +235,7 @@ function StatItem({ target, suffix, label, active }) {
   const val = useCountUp(target, 1600, active);
   return (
     <div className="text-center">
-      <p className="text-5xl md:text-6xl font-extrabold text-white tabular-nums leading-none">
+      <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tabular-nums leading-none">
         {val}{suffix}
       </p>
       <p className="mt-2 text-sm md:text-base text-purple-300 font-medium">{label}</p>
@@ -392,7 +392,7 @@ export default function Ortakliklar() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
-              className="partner-card gcp-card group relative rounded-3xl p-8 md:p-10 overflow-hidden"
+              className="partner-card gcp-card group relative rounded-3xl p-5 sm:p-8 md:p-10 overflow-hidden"
             >
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6">
@@ -438,7 +438,7 @@ export default function Ortakliklar() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
-              className="partner-card openai-card group relative rounded-3xl p-8 md:p-10 overflow-hidden"
+              className="partner-card openai-card group relative rounded-3xl p-5 sm:p-8 md:p-10 overflow-hidden"
             >
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6">
@@ -508,7 +508,7 @@ export default function Ortakliklar() {
               <motion.div
                 key={b.title}
                 variants={fadeUp}
-                className="flex gap-4 bg-white rounded-2xl p-6 border-l-4 border-purple-500 shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="flex gap-3 sm:gap-4 bg-white rounded-2xl p-4 sm:p-6 border-l-4 border-purple-500 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mt-0.5">
                   <Icon d={icons[b.icon]} size="w-5 h-5" />
@@ -535,7 +535,7 @@ export default function Ortakliklar() {
           <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-700/20 blur-3xl" />
         </div>
         <div className="relative container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {c.stats.map((s) => (
               <StatItem key={s.label} {...s} active={statsInView} />
             ))}
@@ -566,7 +566,7 @@ export default function Ortakliklar() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
-              className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-4"
+              className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4"
             >
               {c.section5.steps.map((s) => (
                 <motion.div

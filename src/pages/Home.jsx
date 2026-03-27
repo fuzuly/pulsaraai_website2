@@ -161,7 +161,7 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           {/* Title Section */}
           <div className="mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-light text-slate-900 mb-8 sm:mb-12 tracking-tight leading-snug">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-light text-slate-900 mb-8 sm:mb-12 tracking-tight leading-snug">
               {language === 'tr' ? 'İnşa etmeye bayılıyoruz' : 'We love to build'}
             </h2>
             
@@ -173,7 +173,7 @@ const Home = () => {
                   <div
                     key={service.id}
                     onClick={() => setSelectedService(service.id)}
-                    className={`flex flex-col items-center gap-3 px-6 py-4 rounded-lg transition-all duration-300 cursor-pointer ${
+                    className={`flex flex-col items-center gap-2 sm:gap-3 px-3 sm:px-6 py-3 sm:py-4 rounded-lg transition-all duration-300 cursor-pointer ${
                       isHighlighted
                         ? 'bg-blue-500 text-white shadow-lg scale-105'
                         : 'bg-transparent text-slate-700 hover:bg-slate-100'
@@ -195,7 +195,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
             {/* Left Column - Dynamic Content Based on Selected Service */}
             <div className="transition-all duration-500">
-              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-light text-slate-900 mb-6 sm:mb-8 leading-relaxed tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-slate-900 mb-6 sm:mb-8 leading-relaxed tracking-tight">
                 {displayService.title}
               </h2>
               <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-slate-700 leading-relaxed">
@@ -232,7 +232,7 @@ const Home = () => {
       <section className="py-12 md:py-16 sm:py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <div className="mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-gray-900 mb-6 sm:mb-8 text-center tracking-tight leading-snug">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 mb-6 sm:mb-8 text-center tracking-tight leading-snug">
               {t.products.title}
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 text-center max-w-3xl mx-auto font-light px-4">
@@ -346,17 +346,17 @@ const Home = () => {
       {/* CTA Section - Minimal, Large */}
       <section className="py-12 md:py-16 sm:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-gray-900 mb-6 sm:mb-8 tracking-tight leading-snug">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 mb-6 sm:mb-8 tracking-tight leading-snug">
             {t.cta.title}
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 font-light px-4">
             {t.cta.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <Link to="/contact" className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-sm shadow-lg hover:shadow-purple-500/50 transition-all duration-300 text-lg">
+            <Link to="/contact" className="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-sm shadow-lg hover:shadow-purple-500/50 transition-all duration-300 text-base sm:text-lg text-center">
               {t.cta.scheduleConsultation}
             </Link>
-            <Link to="/services" className="w-full sm:w-auto px-10 py-4 bg-transparent border-2 border-gray-300 text-gray-900 font-medium rounded-sm hover:border-purple-500 transition-all duration-300 text-lg">
+            <Link to="/services" className="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-transparent border-2 border-gray-300 text-gray-900 font-medium rounded-sm hover:border-purple-500 transition-all duration-300 text-base sm:text-lg text-center">
               {t.cta.viewServices}
             </Link>
           </div>

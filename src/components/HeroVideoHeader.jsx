@@ -177,7 +177,7 @@ const HeroVideoHeader = () => {
 
   return (
     <section
-      className="relative min-h-[90vh] flex items-center bg-white overflow-hidden pt-16"
+      className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center bg-white overflow-hidden pt-16"
       aria-label="Hero"
     >
       {/* Soft violet radial gradient — top right */}
@@ -194,7 +194,7 @@ const HeroVideoHeader = () => {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-20 w-full grid lg:grid-cols-[55fr_45fr] gap-12 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 lg:py-20 w-full grid lg:grid-cols-[55fr_45fr] gap-8 sm:gap-12 lg:gap-16 items-center">
 
         {/* ── LEFT ── */}
         <div>
@@ -224,7 +224,7 @@ const HeroVideoHeader = () => {
           <motion.p
             {...fadeUp}
             transition={{ duration: 0.55, delay: 0.2 }}
-            className="text-lg text-slate-500 font-light leading-relaxed mb-9 max-w-[460px]"
+            className="text-base sm:text-lg text-slate-500 font-light leading-relaxed mb-9 max-w-full sm:max-w-[460px]"
           >
             {t.subtitle}
           </motion.p>
@@ -247,7 +247,7 @@ const HeroVideoHeader = () => {
           <motion.div
             {...fadeUp}
             transition={{ duration: 0.55, delay: 0.4 }}
-            className="flex items-center gap-6 flex-wrap"
+            className="flex items-center gap-3 sm:gap-6 flex-wrap"
           >
             {trustSignals.map(signal => (
               <span key={signal} className="text-xs text-slate-400 flex items-center gap-1.5">
@@ -301,10 +301,10 @@ const HeroVideoHeader = () => {
             aria-label={language === 'tr' ? 'Canlı metrikler' : 'Live metrics'}
           >
             {metrics.map(metric => (
-              <div key={metric.label} className="bg-white px-5 py-4" role="listitem">
+              <div key={metric.label} className="bg-white px-3 sm:px-5 py-3 sm:py-4" role="listitem">
                 <div
                   className="font-bold leading-none mb-1"
-                  style={{ fontSize: '1.75rem', color: '#7c5cfc', fontVariantNumeric: 'tabular-nums' }}
+                  style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', color: '#7c5cfc', fontVariantNumeric: 'tabular-nums' }}
                 >
                   {metric.value}
                 </div>

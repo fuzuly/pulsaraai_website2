@@ -149,27 +149,27 @@ const IntegrationFlow = () => {
       <p className="text-xs text-slate-500 uppercase tracking-widest mb-5">Integration Map</p>
       <div className="flex flex-col gap-3">
         {tools.map((t) => (
-          <div key={t.name} className="flex items-center gap-3">
-            <div className={`flex-shrink-0 w-28 text-center border rounded-lg px-3 py-2 text-xs font-semibold ${t.color} bg-white/5`}>
+          <div key={t.name} className="flex items-center gap-1.5 sm:gap-3">
+            <div className={`flex-shrink-0 w-20 sm:w-28 text-center border rounded-lg px-1.5 sm:px-3 py-2 text-xs font-semibold ${t.color} bg-white/5`}>
               {t.name}
             </div>
-            <div className="flex-1 flex items-center gap-1">
+            <div className="flex-1 flex items-center gap-1 min-w-0">
               <div className="flex-1 h-px border-t border-dashed border-white/20" />
-              <svg className="w-3 h-3 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 8 8">
+              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 8 8">
                 <path d="M0 0l8 4-8 4z" />
               </svg>
             </div>
-            <div className="flex-shrink-0 w-28 text-center border border-purple-500/40 rounded-lg px-3 py-2 text-xs font-semibold text-purple-300 bg-purple-500/10">
+            <div className="flex-shrink-0 w-20 sm:w-28 text-center border border-purple-500/40 rounded-lg px-1.5 sm:px-3 py-2 text-xs font-semibold text-purple-300 bg-purple-500/10">
               Pulsara AI
             </div>
-            <div className="flex-1 flex items-center gap-1">
+            <div className="flex-1 flex items-center gap-1 min-w-0">
               <div className="flex-1 h-px border-t border-dashed border-white/20" />
-              <svg className="w-3 h-3 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 8 8">
+              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 8 8">
                 <path d="M0 0l8 4-8 4z" />
               </svg>
             </div>
-            <div className="flex-shrink-0 w-24 text-center border border-emerald-500/30 rounded-lg px-3 py-2 text-xs font-semibold text-emerald-400 bg-emerald-500/5">
-              Automated
+            <div className="flex-shrink-0 w-16 sm:w-24 text-center border border-emerald-500/30 rounded-lg px-1.5 sm:px-3 py-2 text-xs font-semibold text-emerald-400 bg-emerald-500/5">
+              Auto
             </div>
           </div>
         ))}

@@ -283,7 +283,7 @@ const Company = () => {
       <section className="pt-24 sm:pt-32 md:pt-40 pb-12 sm:pb-20 md:pb-28 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 sm:mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 sm:mb-8 leading-tight">
               {t.hero.title}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -341,10 +341,10 @@ const Company = () => {
                 key={index}
                 className="bg-white rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center mb-6 text-purple-600">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center mb-4 md:mb-6 text-purple-600">
                   {value.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 leading-relaxed">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-snug">
                   {value.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -373,11 +373,11 @@ const Company = () => {
                 key={index}
                 className="bg-white rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-8 border-2 border-gray-100 hover:border-purple-200 hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-6 text-white">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 md:mb-6 text-white">
                   {item.icon}
                 </div>
                 <div className="mb-4">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                     {item.title}
                   </h3>
                   {item.subtitle && (
@@ -432,7 +432,7 @@ const Company = () => {
                   
                   {/* Card - alternates left/right on desktop, centered on mobile */}
                   <div
-                    className={`flex-1 w-full md:w-[calc(50%-3rem)] ${
+                    className={`flex-1 w-full md:max-w-[calc(50%-3rem)] ${
                       index % 2 === 0
                         ? 'md:mr-auto md:pr-8 md:text-right'
                         : 'md:ml-auto md:pl-8 md:text-left'
