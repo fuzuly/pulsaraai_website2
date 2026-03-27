@@ -405,7 +405,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">{c.info.email}</p>
-                    <p className="text-gray-900 font-medium text-sm sm:text-base">info@pulsara.com.tr</p>
+                    <p className="text-gray-900 font-medium text-sm sm:text-base">info@pulsaraai.com</p>
                   </div>
                 </div>
 
