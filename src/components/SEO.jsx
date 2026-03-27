@@ -8,7 +8,7 @@ const SEO = ({ title, description }) => {
 
   useEffect(() => {
     // Base URL for canonical and Open Graph
-    const baseUrl = 'https://pulsara.ai';
+    const baseUrl = 'https://pulsaraai.com';
     
     // Normalize pathname - handle duplicate paths
     let canonicalPath = location.pathname;
@@ -109,7 +109,7 @@ const SEO = ({ title, description }) => {
     removeHreflangTags();
     
     // Define all routes for hreflang
-    const routes = ['/', '/products', '/solutions', '/services', '/company', '/ai', '/contact'];
+    const routes = ['/', '/products', '/solutions', '/services', '/ortakliklar', '/company', '/contact'];
     
     // Generate hreflang tags for each route
     routes.forEach(route => {
@@ -144,8 +144,8 @@ const SEO = ({ title, description }) => {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Pulsara AI",
-      "url": "https://pulsara.ai/",
-      "logo": "https://pulsara.ai/pulsara_icon.webp",
+      "url": "https://pulsaraai.com/",
+      "logo": "https://pulsaraai.com/pulsara_icon.webp",
       "description": "Enterprise AI platforms for workforce, finance and production.",
       "sameAs": [
         "https://www.linkedin.com/company/pulsara-ai"
@@ -159,10 +159,10 @@ const SEO = ({ title, description }) => {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Pulsara AI",
-        "url": "https://pulsara.ai/",
+        "url": "https://pulsaraai.com/",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://pulsara.ai/search?q={search_term_string}",
+          "target": "https://pulsaraai.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       };
@@ -181,8 +181,8 @@ const SEO = ({ title, description }) => {
         '/products': { name: 'Products' },
         '/solutions': { name: 'Solutions' },
         '/services': { name: 'Services' },
+        '/ortakliklar': { name: 'Teknoloji Ortaklıkları' },
         '/company': { name: 'Company' },
-        '/ai': { name: 'AI' },
         '/contact': { name: 'Contact' }
       };
 
@@ -196,7 +196,7 @@ const SEO = ({ title, description }) => {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://pulsara.ai/"
+              "item": "https://pulsaraai.com/"
             },
             {
               "@type": "ListItem",
@@ -228,7 +228,7 @@ const SEO = ({ title, description }) => {
             "@type": "Brand",
             "name": "Pulsara AI"
           },
-          "url": "https://pulsara.ai/products"
+          "url": "https://pulsaraai.com/products"
         },
         {
           "@context": "https://schema.org",
@@ -239,7 +239,7 @@ const SEO = ({ title, description }) => {
             "@type": "Brand",
             "name": "Pulsara AI"
           },
-          "url": "https://pulsara.ai/products"
+          "url": "https://pulsaraai.com/products"
         },
         {
           "@context": "https://schema.org",
@@ -250,7 +250,7 @@ const SEO = ({ title, description }) => {
             "@type": "Brand",
             "name": "Pulsara AI"
           },
-          "url": "https://pulsara.ai/products"
+          "url": "https://pulsaraai.com/products"
         },
         {
           "@context": "https://schema.org",
@@ -261,7 +261,7 @@ const SEO = ({ title, description }) => {
             "@type": "Brand",
             "name": "Pulsara AI"
           },
-          "url": "https://pulsara.ai/products"
+          "url": "https://pulsaraai.com/products"
         }
       ];
 
