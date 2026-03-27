@@ -11,7 +11,6 @@ import Chooser from './pages/Chooser.jsx';
 import Home from './pages/Home.jsx';
 import Contact from './pages/Contact.jsx';
 import Products from './pages/Products.jsx';
-import Solutions from './pages/Solutions.jsx';
 import Services from './pages/Services.jsx';
 import Company from './pages/Company.jsx';
 import Ortakliklar from './pages/Ortakliklar.jsx';
@@ -1450,13 +1449,6 @@ function BusinessApp() {
             } />
       
             {/* Full page routes */}
-            <Route path="/solutions" element={
-              <>
-                <Navbar />
-                <Solutions />
-                <Footer />
-              </>
-            } />
             <Route path="/products" element={
               <>
                 <Navbar />

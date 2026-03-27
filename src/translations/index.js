@@ -2,7 +2,6 @@ export const translations = {
   en: {
     nav: {
       home: 'Home',
-      solutions: 'Solutions',
       products: 'Products',
       services: 'Services',
       company: 'Company',
@@ -110,7 +109,6 @@ export const translations = {
     },
     footer: {
       products: 'Products',
-      solutions: 'Solutions',
       services: 'Services',
       company: 'Company',
       tagline: 'AI Software & Consulting for the Enterprise',
@@ -122,7 +120,6 @@ export const translations = {
   tr: {
     nav: {
       home: 'Ana Sayfa',
-      solutions: 'Çözümler',
       products: 'Ürünler',
       services: 'Hizmetler',
       company: 'Şirket',
@@ -230,7 +227,6 @@ export const translations = {
     },
     footer: {
       products: 'Ürünler',
-      solutions: 'Çözümler',
       services: 'Hizmetler',
       company: 'Şirket',
       tagline: 'Kurumsal için AI Yazılım & Danışmanlık',

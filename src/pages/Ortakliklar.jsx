@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import { useLanguage } from '../context/LanguageContext';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    HOOKS
@@ -69,38 +70,145 @@ const icons = {
   bolt:    'M13 2L3 14h9l-1 8 10-12h-9l1-8z',
   currency:'M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6',
   support: 'M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z',
-  check:   'M5 13l4 4L19 7',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   DATA
+   STATIC DATA (language-independent)
 ───────────────────────────────────────────────────────────────────────────── */
 const gcpPills = ['Vertex AI', 'BigQuery', 'Cloud Run', 'GKE', 'Looker', 'Gemini'];
 const openaiPills = ['GPT-4o', 'o1', 'Assistants API', 'Fine-tuning', 'DALL·E', 'Embeddings'];
 
-const combinedBenefits = [
-  { icon: 'brain',    title: 'En İleri AI Modelleri',    desc: 'GPT-4o ve Gemini\'ye doğrudan kurumsal erişim ile rakiplerinizin önüne geçin.' },
-  { icon: 'cloud',    title: 'Küresel Bulut Altyapısı',  desc: "Google'ın dünya genelindeki veri merkezleri ile düşük gecikme ve yüksek erişilebilirlik." },
-  { icon: 'shield',   title: 'Kurumsal Güvenlik',        desc: 'SOC2, GDPR ve KVKK uyumlu deployment ile verileriniz her zaman güvende.' },
-  { icon: 'bolt',     title: 'Hızlı Entegrasyon',        desc: "8 haftada production'a çıkma garantisi — sertifikalı ekibimizle hızlı sonuç alın." },
-  { icon: 'currency', title: 'Maliyet Avantajı',         desc: 'Partner kredileri ve özel fiyatlandırma ile bütçenizi verimli kullanın.' },
-  { icon: 'support',  title: 'Öncelikli Destek',         desc: 'Her iki platformdan doğrudan teknik destek hattı ile kesintisiz operasyon.' },
-];
-
-const stats = [
-  { target: 80, suffix: '+', label: 'Tamamlanan Proje' },
-  { target: 2,  suffix: '',  label: 'Resmi Teknoloji Ortaklığı' },
-  { target: 8,  suffix: 'hf', label: 'Ortalama Yayına Alma' },
-  { target: 3,  suffix: 'x', label: 'Verimlilik Artışı' },
-];
-
-const steps = [
-  { num: '01', title: 'Keşif Görüşmesi',              desc: 'İş hedeflerinizi ve teknik ihtiyaçlarınızı analiz ediyoruz.' },
-  { num: '02', title: 'Çözüm Tasarımı',               desc: 'Size özel mimari ve entegrasyon planı oluşturuyoruz.' },
-  { num: '03', title: 'Google & OpenAI Entegrasyonu', desc: 'Resmi partner erişimimizle modelleri ve altyapıyı kuruyoruz.' },
-  { num: '04', title: 'Test & Optimizasyon',          desc: 'Performans, güvenlik ve maliyet testlerini tamamlıyoruz.' },
-  { num: '05', title: 'Yayına Alma',                  desc: 'Çözümü production ortamına taşıyıp izlemeye alıyoruz.' },
-];
+/* ─────────────────────────────────────────────────────────────────────────────
+   BILINGUAL CONTENT
+───────────────────────────────────────────────────────────────────────────── */
+const content = {
+  tr: {
+    seo: {
+      title: 'Teknoloji Ortaklıkları — Pulsara | Google Cloud & OpenAI',
+      description: "Pulsara, Google Cloud ve OpenAI'ın resmi ortağı olarak işletmenize en ileri yapay zeka ve bulut çözümlerini sunar.",
+    },
+    hero: {
+      badge: 'Resmi Teknoloji Ortağı',
+      headline1: 'Dünyanın En Güçlü',
+      headlineAccent: 'AI Platformlarının',
+      headline2: 'Güvenilir Ortağıyız',
+      subtext: 'Google Cloud ve OpenAI ile kurduğumuz resmi ortaklık sayesinde işletmenize en ileri yapay zeka çözümlerini sunuyoruz.',
+      cta: 'Ortaklıklarımızı Keşfedin',
+      ctaAriaLabel: 'Ortaklık detaylarına git',
+    },
+    section2: {
+      label: 'Resmi Ortaklıklar',
+      heading: 'İki Güç, Tek Platform',
+      gcpTitle: 'Google Cloud Ortaklığı',
+      gcpDesc: "Google'ın global bulut altyapısı, Vertex AI ve BigQuery teknolojilerini işletmenize entegre ediyoruz.",
+      gcpStats: [['50+', 'Proje'], ['99.9%', 'Uptime'], ['Cloud', 'Sertifika']],
+      openaiTitle: 'OpenAI Ortaklığı',
+      openaiDesc: "GPT-4o, o1 ve DALL·E modellerini kurumsal iş süreçlerinize entegre ederek rekabet avantajı yaratıyoruz.",
+      openaiStats: [['30+', 'AI Ürünü'], ['Kurumsal', 'Güvenlik'], ['Özel', 'Erişim']],
+    },
+    section3: {
+      label: 'Neden Pulsara?',
+      heading: 'İki Güçlü Ortaklığın Avantajları',
+      benefits: [
+        { icon: 'brain',    title: 'En İleri AI Modelleri',   desc: "GPT-4o ve Gemini'ye doğrudan kurumsal erişim ile rakiplerinizin önüne geçin." },
+        { icon: 'cloud',    title: 'Küresel Bulut Altyapısı', desc: "Google'ın dünya genelindeki veri merkezleri ile düşük gecikme ve yüksek erişilebilirlik." },
+        { icon: 'shield',   title: 'Kurumsal Güvenlik',       desc: 'SOC2, GDPR ve KVKK uyumlu deployment ile verileriniz her zaman güvende.' },
+        { icon: 'bolt',     title: 'Hızlı Entegrasyon',       desc: "8 haftada production'a çıkma garantisi — sertifikalı ekibimizle hızlı sonuç alın." },
+        { icon: 'currency', title: 'Maliyet Avantajı',        desc: 'Partner kredileri ve özel fiyatlandırma ile bütçenizi verimli kullanın.' },
+        { icon: 'support',  title: 'Öncelikli Destek',        desc: 'Her iki platformdan doğrudan teknik destek hattı ile kesintisiz operasyon.' },
+      ],
+    },
+    stats: [
+      { target: 80, suffix: '+',  label: 'Tamamlanan Proje' },
+      { target: 2,  suffix: '',   label: 'Resmi Teknoloji Ortaklığı' },
+      { target: 8,  suffix: 'hf', label: 'Ortalama Yayına Alma' },
+      { target: 3,  suffix: 'x',  label: 'Verimlilik Artışı' },
+    ],
+    section5: {
+      label: 'Süreç',
+      heading: 'Ortaklık Sürecimiz Nasıl İşler?',
+      steps: [
+        { num: '01', title: 'Keşif Görüşmesi',              desc: 'İş hedeflerinizi ve teknik ihtiyaçlarınızı analiz ediyoruz.' },
+        { num: '02', title: 'Çözüm Tasarımı',               desc: 'Size özel mimari ve entegrasyon planı oluşturuyoruz.' },
+        { num: '03', title: 'Google & OpenAI Entegrasyonu', desc: 'Resmi partner erişimimizle modelleri ve altyapıyı kuruyoruz.' },
+        { num: '04', title: 'Test & Optimizasyon',          desc: 'Performans, güvenlik ve maliyet testlerini tamamlıyoruz.' },
+        { num: '05', title: 'Yayına Alma',                  desc: 'Çözümü production ortamına taşıyıp izlemeye alıyoruz.' },
+      ],
+    },
+    cta: {
+      heading1: 'AI Dönüşümünüze Başlamaya',
+      heading2: 'Hazır mısınız?',
+      subtext: 'Google Cloud ve OpenAI ortaklığımız ile işletmenizi geleceğe taşıyalım.',
+      btn1: 'Bizimle İletişime Geçin',
+      btn1Aria: 'İletişime geçin',
+      btn2: 'Tüm Hizmetleri Gör',
+      btn2Aria: 'Tüm hizmetleri gör',
+    },
+  },
+  en: {
+    seo: {
+      title: 'Technology Partnerships — Pulsara | Google Cloud & OpenAI',
+      description: 'Pulsara is an official partner of Google Cloud and OpenAI, delivering cutting-edge AI and cloud solutions to your enterprise.',
+    },
+    hero: {
+      badge: 'Official Technology Partner',
+      headline1: "We Are the Trusted Partner of the World's Most",
+      headlineAccent: 'Powerful AI Platforms',
+      headline2: '',
+      subtext: 'Through our official partnerships with Google Cloud and OpenAI, we bring the most advanced AI solutions to your business.',
+      cta: 'Explore Our Partnerships',
+      ctaAriaLabel: 'Go to partnership details',
+    },
+    section2: {
+      label: 'Official Partnerships',
+      heading: 'Two Powers, One Platform',
+      gcpTitle: 'Google Cloud Partnership',
+      gcpDesc: "We integrate Google's global cloud infrastructure, Vertex AI and BigQuery technologies into your business.",
+      gcpStats: [['50+', 'Projects'], ['99.9%', 'Uptime'], ['Cloud', 'Certificate']],
+      openaiTitle: 'OpenAI Partnership',
+      openaiDesc: 'We integrate GPT-4o, o1 and DALL·E models into your enterprise workflows to create competitive advantage.',
+      openaiStats: [['30+', 'AI Products'], ['Enterprise', 'Security'], ['Exclusive', 'Access']],
+    },
+    section3: {
+      label: 'Why Pulsara?',
+      heading: 'Advantages of Two Powerful Partnerships',
+      benefits: [
+        { icon: 'brain',    title: 'Most Advanced AI Models',   desc: 'Get ahead of the competition with direct enterprise access to GPT-4o and Gemini.' },
+        { icon: 'cloud',    title: 'Global Cloud Infrastructure', desc: "Low latency and high availability through Google's worldwide data centers." },
+        { icon: 'shield',   title: 'Enterprise Security',       desc: 'SOC2, GDPR and KVKK compliant deployment keeps your data secure at all times.' },
+        { icon: 'bolt',     title: 'Fast Integration',          desc: 'Guaranteed go-live in 8 weeks — fast results with our certified team.' },
+        { icon: 'currency', title: 'Cost Advantage',            desc: 'Use your budget efficiently with partner credits and custom pricing.' },
+        { icon: 'support',  title: 'Priority Support',          desc: 'Uninterrupted operations with a direct technical support line from both platforms.' },
+      ],
+    },
+    stats: [
+      { target: 80, suffix: '+',  label: 'Projects Completed' },
+      { target: 2,  suffix: '',   label: 'Official Tech Partnerships' },
+      { target: 8,  suffix: 'wk', label: 'Avg. Time to Launch' },
+      { target: 3,  suffix: 'x',  label: 'Efficiency Gain' },
+    ],
+    section5: {
+      label: 'Process',
+      heading: 'How Does Our Partnership Process Work?',
+      steps: [
+        { num: '01', title: 'Discovery Call',               desc: 'We analyze your business goals and technical requirements.' },
+        { num: '02', title: 'Solution Design',              desc: 'We create a custom architecture and integration plan for you.' },
+        { num: '03', title: 'Google & OpenAI Integration',  desc: 'We set up models and infrastructure with our official partner access.' },
+        { num: '04', title: 'Testing & Optimization',       desc: 'We complete performance, security and cost testing.' },
+        { num: '05', title: 'Go Live',                      desc: 'We move the solution to production and set up monitoring.' },
+      ],
+    },
+    cta: {
+      heading1: 'Ready to Start Your',
+      heading2: 'AI Transformation?',
+      subtext: 'Let us take your business into the future with our Google Cloud and OpenAI partnership.',
+      btn1: 'Contact Us',
+      btn1Aria: 'Contact us',
+      btn2: 'View All Services',
+      btn2Aria: 'View all services',
+    },
+  },
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SUB-COMPONENTS
@@ -139,6 +247,8 @@ function StatItem({ target, suffix, label, active }) {
    MAIN PAGE
 ───────────────────────────────────────────────────────────────────────────── */
 export default function Ortakliklar() {
+  const { language } = useLanguage();
+  const c = content[language === 'tr' ? 'tr' : 'en'];
   const [statsRef, statsInView] = useInView(0.3);
 
   const scrollToPartners = () => {
@@ -147,10 +257,7 @@ export default function Ortakliklar() {
 
   return (
     <div className="bg-white overflow-x-hidden">
-      <SEO
-        title="Teknoloji Ortaklıkları — Pulsara | Google Cloud & OpenAI"
-        description="Pulsara, Google Cloud ve OpenAI'ın resmi ortağı olarak işletmenize en ileri yapay zeka ve bulut çözümlerini sunar."
-      />
+      <SEO title={c.seo.title} description={c.seo.description} />
 
       {/* ══════════════════════════════════════════════════════════════════════
           SECTION 1 — HERO
@@ -162,7 +269,6 @@ export default function Ortakliklar() {
           <div className="hero-blob hero-blob-1" />
           <div className="hero-blob hero-blob-2" />
           <div className="hero-blob hero-blob-3" />
-          {/* Stars */}
           {Array.from({ length: 60 }).map((_, i) => (
             <div
               key={i}
@@ -176,7 +282,6 @@ export default function Ortakliklar() {
               }}
             />
           ))}
-          {/* grain */}
           <div className="absolute inset-0 opacity-[0.035]"
             style={{backgroundImage:"url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",backgroundSize:'256px 256px'}}
           />
@@ -195,7 +300,7 @@ export default function Ortakliklar() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
               </span>
-              Resmi Teknoloji Ortağı
+              {c.hero.badge}
             </span>
           </motion.div>
 
@@ -205,11 +310,11 @@ export default function Ortakliklar() {
             transition={{ duration: 0.6, delay: 0.12 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight tracking-tight max-w-4xl mx-auto"
           >
-            Dünyanın En Güçlü{' '}
+            {c.hero.headline1}{' '}
             <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-300 bg-clip-text text-transparent font-semibold">
-              AI Platformlarının
+              {c.hero.headlineAccent}
             </span>
-            <br />Güvenilir Ortağıyız
+            {c.hero.headline2 && <><br />{c.hero.headline2}</>}
           </motion.h1>
 
           {/* Subtext */}
@@ -218,7 +323,7 @@ export default function Ortakliklar() {
             transition={{ duration: 0.6, delay: 0.24 }}
             className="mt-6 text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto"
           >
-            Google Cloud ve OpenAI ile kurduğumuz resmi ortaklık sayesinde işletmenize en ileri yapay zeka çözümlerini sunuyoruz.
+            {c.hero.subtext}
           </motion.p>
 
           {/* Partner logo badges */}
@@ -227,20 +332,18 @@ export default function Ortakliklar() {
             transition={{ duration: 0.6, delay: 0.36 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
-            {/* GCP badge */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
               <GCPLogo />
               <div className="text-left">
                 <p className="text-white font-semibold text-sm leading-none">Google Cloud</p>
-                <p className="text-slate-400 text-xs mt-0.5">Premier Partner</p>
+                <p className="text-slate-400 text-xs mt-0.5">Cloud Partner</p>
               </div>
             </div>
-            {/* OpenAI badge */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
               <span className="text-white"><OpenAILogo /></span>
               <div className="text-left">
                 <p className="text-white font-semibold text-sm leading-none">OpenAI</p>
-                <p className="text-slate-400 text-xs mt-0.5">Resmi API Ortağı</p>
+                <p className="text-slate-400 text-xs mt-0.5">Data Partner</p>
               </div>
             </div>
           </motion.div>
@@ -253,10 +356,10 @@ export default function Ortakliklar() {
           >
             <button
               onClick={scrollToPartners}
-              aria-label="Ortaklık detaylarına git"
+              aria-label={c.hero.ctaAriaLabel}
               className="px-8 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-purple-600/30 hover:scale-105 transition-all duration-300"
             >
-              Ortaklıklarımızı Keşfedin
+              {c.hero.cta}
             </button>
           </motion.div>
         </div>
@@ -277,8 +380,8 @@ export default function Ortakliklar() {
             transition={{ duration: 0.5 }}
             className="text-center mb-14"
           >
-            <p className="text-purple-600 text-sm font-semibold tracking-widest uppercase mb-3">Resmi Ortaklıklar</p>
-            <h2 className="text-3xl sm:text-4xl font-light text-slate-900">İki Güç, Tek Platform</h2>
+            <p className="text-purple-600 text-sm font-semibold tracking-widest uppercase mb-3">{c.section2.label}</p>
+            <h2 className="text-3xl sm:text-4xl font-light text-slate-900">{c.section2.heading}</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
@@ -298,18 +401,17 @@ export default function Ortakliklar() {
                     <span className="text-white/90 font-semibold text-lg">Google Cloud</span>
                   </div>
                   <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold">
-                    Premier Partner
+                    Cloud Partner
                   </span>
                 </div>
 
                 <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
-                  Google Cloud Ortaklığı
+                  {c.section2.gcpTitle}
                 </h3>
                 <p className="text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
-                  Google'ın global bulut altyapısı, Vertex AI ve BigQuery teknolojilerini işletmenize entegre ediyoruz.
+                  {c.section2.gcpDesc}
                 </p>
 
-                {/* Feature pills */}
                 <div className="flex flex-wrap gap-2 mb-8">
                   {gcpPills.map((p) => (
                     <span key={p} className="px-3 py-1 rounded-full bg-white/8 border border-white/10 text-slate-300 text-xs font-medium">
@@ -318,9 +420,8 @@ export default function Ortakliklar() {
                   ))}
                 </div>
 
-                {/* Stats */}
                 <div className="flex flex-wrap gap-4 pt-6 border-t border-white/10 text-sm">
-                  {[['50+', 'Proje'], ['99.9%', 'Uptime'], ['Premier', 'Sertifika']].map(([v, l]) => (
+                  {c.section2.gcpStats.map(([v, l]) => (
                     <div key={l}>
                       <span className="text-white font-bold">{v}</span>
                       <span className="text-slate-500 ml-1">{l}</span>
@@ -328,8 +429,6 @@ export default function Ortakliklar() {
                   ))}
                 </div>
               </div>
-
-              {/* Glow orb */}
               <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-blue-500/15 blur-3xl pointer-events-none group-hover:bg-blue-500/25 transition-all duration-700" />
             </motion.div>
 
@@ -348,18 +447,17 @@ export default function Ortakliklar() {
                     <span className="text-white/90 font-semibold text-lg">OpenAI</span>
                   </div>
                   <span className="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
-                    Resmi API Ortağı
+                    Data Partner
                   </span>
                 </div>
 
                 <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
-                  OpenAI Ortaklığı
+                  {c.section2.openaiTitle}
                 </h3>
                 <p className="text-slate-400 leading-relaxed mb-6 text-sm md:text-base">
-                  GPT-4o, o1 ve DALL·E modellerini kurumsal iş süreçlerinize entegre ederek rekabet avantajı yaratıyoruz.
+                  {c.section2.openaiDesc}
                 </p>
 
-                {/* Feature pills */}
                 <div className="flex flex-wrap gap-2 mb-8">
                   {openaiPills.map((p) => (
                     <span key={p} className="px-3 py-1 rounded-full bg-white/8 border border-white/10 text-slate-300 text-xs font-medium">
@@ -368,9 +466,8 @@ export default function Ortakliklar() {
                   ))}
                 </div>
 
-                {/* Stats */}
                 <div className="flex flex-wrap gap-4 pt-6 border-t border-white/10 text-sm">
-                  {[['30+', 'AI Ürünü'], ['Kurumsal', 'Güvenlik'], ['Özel', 'Erişim']].map(([v, l]) => (
+                  {c.section2.openaiStats.map(([v, l]) => (
                     <div key={l}>
                       <span className="text-white font-bold">{v}</span>
                       <span className="text-slate-500 ml-1">{l}</span>
@@ -378,8 +475,6 @@ export default function Ortakliklar() {
                   ))}
                 </div>
               </div>
-
-              {/* Glow orb */}
               <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-emerald-500/15 blur-3xl pointer-events-none group-hover:bg-emerald-500/25 transition-all duration-700" />
             </motion.div>
           </div>
@@ -398,8 +493,8 @@ export default function Ortakliklar() {
             transition={{ duration: 0.5 }}
             className="text-center mb-14"
           >
-            <p className="text-purple-600 text-sm font-semibold tracking-widest uppercase mb-3">Neden Pulsara?</p>
-            <h2 className="text-3xl sm:text-4xl font-light text-slate-900">İki Güçlü Ortaklığın Avantajları</h2>
+            <p className="text-purple-600 text-sm font-semibold tracking-widest uppercase mb-3">{c.section3.label}</p>
+            <h2 className="text-3xl sm:text-4xl font-light text-slate-900">{c.section3.heading}</h2>
           </motion.div>
 
           <motion.div
@@ -409,7 +504,7 @@ export default function Ortakliklar() {
             viewport={{ once: true, margin: '-60px' }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
           >
-            {combinedBenefits.map((b) => (
+            {c.section3.benefits.map((b) => (
               <motion.div
                 key={b.title}
                 variants={fadeUp}
@@ -441,7 +536,7 @@ export default function Ortakliklar() {
         </div>
         <div className="relative container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
-            {stats.map((s) => (
+            {c.stats.map((s) => (
               <StatItem key={s.label} {...s} active={statsInView} />
             ))}
           </div>
@@ -460,15 +555,12 @@ export default function Ortakliklar() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <p className="text-purple-600 text-sm font-semibold tracking-widest uppercase mb-3">Süreç</p>
-            <h2 className="text-3xl sm:text-4xl font-light text-slate-900">Ortaklık Sürecimiz Nasıl İşler?</h2>
+            <p className="text-purple-600 text-sm font-semibold tracking-widest uppercase mb-3">{c.section5.label}</p>
+            <h2 className="text-3xl sm:text-4xl font-light text-slate-900">{c.section5.heading}</h2>
           </motion.div>
 
-          {/* Steps — horizontal on desktop, vertical on mobile */}
           <div className="relative">
-            {/* Connector line (desktop only) */}
             <div className="hidden lg:block absolute top-7 left-[calc(10%+2rem)] right-[calc(10%+2rem)] h-px border-t-2 border-dashed border-purple-200 z-0" />
-
             <motion.div
               variants={stagger(0.1)}
               initial="hidden"
@@ -476,7 +568,7 @@ export default function Ortakliklar() {
               viewport={{ once: true, margin: '-60px' }}
               className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-4"
             >
-              {steps.map((s) => (
+              {c.section5.steps.map((s) => (
                 <motion.div
                   key={s.num}
                   variants={fadeUp}
@@ -498,7 +590,6 @@ export default function Ortakliklar() {
           SECTION 6 — CTA
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 bg-[#F8F7FF] relative overflow-hidden">
-        {/* Animated gradient blobs */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="cta-blob cta-blob-1" />
           <div className="cta-blob cta-blob-2" />
@@ -516,26 +607,26 @@ export default function Ortakliklar() {
             <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-white/5 blur-2xl pointer-events-none" />
 
             <h2 className="relative text-3xl sm:text-4xl md:text-5xl font-light text-white mb-4 max-w-2xl mx-auto leading-tight">
-              AI Dönüşümünüze Başlamaya
-              <br className="hidden sm:block" /> Hazır mısınız?
+              {c.cta.heading1}
+              <br className="hidden sm:block" /> {c.cta.heading2}
             </h2>
             <p className="relative text-purple-200 text-base md:text-lg mb-10 max-w-xl mx-auto">
-              Google Cloud ve OpenAI ortaklığımız ile işletmenizi geleceğe taşıyalım.
+              {c.cta.subtext}
             </p>
             <div className="relative flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                aria-label="İletişime geçin"
+                aria-label={c.cta.btn1Aria}
                 className="px-8 py-3.5 bg-white text-purple-700 font-semibold rounded-xl hover:bg-purple-50 shadow-lg hover:scale-105 transition-all duration-300"
               >
-                Bizimle İletişime Geçin
+                {c.cta.btn1}
               </Link>
               <Link
                 to="/services"
-                aria-label="Tüm hizmetleri gör"
+                aria-label={c.cta.btn2Aria}
                 className="px-8 py-3.5 border-2 border-white/40 text-white font-semibold rounded-xl hover:bg-white/10 hover:scale-105 transition-all duration-300"
               >
-                Tüm Hizmetleri Gör
+                {c.cta.btn2}
               </Link>
             </div>
           </motion.div>
@@ -544,7 +635,6 @@ export default function Ortakliklar() {
 
       {/* ── Page-scoped styles ── */}
       <style>{`
-        /* Hero blobs */
         .hero-blob {
           position: absolute;
           border-radius: 50%;
@@ -574,8 +664,6 @@ export default function Ortakliklar() {
           33%       { transform: translate(30px, -30px) scale(1.04); }
           66%       { transform: translate(-20px, 20px) scale(0.97); }
         }
-
-        /* Stars */
         .star {
           position: absolute;
           border-radius: 50%;
@@ -586,8 +674,6 @@ export default function Ortakliklar() {
           0%, 100% { opacity: 0.15; }
           50%       { opacity: 0.7; }
         }
-
-        /* Partner badge */
         .partner-badge {
           border: 1px solid rgba(255,255,255,0.12);
           background: rgba(255,255,255,0.04);
@@ -597,46 +683,32 @@ export default function Ortakliklar() {
         }
         @keyframes badgePulse {
           0%, 100% { box-shadow: 0 0 12px rgba(139,92,246,0.2), inset 0 0 20px rgba(139,92,246,0.05); }
-          50%       { box-shadow: 0 0 28px rgba(139,92,246,0.45), inset 0 0 20px rgba(139,92,246,0.1); }
+          50%       { box-shadow: 0 0 28px rgba(139,92,246,0.4), inset 0 0 20px rgba(139,92,246,0.1); }
         }
-
-        /* Partner cards */
         .partner-card {
           background: #0F0F1A;
-          border: 1px solid rgba(255,255,255,0.07);
-          transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+          border: 1px solid rgba(255,255,255,0.06);
+          transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
         }
-        .partner-card:hover {
-          transform: translateY(-6px);
-        }
-        .gcp-card { border-color: rgba(66,133,244,0.15); }
-        .gcp-card:hover {
-          box-shadow: 0 24px 60px rgba(66,133,244,0.18);
-          border-color: rgba(66,133,244,0.4);
-        }
-        .openai-card { border-color: rgba(16,185,129,0.15); }
-        .openai-card:hover {
-          box-shadow: 0 24px 60px rgba(16,185,129,0.18);
-          border-color: rgba(16,185,129,0.4);
-        }
-
-        /* CTA blobs */
+        .partner-card:hover { transform: translateY(-4px); }
+        .gcp-card:hover  { box-shadow: 0 0 40px rgba(66,133,244,0.2);  border-color: rgba(66,133,244,0.3); }
+        .openai-card:hover { box-shadow: 0 0 40px rgba(16,185,129,0.2); border-color: rgba(16,185,129,0.3); }
         .cta-blob {
           position: absolute;
           border-radius: 50%;
-          filter: blur(60px);
-          animation: blobFloat 10s ease-in-out infinite;
+          filter: blur(80px);
+          animation: blobFloat 14s ease-in-out infinite;
         }
         .cta-blob-1 {
-          width: 400px; height: 400px;
+          width: 500px; height: 500px;
           top: -100px; left: -100px;
           background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
         }
         .cta-blob-2 {
           width: 400px; height: 400px;
-          bottom: -100px; right: -100px;
-          background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
-          animation-delay: 5s;
+          bottom: -80px; right: -80px;
+          background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+          animation-delay: 7s;
         }
       `}</style>
     </div>

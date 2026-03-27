@@ -8,7 +8,6 @@ const Footer = () => {
   const { language } = useLanguage();
   const t = translations[language]?.footer || {
     products: 'Products',
-    solutions: 'Solutions',
     services: 'Services',
     company: 'Company',
     tagline: 'AI Software & Consulting for the Enterprise',
@@ -25,15 +24,6 @@ const Footer = () => {
         { name: 'Roster Manager', path: '/products' },
         { name: 'Finance Manager', path: '/products' },
         { name: 'ProdiX', path: '/products' },
-      ],
-    },
-    {
-      title: t.solutions || 'Solutions',
-      links: [
-        { name: 'Retail & E-commerce', path: '/solutions' },
-        { name: 'Manufacturing', path: '/solutions' },
-        { name: 'HR Tech', path: '/solutions' },
-        { name: 'Real Estate', path: '/solutions' },
       ],
     },
     {
@@ -58,7 +48,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-50 border-t border-slate-200">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Link to="/">

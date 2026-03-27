@@ -241,12 +241,6 @@ const HeroVideoHeader = () => {
             >
               {t.talkToTeam}
             </Link>
-            <Link
-              to="/solutions"
-              className="px-7 py-3.5 bg-transparent border-2 border-slate-300 text-slate-700 font-semibold rounded-sm hover:border-purple-500 transition-all duration-300 text-sm"
-            >
-              {t.viewSolutions}
-            </Link>
           </motion.div>
 
           {/* Trust signals */}
