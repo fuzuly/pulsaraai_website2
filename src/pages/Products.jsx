@@ -1,105 +1,345 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useLanguage } from '../context/LanguageContext';
-import { translations } from '../translations';
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import { useLanguage } from '../context/LanguageContext';
 
-const IconCheckCircle = (props) => (
-  <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+/* ─── Icons ─── */
+const CheckIcon = () => (
+  <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
   </svg>
 );
 
-const CTAButton = ({ children, to, className = '' }) => (
-  <Link
-    to={to}
-    className={`inline-block w-full md:w-auto px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105 text-center ${className}`}
+/* ─── Animation variants ─── */
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+};
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+/* ─── Bilingual content ─── */
+const content = {
+  tr: {
+    seo: {
+      title: 'Pulsara Ürünleri — Kurumsal AI Platformları',
+      description: 'Wellbeing, işgücü planlama, büyük veri analitiği ve endüstriyel IoT için kurumsal yapay zeka platformları.',
+    },
+    eyebrow: 'Ürünlerimiz',
+    heading: 'Ürünlerimiz',
+    subtitle: 'İşletmenizin her katmanı için kurumsal yapay zeka çözümleri',
+    cat1: 'İnsan & Operasyon Zekası',
+    cat2: 'Endüstriyel & Veri Çözümleri',
+    cta: {
+      heading: 'Hangi ürün işinize yarar?',
+      sub: 'Ekibimiz, ihtiyaçlarınızı dinleyip size en uygun platformu önerir — ücretsiz.',
+      btn: 'Uzmanla Konuşun',
+    },
+    learnMore: 'Daha Fazla Bilgi',
+    products: [
+      {
+        badge: 'Wellbeing',
+        badgeColor: 'bg-purple-100 text-purple-700',
+        name: 'Pulsara Wellbeing',
+        tagline: 'Ekip sağlığınızı veriye dönüştürün',
+        taglineColor: 'text-violet-600',
+        description: 'Tükenmişlik riskini haftalarca önce tespit eden, anonim nabız anketleri ve AI destekli içgörülerle yöneticilere aksiyon önerileri sunan kurumsal wellbeing platformu.',
+        features: [
+          'Ruh hali takibi & tükenmişlik riski tespiti',
+          'Anonim nabız anketleri ve içgörüler',
+          'Yönetici paneli ile aksiyon önerileri',
+          'Şirket geneli wellbeing raporlama',
+        ],
+        prominent: false,
+      },
+      {
+        badge: 'İşgücü Planlama',
+        badgeColor: 'bg-blue-100 text-blue-700',
+        name: 'Pulsara Roster',
+        tagline: 'Vardiya planlamanızı otomatikleştirin',
+        taglineColor: 'text-blue-600',
+        description: '7/24 operasyonlar için akıllı vardiya planlama. İşgücü yükünü dengeleyin, kısıtlamalara saygı gösterin ve minimum manuel işle her vardiyayı kapsayın.',
+        features: [
+          'Akıllı vardiya planlama ve otomatik zamanlama',
+          'Yetenek, sözleşme ve uyumluluk bilinçli vardiyalar',
+          'Gerçek zamanlı kapsama ve fazla mesai görünürlüğü',
+          'İK ve zaman takip araçları ile entegrasyonlar',
+        ],
+        prominent: false,
+      },
+      {
+        badge: 'Veri & Analitik',
+        badgeColor: 'bg-indigo-100 text-indigo-700',
+        name: 'Pulsara Big Data',
+        tagline: 'Ham veriden iş kararına',
+        taglineColor: 'text-indigo-600',
+        description: 'Dağınık veri kaynaklarını birleştiren, gerçek zamanlı analitik paneller ve AI destekli raporlama ile kurumsal karar alma süreçlerini hızlandıran veri zekası platformu.',
+        features: [
+          'Çoklu kaynak veri entegrasyonu',
+          'Gerçek zamanlı dashboard ve raporlama',
+          'AI destekli anomali tespiti ve tahminleme',
+          'Özelleştirilebilir KPI takip panelleri',
+        ],
+        prominent: false,
+      },
+      {
+        badge: 'Endüstriyel IoT',
+        badgeColor: 'bg-teal-100 text-teal-700',
+        name: 'ProdiX',
+        tagline: 'Üretim ve saha operasyonlarını yapay zeka ile izleyin',
+        taglineColor: 'text-teal-600',
+        description: 'Gıda, üretim ve lojistik sektörleri için tasarlanmış IoT tabanlı sıcaklık/nem izleme, merkezi alarm sistemi ve üretim otomasyon zekası platformu. Tüm lokasyonlar tek ekranda.',
+        features: [
+          'Gerçek zamanlı sıcaklık & nem ölçümü',
+          'Merkezi izleme paneli — tüm şubeler tek ekranda',
+          'Eşik aşımlarında otomatik alarm (SMS, e-posta, uygulama)',
+          'Üretim otomasyon entegrasyonu & AI analitik',
+        ],
+        prominent: true,
+      },
+    ],
+  },
+  en: {
+    seo: {
+      title: 'Pulsara Products — Enterprise AI Platforms',
+      description: 'Enterprise AI platforms for wellbeing, workforce planning, big data analytics, and industrial IoT. Built for scale.',
+    },
+    eyebrow: 'Our Products',
+    heading: 'Our Products',
+    subtitle: 'Enterprise AI solutions for every layer of your business',
+    cat1: 'People & Operations Intelligence',
+    cat2: 'Industrial & Data Solutions',
+    cta: {
+      heading: 'Not sure which product fits?',
+      sub: 'Our team will listen to your needs and recommend the right platform — for free.',
+      btn: 'Talk to an Expert',
+    },
+    learnMore: 'Learn More',
+    products: [
+      {
+        badge: 'Wellbeing',
+        badgeColor: 'bg-purple-100 text-purple-700',
+        name: 'Pulsara Wellbeing',
+        tagline: 'Turn team health into data',
+        taglineColor: 'text-violet-600',
+        description: 'An enterprise wellbeing platform that detects burnout risk weeks in advance, using anonymous pulse surveys and AI-powered insights to deliver actionable recommendations to managers.',
+        features: [
+          'Mood tracking & burnout risk detection',
+          'Anonymous pulse surveys and insights',
+          'Manager dashboard with action recommendations',
+          'Company-wide wellbeing reporting',
+        ],
+        prominent: false,
+      },
+      {
+        badge: 'Workforce Planning',
+        badgeColor: 'bg-blue-100 text-blue-700',
+        name: 'Pulsara Roster',
+        tagline: 'Automate your shift planning',
+        taglineColor: 'text-blue-600',
+        description: 'Intelligent shift planning for 24/7 operations. Balance workforce load, respect constraints, and keep every shift covered with minimal manual work.',
+        features: [
+          'Smart shift planning and automatic scheduling',
+          'Skill, contract, and compliance-aware shifts',
+          'Real-time coverage and overtime visibility',
+          'Integrations with HR and time-tracking tools',
+        ],
+        prominent: false,
+      },
+      {
+        badge: 'Data & Analytics',
+        badgeColor: 'bg-indigo-100 text-indigo-700',
+        name: 'Pulsara Big Data',
+        tagline: 'From raw data to business decisions',
+        taglineColor: 'text-indigo-600',
+        description: 'A data intelligence platform that consolidates scattered data sources, accelerating enterprise decision-making with real-time analytics dashboards and AI-powered reporting.',
+        features: [
+          'Multi-source data integration',
+          'Real-time dashboards and reporting',
+          'AI-powered anomaly detection and forecasting',
+          'Customizable KPI tracking panels',
+        ],
+        prominent: false,
+      },
+      {
+        badge: 'Industrial IoT',
+        badgeColor: 'bg-teal-100 text-teal-700',
+        name: 'ProdiX',
+        tagline: 'Monitor production & field operations with AI',
+        taglineColor: 'text-teal-600',
+        description: 'An IoT-based temperature/humidity monitoring, centralized alarm system, and production automation intelligence platform designed for food, manufacturing, and logistics. All locations, one screen.',
+        features: [
+          'Real-time temperature & humidity measurement',
+          'Centralized monitoring — all branches on one screen',
+          'Automatic alerts on threshold breach (SMS, email, app)',
+          'Production automation integration & AI analytics',
+        ],
+        prominent: true,
+      },
+    ],
+  },
+};
+
+/* ─── Product Card ─── */
+const ProductCard = ({ badge, badgeColor, name, tagline, taglineColor, description, features, prominent, learnMore }) => (
+  <motion.div
+    variants={fadeUp}
+    className={`flex flex-col bg-white rounded-2xl border overflow-hidden transition-shadow duration-300 hover:shadow-xl ${
+      prominent
+        ? 'border-teal-200 hover:shadow-teal-100/60 shadow-md'
+        : 'border-gray-200 hover:shadow-purple-100/60'
+    }`}
   >
-    {children}
-  </Link>
+    {/* Top accent bar */}
+    <div className={`h-1 w-full ${prominent ? 'bg-gradient-to-r from-teal-400 to-cyan-500' : 'bg-gradient-to-r from-violet-600 to-purple-500'}`} />
+
+    <div className="flex flex-col flex-1 p-6 sm:p-8">
+      {/* Badge */}
+      <div className="mb-5">
+        <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${badgeColor}`}>
+          {badge}
+        </span>
+      </div>
+
+      {/* Name & Tagline */}
+      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 leading-snug">{name}</h3>
+      <p className={`text-sm font-semibold mb-4 ${taglineColor}`}>{tagline}</p>
+
+      {/* Description */}
+      <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">{description}</p>
+
+      {/* Features */}
+      <ul className="space-y-2.5 mb-8 flex-1">
+        {features.map((f, i) => (
+          <li key={i} className={`flex items-start gap-2.5 text-sm text-gray-700 ${prominent ? '[&>svg]:text-teal-500' : '[&>svg]:text-violet-500'}`}>
+            <CheckIcon />
+            <span>{f}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* CTA */}
+      <Link
+        to="/contact"
+        className={`mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
+          prominent
+            ? 'bg-teal-50 text-teal-700 border border-teal-200 hover:bg-teal-600 hover:text-white hover:border-teal-600'
+            : 'bg-violet-50 text-violet-700 border border-violet-200 hover:bg-violet-600 hover:text-white hover:border-violet-600'
+        }`}
+      >
+        {learnMore}
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </Link>
+    </div>
+  </motion.div>
 );
 
+/* ─── Category Header ─── */
+const CategoryHeader = ({ label }) => (
+  <div className="flex items-center gap-4 mb-8 sm:mb-10">
+    <div className="flex-shrink-0">
+      <span className="inline-block px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-xs font-semibold tracking-widest uppercase">
+        {label}
+      </span>
+    </div>
+    <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent" />
+  </div>
+);
+
+/* ─── Main Page ─── */
 const Products = () => {
   const { language } = useLanguage();
-  const t = translations[language]?.home?.products || translations.en.home.products;
-
-  const products = [
-    {
-      name: t.wellbeingManager.name,
-      tagline: t.wellbeingManager.tagline,
-      description: t.wellbeingManager.description,
-      features: t.wellbeingManager.features,
-    },
-    {
-      name: t.rosterManager.name,
-      tagline: t.rosterManager.tagline,
-      description: t.rosterManager.description,
-      features: t.rosterManager.features,
-    },
-    {
-      name: t.financeManager.name,
-      tagline: t.financeManager.tagline,
-      description: t.financeManager.description,
-      features: t.financeManager.features,
-    },
-    {
-      name: t.prodix.name,
-      tagline: t.prodix.tagline,
-      description: t.prodix.description,
-      features: t.prodix.features,
-    },
-  ];
+  const c = content[language === 'tr' ? 'tr' : 'en'];
+  const [cat1p1, cat1p2, cat2p1, cat2p2] = c.products;
 
   return (
-    <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 bg-white">
-      <SEO 
-        title="Pulsara Products — AI Platforms for Modern Business Operations"
-        description="Explore AI platforms for wellbeing, roster planning, finance automation, and ProdiX production intelligence. Built for enterprise scale."
-      />
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 sm:mb-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug">{t.title}</h1>
-          <p className="max-w-2xl mx-auto text-base sm:text-lg text-gray-600 mt-4 leading-relaxed">{t.subtitle}</p>
-        </div>
+    <div className="bg-white min-h-screen">
+      <SEO title={c.seo.title} description={c.seo.description} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 mb-12 sm:mb-24">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className="group relative bg-white p-5 sm:p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 hover:border-purple-300 overflow-hidden"
-            >
-              {/* Purple gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-purple-400/0 to-blue-500/0 group-hover:from-purple-500/10 group-hover:via-purple-400/8 group-hover:to-blue-500/10 transition-all duration-300 pointer-events-none rounded-2xl" />
-              
-              {/* Purple glow effect on hover */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300 rounded-2xl pointer-events-none" />
-              
-              {/* Content wrapper */}
-              <div className="relative z-10">
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-purple-50 text-purple-700 rounded-full text-sm font-semibold mb-4 group-hover:from-purple-200 group-hover:to-purple-100 group-hover:text-purple-800 group-hover:shadow-md group-hover:shadow-purple-200 transition-all duration-300">
-                    {product.tagline}
-                  </span>
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 leading-relaxed group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">{product.name}</h2>
-                  <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{product.description}</p>
-                </div>
-                <ul className="space-y-3 mb-6 sm:mb-8">
-                  {product.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start group-hover:translate-x-2 transition-transform duration-300">
-                      <IconCheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 mr-3 flex-shrink-0 group-hover:text-purple-600 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300" />
-                      <span className="text-sm sm:text-base text-gray-700 group-hover:text-gray-800 font-medium transition-colors duration-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <CTAButton to="/contact" className="w-full md:w-auto group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 group-hover:text-white group-hover:shadow-xl group-hover:shadow-purple-500/50 group-hover:scale-105">
-                  {language === 'tr' ? 'İletişime Geçin' : 'Get in Touch'}
-                </CTAButton>
-              </div>
-            </div>
-          ))}
+      {/* ── Page Header ── */}
+      <section className="pt-28 sm:pt-36 pb-12 sm:pb-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-violet-100 text-violet-700 text-xs font-semibold tracking-widest uppercase">
+              {c.eyebrow}
+            </span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug mb-4">
+              {c.heading}
+            </h1>
+            <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+              {c.subtitle}
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
+
+      {/* ── Products ── */}
+      <section className="pb-20 sm:pb-28">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+
+          {/* Category 1 */}
+          <CategoryHeader label={c.cat1} />
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20"
+          >
+            <ProductCard {...cat1p1} learnMore={c.learnMore} />
+            <ProductCard {...cat1p2} learnMore={c.learnMore} />
+          </motion.div>
+
+          {/* Category 2 */}
+          <CategoryHeader label={c.cat2} />
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
+          >
+            <ProductCard {...cat2p1} learnMore={c.learnMore} />
+            <ProductCard {...cat2p2} learnMore={c.learnMore} />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Bottom CTA ── */}
+      <section className="py-16 sm:py-20 bg-gray-50 border-t border-gray-100">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="container mx-auto px-4 sm:px-6 max-w-3xl text-center"
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+            {c.cta.heading}
+          </h2>
+          <p className="text-gray-500 mb-8 text-sm sm:text-base">
+            {c.cta.sub}
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-violet-600 text-white font-semibold rounded-xl shadow-lg hover:bg-violet-700 hover:shadow-violet-300/50 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+          >
+            {c.cta.btn}
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </motion.div>
+      </section>
     </div>
   );
 };

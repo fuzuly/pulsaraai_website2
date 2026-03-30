@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#07071A"/>
+      <stop offset="100%" style="stop-color:#0f0a2e"/>
+    </linearGradient>
+    <!-- Purple glow blob top-left -->
+    <radialGradient id="blob1" cx="20%" cy="20%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(124,58,237,0.35)"/>
+      <stop offset="100%" style="stop-color:rgba(124,58,237,0)"/>
+    </radialGradient>
+    <!-- Blue glow blob bottom-right -->
+    <radialGradient id="blob2" cx="80%" cy="80%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(59,130,246,0.25)"/>
+      <stop offset="100%" style="stop-color:rgba(59,130,246,0)"/>
+    </radialGradient>
+    <!-- Violet glow blob center -->
+    <radialGradient id="blob3" cx="55%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0.18)"/>
+      <stop offset="100%" style="stop-color:rgba(139,92,246,0)"/>
+    </radialGradient>
+    <!-- Logo text gradient -->
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="50%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <!-- Tagline gradient -->
+    <linearGradient id="tagGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c4b5fd"/>
+      <stop offset="100%" style="stop-color:#93c5fd"/>
+    </linearGradient>
+    <!-- Border gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(139,92,246,0)"/>
+      <stop offset="30%" style="stop-color:rgba(139,92,246,0.6)"/>
+      <stop offset="70%" style="stop-color:rgba(96,165,250,0.6)"/>
+      <stop offset="100%" style="stop-color:rgba(96,165,250,0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow blobs -->
+  <ellipse cx="240" cy="126" rx="420" ry="320" fill="url(#blob1)"/>
+  <ellipse cx="960" cy="504" rx="380" ry="280" fill="url(#blob2)"/>
+  <ellipse cx="660" cy="284" rx="340" ry="260" fill="url(#blob3)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="rgba(139,92,246,0.07)" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- Top border accent line -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#borderGrad)"/>
+
+  <!-- Badge pill -->
+  <rect x="474" y="168" width="252" height="36" rx="18" fill="rgba(139,92,246,0.15)" stroke="rgba(139,92,246,0.4)" stroke-width="1"/>
+  <circle cx="498" cy="186" r="5" fill="#4ade80"/>
+  <text x="600" y="191" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#a78bfa" text-anchor="middle" letter-spacing="2">ENTERPRISE AI</text>
+
+  <!-- Main logo / wordmark -->
+  <text x="600" y="295" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="96" font-weight="300" fill="url(#logoGrad)" text-anchor="middle" letter-spacing="-2">Pulsara AI</text>
+
+  <!-- Divider line under logo -->
+  <rect x="380" y="322" width="440" height="1" fill="url(#borderGrad)"/>
+
+  <!-- Tagline -->
+  <text x="600" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="24" font-weight="300" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">Enterprise AI, built to production.</text>
+
+  <!-- Sub-tagline -->
+  <text x="600" y="413" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="18" font-weight="300" fill="#64748b" text-anchor="middle">AI Consulting · Custom Development · Integrations</text>
+
+  <!-- Bottom stats row -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" text-anchor="middle">
+    <!-- Stat 1 -->
+    <rect x="274" y="472" width="160" height="60" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="354" y="498" font-size="22" font-weight="700" fill="white">40+</text>
+    <text x="354" y="518" font-size="12" fill="#64748b">Systems Live</text>
+    <!-- Stat 2 -->
+    <rect x="520" y="472" width="160" height="60" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="600" y="498" font-size="22" font-weight="700" fill="white">8 weeks</text>
+    <text x="600" y="518" font-size="12" fill="#64748b">To Production</text>
+    <!-- Stat 3 -->
+    <rect x="766" y="472" width="160" height="60" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="846" y="498" font-size="22" font-weight="700" fill="white">2</text>
+    <text x="846" y="518" font-size="12" fill="#64748b">Official Partnerships</text>
+  </g>
+
+  <!-- Domain watermark -->
+  <text x="600" y="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="14" fill="rgba(100,116,139,0.6)" text-anchor="middle" letter-spacing="1">pulsaraai.com</text>
+</svg>

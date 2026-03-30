@@ -77,12 +77,6 @@ const SEO = ({ title, description }) => {
       }
     };
     
-    // Helper function to remove all hreflang tags
-    const removeHreflangTags = () => {
-      const existingHreflang = document.querySelectorAll('link[hreflang]');
-      existingHreflang.forEach(link => link.remove());
-    };
-
     // Helper function to inject JSON-LD script
     const injectJSONLD = (id, jsonData) => {
       // Remove existing script with same id if it exists
@@ -104,28 +98,10 @@ const SEO = ({ title, description }) => {
     // Canonical URL
     updateLinkTag('canonical', canonicalUrl);
     
-    // Hreflang tags for language alternates
-    // Remove existing hreflang tags first
-    removeHreflangTags();
-    
-    // Define all routes for hreflang
-    const routes = ['/', '/products', '/solutions', '/services', '/ortakliklar', '/company', '/contact'];
-    
-    // Generate hreflang tags for each route
-    routes.forEach(route => {
-      // English version
-      updateLinkTag('alternate', `${baseUrl}${route}`, 'en');
-      // Turkish version (assuming /tr/ prefix for Turkish routes)
-      updateLinkTag('alternate', `${baseUrl}/tr${route === '/' ? '' : route}`, 'tr');
-    });
-    
-    // Add x-default pointing to English version
-    updateLinkTag('alternate', `${baseUrl}${canonicalPath}`, 'x-default');
-
     // Open Graph tags
     updateMetaTag('property', 'og:title', title);
     updateMetaTag('property', 'og:description', description);
-    updateMetaTag('property', 'og:image', `${baseUrl}/og-default.jpg`);
+    updateMetaTag('property', 'og:image', `${baseUrl}/og-default.png`);
     updateMetaTag('property', 'og:url', currentUrl);
     updateMetaTag('property', 'og:type', 'website');
     updateMetaTag('property', 'og:site_name', 'Pulsara AI');
@@ -135,7 +111,7 @@ const SEO = ({ title, description }) => {
     updateMetaTag('name', 'twitter:card', 'summary_large_image');
     updateMetaTag('name', 'twitter:title', title);
     updateMetaTag('name', 'twitter:description', description);
-    updateMetaTag('name', 'twitter:image', `${baseUrl}/og-default.jpg`);
+    updateMetaTag('name', 'twitter:image', `${baseUrl}/og-default.png`);
 
     // JSON-LD Structured Data
 

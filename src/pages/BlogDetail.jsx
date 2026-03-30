@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { getPostBySlug } from '../data/blogPosts';
 import blogCover from '../assets/blog-cover.webp';
+import DOMPurify from 'dompurify';
 
 const BlogDetail = () => {
   const { slug } = useParams();
@@ -72,7 +73,7 @@ const BlogDetail = () => {
             prose-code:text-purple-600 prose-code:bg-purple-50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
             prose-img:rounded-xl prose-img:shadow-md
             mb-12"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
         />
 
         {/* Back to Blog Link */}

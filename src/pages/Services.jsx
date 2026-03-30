@@ -371,21 +371,44 @@ const Services = () => {
       {/* ══════════════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════════════ */}
-      <section className="relative bg-slate-950 pt-32 pb-24 md:pb-32 overflow-hidden">
-        {/* Background glow */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[400px] rounded-full bg-purple-700/20 blur-[100px]" />
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] rounded-full bg-blue-700/15 blur-[80px]" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#07071A]">
+
+        {/* Animated blob background */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="srv-hero-blob srv-hero-blob-1" />
+          <div className="srv-hero-blob srv-hero-blob-2" />
+          <div className="srv-hero-blob srv-hero-blob-3" />
+          {Array.from({ length: 60 }).map((_, i) => (
+            <div
+              key={i}
+              className="srv-star"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`,
+                width: `${Math.random() > 0.8 ? 2 : 1}px`,
+                height: `${Math.random() > 0.8 ? 2 : 1}px`,
+              }}
+            />
+          ))}
+          <div className="absolute inset-0 opacity-[0.035]"
+            style={{backgroundImage:"url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",backgroundSize:'256px 256px'}}
+          />
         </div>
 
-        <div className="relative container mx-auto px-4 md:px-6 text-center">
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-32 text-center">
+          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center mb-6"
+            className="flex justify-center mb-8"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-semibold tracking-wide">
+            <span className="srv-hero-badge inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
+              </span>
               {tr ? 'Ne İnşa Ediyoruz' : 'What We Build'}
             </span>
           </motion.div>
@@ -393,19 +416,19 @@ const Services = () => {
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight tracking-tight max-w-4xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.12 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight tracking-tight max-w-4xl mx-auto"
           >
             {tr
-              ? <>Kurumsal AI, production'a taşındı.<br /><span className="text-slate-400 font-light">Sadece demo için değil.</span></>
-              : <>Enterprise AI, built to production.<br /><span className="text-slate-400 font-light">Not just to demo.</span></>
+              ? <>Kurumsal AI,{' '}<span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-300 bg-clip-text text-transparent font-semibold">production'a taşındı.</span><br /><span className="text-slate-400 font-light">Sadece demo için değil.</span></>
+              : <>Enterprise AI,{' '}<span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-300 bg-clip-text text-transparent font-semibold">built to production.</span><br /><span className="text-slate-400 font-light">Not just to demo.</span></>
             }
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.24 }}
             className="mt-6 text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto"
           >
             {tr
@@ -417,23 +440,23 @@ const Services = () => {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.36 }}
             className="mt-8 flex items-center justify-center gap-6 flex-wrap"
           >
             {[
               { value: '40+', label: tr ? 'canlı sistem' : 'systems live' },
               { value: tr ? '8 haftalık' : '8-week', label: tr ? 'teslimat' : 'delivery' },
             ].map(({ value, label }) => (
-              <div key={label} className="flex items-center gap-2">
+              <div key={label} className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
                 <span className="text-xl font-bold text-white">{value}</span>
-                <span className="text-slate-500 text-sm">{label}</span>
+                <span className="text-slate-400 text-sm">{label}</span>
               </div>
             ))}
           </motion.div>
         </div>
 
         {/* bottom fade to white */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" />
       </section>
 
       {/* ══════════════════════════════════════════════════════
@@ -457,6 +480,58 @@ const Services = () => {
 
       {/* ── Scoped styles ── */}
       <style>{`
+        /* ── Hero blobs ── */
+        .srv-hero-blob {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(80px);
+          animation: srvBlobFloat 12s ease-in-out infinite;
+        }
+        .srv-hero-blob-1 {
+          width: 600px; height: 600px;
+          top: -100px; left: -100px;
+          background: radial-gradient(circle, rgba(124,58,237,0.22) 0%, transparent 70%);
+          animation-delay: 0s;
+        }
+        .srv-hero-blob-2 {
+          width: 500px; height: 500px;
+          top: 30%; right: -80px;
+          background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%);
+          animation-delay: 4s;
+        }
+        .srv-hero-blob-3 {
+          width: 400px; height: 400px;
+          bottom: 0; left: 30%;
+          background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
+          animation-delay: 8s;
+        }
+        @keyframes srvBlobFloat {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33%       { transform: translate(30px, -30px) scale(1.04); }
+          66%       { transform: translate(-20px, 20px) scale(0.97); }
+        }
+        .srv-star {
+          position: absolute;
+          border-radius: 50%;
+          background: white;
+          animation: srvTwinkle 4s ease-in-out infinite;
+        }
+        @keyframes srvTwinkle {
+          0%, 100% { opacity: 0.15; }
+          50%       { opacity: 0.7; }
+        }
+        .srv-hero-badge {
+          border: 1px solid rgba(255,255,255,0.12);
+          background: rgba(255,255,255,0.04);
+          backdrop-filter: blur(8px);
+          box-shadow: 0 0 20px rgba(139,92,246,0.2), inset 0 0 20px rgba(139,92,246,0.05);
+          animation: srvBadgePulse 3s ease-in-out infinite;
+        }
+        @keyframes srvBadgePulse {
+          0%, 100% { box-shadow: 0 0 12px rgba(139,92,246,0.2), inset 0 0 20px rgba(139,92,246,0.05); }
+          50%       { box-shadow: 0 0 28px rgba(139,92,246,0.4), inset 0 0 20px rgba(139,92,246,0.1); }
+        }
+        /* ── Service visuals ── */
         .srv-visual {
           background: #0f172a;
           border: 1px solid rgba(139,92,246,0.18);
