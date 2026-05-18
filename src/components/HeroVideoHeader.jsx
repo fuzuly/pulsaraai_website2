@@ -198,15 +198,6 @@ const HeroVideoHeader = () => {
 
         {/* ── LEFT ── */}
         <div>
-          {/* Eyebrow pill */}
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 border border-purple-500 bg-purple-50 text-purple-600 font-sans text-xs font-medium px-3.5 py-1.5 rounded-full mb-7"
-          >
-            Agentic AI & Enterprise Software
-          </motion.div>
-
           {/* H1 */}
           <motion.h1
             {...fadeUp}

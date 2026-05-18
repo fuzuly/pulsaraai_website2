@@ -14,6 +14,7 @@ import Products from './pages/Products.jsx';
 import Services from './pages/Services.jsx';
 import Company from './pages/Company.jsx';
 import Ortakliklar from './pages/Ortakliklar.jsx';
+import PulsaraIntel from './pages/PulsaraIntel.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1478,6 +1479,15 @@ function BusinessApp() {
               </>
             } />
       
+            {/* Pulsara Intel product landing page */}
+            <Route path="/pulsara-intel" element={
+              <>
+                <Navbar />
+                <PulsaraIntel />
+                <Footer />
+              </>
+            } />
+
             {/* Business site (old version) */}
             <Route path="/business" element={<BusinessApp />} />
       

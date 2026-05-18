@@ -10,6 +10,7 @@ export const translations = {
       partnerships: 'Technology Partnerships',
       contact: 'Contact',
       getStarted: 'Get Started',
+      intel: 'Pulsara Intel',
     },
     common: {
       learnMore: 'Learn more',
@@ -128,6 +129,7 @@ export const translations = {
       partnerships: 'Teknoloji Ortaklıkları',
       contact: 'İletişim',
       getStarted: 'Başlayın',
+      intel: 'Pulsara Intel',
     },
     common: {
       learnMore: 'Daha fazla bilgi',

@@ -24,6 +24,7 @@ const Footer = () => {
         { name: 'Roster Manager', path: '/products' },
         { name: 'Finance Manager', path: '/products' },
         { name: 'ProdiX', path: '/products' },
+        { name: 'Pulsara Intel', path: '/pulsara-intel' },
       ],
     },
     {
