@@ -469,7 +469,7 @@ const Services = () => {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          PROCESS STRIP
+          PROCESS STRIPPP
       ══════════════════════════════════════════════════════ */}
       <ProcessStrip steps={processSteps} tr={tr} />
 
