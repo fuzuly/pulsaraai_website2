@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 
-/* ─── Scroll-trigger hook (same pattern as Services) ─── */
+/* ─── Scroll-trigger hook ─── */
 function useInView(threshold = 0.12) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -16,18 +16,18 @@ function useInView(threshold = 0.12) {
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [threshold]);
   return [ref, inView];
 }
 
-/* ─── Animation variants (same as Products / Services) ─── */
+/* ─── Animation variants ─── */
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 const stagger = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.15 } },
 };
 
 /* ─── Bilingual content ─── */
@@ -254,78 +254,62 @@ const content = {
 
 /* ─── Feature icons (inline SVG) ─── */
 const FeatureIcons = [
-  // Otomatik Rakip Keşfi — magnifying glass
-  <svg key="0" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
-    <circle cx="11" cy="11" r="8" /><path strokeLinecap="round" strokeLinejoin="round" d="m21 21-4.35-4.35" />
-  </svg>,
-  // AI Yorum Analizi — chat + star
-  <svg key="1" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-  </svg>,
-  // Fiyat Takibi — trending up
-  <svg key="2" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
-    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" />
-  </svg>,
-  // Haftalık Rapor — document
-  <svg key="3" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-  </svg>,
-  // Anlık Uyarılar — bell
-  <svg key="4" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-  </svg>,
-  // Çoklu Şube — building
-  <svg key="5" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-  </svg>,
+  <svg key="0" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><path strokeLinecap="round" strokeLinejoin="round" d="m21 21-4.35-4.35" /></svg>,
+  <svg key="1" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>,
+  <svg key="2" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>,
+  <svg key="3" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
+  <svg key="4" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>,
+  <svg key="5" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>,
 ];
 
 /* ─── Hero dashboard mockup ─── */
 const IntelDashboard = () => (
-  <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+  <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl shadow-[0_0_80px_-15px_rgba(168,85,247,0.3)] border border-white/10 overflow-hidden">
     {/* Window chrome */}
-    <div className="bg-gray-50 border-b border-gray-100 px-4 py-2.5 flex items-center gap-2">
-      <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
-      <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-      <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
-      <span className="text-xs text-gray-400 font-mono ml-2 truncate">intel.pulsaraai.com — Dashboard</span>
-      <span className="ml-auto bg-green-100 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0">Canlı</span>
+    <div className="bg-white/5 border-b border-white/5 px-4 py-3 flex items-center gap-2">
+      <span className="w-3 h-3 rounded-full bg-red-500/80" />
+      <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
+      <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
+      <span className="text-xs text-slate-400 font-mono ml-3 truncate">intel.pulsaraai.com</span>
+      <span className="ml-auto bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5">
+        <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" /> Canlı
+      </span>
     </div>
-    <div className="p-4 sm:p-5">
+    <div className="p-4 sm:p-6">
       {/* KPI row */}
-      <div className="grid grid-cols-3 gap-2 mb-4">
-        <div className="bg-purple-50 rounded-xl p-3">
-          <p className="text-xs text-gray-500 mb-1">Rakip</p>
-          <p className="text-2xl font-extrabold text-purple-700">20</p>
+      <div className="grid grid-cols-3 gap-3 mb-5">
+        <div className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 hover:bg-white/10 transition-colors">
+          <p className="text-xs text-slate-400 mb-1">Takipte</p>
+          <p className="text-2xl sm:text-3xl font-extrabold text-white">20</p>
         </div>
-        <div className="bg-blue-50 rounded-xl p-3">
-          <p className="text-xs text-gray-500 mb-1">Yorum / hf</p>
-          <p className="text-2xl font-extrabold text-blue-700">847</p>
+        <div className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 hover:bg-white/10 transition-colors">
+          <p className="text-xs text-slate-400 mb-1">Yorum / hf</p>
+          <p className="text-2xl sm:text-3xl font-extrabold text-white">847</p>
         </div>
-        <div className="bg-amber-50 rounded-xl p-3">
-          <p className="text-xs text-gray-500 mb-1">Uyarı</p>
-          <p className="text-2xl font-extrabold text-amber-600">3</p>
+        <div className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 hover:bg-white/10 transition-colors">
+          <p className="text-xs text-slate-400 mb-1">Uyarı</p>
+          <p className="text-2xl sm:text-3xl font-extrabold text-amber-400">3</p>
         </div>
       </div>
 
       {/* Competitor table */}
-      <div className="mb-3">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Rakip Sıralama</p>
-        <div className="space-y-1.5">
+      <div className="mb-5">
+        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Rakip Sıralama</p>
+        <div className="space-y-2">
           {[
-            { name: 'Rakip A', rating: 4.6, delta: '+0.2', up: true, price: '₺75' },
-            { name: 'Rakip B', rating: 4.1, delta: '-0.3', up: false, price: '₺95' },
-            { name: 'Rakip C', rating: 3.8, delta: '-0.1', up: false, price: '₺42' },
+            { name: 'Caffe Nero', rating: 4.6, delta: '+0.2', up: true, price: '₺75' },
+            { name: 'Starbucks', rating: 4.1, delta: '-0.3', up: false, price: '₺95' },
+            { name: 'Espresso Lab', rating: 3.8, delta: '-0.1', up: false, price: '₺42' },
           ].map((c, i) => (
-            <div key={i} className="flex items-center justify-between bg-gray-50 rounded-lg px-3 py-2">
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-full bg-purple-100 text-purple-700 text-xs flex items-center justify-center font-bold flex-shrink-0">{i + 1}</span>
-                <span className="text-xs sm:text-sm font-medium text-gray-700">{c.name}</span>
+            <div key={i} className="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors border border-white/5 rounded-xl px-4 py-3">
+              <div className="flex items-center gap-3">
+                <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 text-xs flex items-center justify-center font-bold flex-shrink-0">{i + 1}</span>
+                <span className="text-sm font-semibold text-slate-200">{c.name}</span>
               </div>
-              <div className="flex items-center gap-2 sm:gap-3">
-                <span className="text-xs text-gray-500">★ {c.rating}</span>
-                <span className={`text-xs font-semibold ${c.up ? 'text-green-600' : 'text-red-500'}`}>{c.delta}</span>
-                <span className="text-xs font-mono text-gray-600">{c.price}</span>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <span className="text-sm text-slate-400">★ {c.rating}</span>
+                <span className={`text-sm font-bold ${c.up ? 'text-emerald-400' : 'text-red-400'}`}>{c.delta}</span>
+                <span className="text-sm font-mono text-slate-300 bg-black/30 px-2 py-0.5 rounded">{c.price}</span>
               </div>
             </div>
           ))}
@@ -333,28 +317,28 @@ const IntelDashboard = () => (
       </div>
 
       {/* Alert card */}
-      <div className="bg-amber-50 border border-amber-200 rounded-xl px-3 py-2.5 flex items-start gap-2 mb-3">
-        <svg className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl px-4 py-3 flex items-start gap-3 mb-5 hover:bg-amber-500/20 transition-colors">
+        <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
         <div>
-          <p className="text-xs font-semibold text-amber-800">Fiyat Değişimi Algılandı</p>
-          <p className="text-xs text-amber-700 mt-0.5">Rakip B büyük boy ürünü ₺95 → ₺85'e indirdi</p>
+          <p className="text-sm font-bold text-amber-500">Fiyat Değişimi Algılandı</p>
+          <p className="text-sm text-amber-200/80 mt-0.5">Starbucks büyük boy ürünü ₺95 → ₺85'e indirdi</p>
         </div>
       </div>
 
       {/* Sentiment bar */}
-      <div className="bg-gray-50 rounded-xl p-3">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Bu Hafta Sentiment</p>
-        <div className="flex h-2 rounded-full overflow-hidden">
-          <div className="bg-green-400 h-full" style={{ width: '58%' }} />
-          <div className="bg-gray-200 h-full" style={{ width: '22%' }} />
-          <div className="bg-red-400 h-full" style={{ width: '20%' }} />
+      <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Bu Hafta Sentiment</p>
+        <div className="flex h-2.5 rounded-full overflow-hidden bg-black/50">
+          <div className="bg-emerald-500 h-full shadow-[0_0_10px_rgba(16,185,129,0.8)]" style={{ width: '58%' }} />
+          <div className="bg-slate-500 h-full" style={{ width: '22%' }} />
+          <div className="bg-red-500 h-full shadow-[0_0_10px_rgba(239,68,68,0.8)]" style={{ width: '20%' }} />
         </div>
-        <div className="flex justify-between text-xs text-gray-400 mt-1.5">
-          <span className="text-green-600 font-medium">Olumlu 58%</span>
+        <div className="flex justify-between text-xs text-slate-400 mt-2.5">
+          <span className="text-emerald-400 font-bold">Olumlu 58%</span>
           <span>Nötr 22%</span>
-          <span className="text-red-500 font-medium">Olumsuz 20%</span>
+          <span className="text-red-400 font-bold">Olumsuz 20%</span>
         </div>
       </div>
     </div>
@@ -382,10 +366,10 @@ function validateField(name, value, f) {
 /* ─── Reusable validated input ─── */
 const Field = ({ id, label, error, touched, valid, children }) => (
   <div>
-    <label htmlFor={id} className="block text-sm font-semibold text-gray-700 mb-2">{label}</label>
+    <label htmlFor={id} className="block text-sm font-semibold text-slate-300 mb-2">{label}</label>
     {children}
     {touched && error && (
-      <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+      <p className="mt-1.5 text-sm text-red-400 flex items-center gap-1.5">
         <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
         </svg>
@@ -393,7 +377,7 @@ const Field = ({ id, label, error, touched, valid, children }) => (
       </p>
     )}
     {touched && !error && valid && (
-      <p className="mt-1 text-sm text-green-600 flex items-center gap-1">
+      <p className="mt-1.5 text-sm text-emerald-400 flex items-center gap-1.5">
         <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
         </svg>
@@ -404,12 +388,12 @@ const Field = ({ id, label, error, touched, valid, children }) => (
 );
 
 const inputCls = (touched, error) =>
-  `w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none transition-colors ${
+  `w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors bg-white/5 text-white placeholder-slate-500 ${
     touched && error
-      ? 'border-red-500 focus:border-red-500'
+      ? 'border-red-500/50 focus:border-red-500 focus:bg-white/10'
       : touched && !error
-      ? 'border-green-500 focus:border-green-500'
-      : 'border-gray-300 focus:border-purple-500'
+      ? 'border-emerald-500/50 focus:border-emerald-500 focus:bg-white/10'
+      : 'border-white/10 focus:border-purple-500 focus:bg-white/10'
   }`;
 
 /* ════════════════════════════════════════════════════════════
@@ -462,50 +446,53 @@ const PulsaraIntel = () => {
   const [howRef, howInView] = useInView();
   const [featRef, featInView] = useInView();
   const [sectRef, sectInView] = useInView();
-  const [trustRef, trustInView] = useInView();
   const [faqRef, faqInView] = useInView();
-  const [ctaRef, ctaInView] = useInView();
 
   return (
-    <div className="bg-white">
+    <div className="bg-slate-950 min-h-screen text-slate-300 selection:bg-purple-500/30">
       <SEO title={c.seo.title} description={c.seo.description} />
 
       {/* ══════════════════════════════════════════
-          1. HERO
+          1. HERO (Deep Space AI)
       ══════════════════════════════════════════ */}
-      <section className="pt-28 sm:pt-36 pb-16 sm:pb-24 bg-gradient-to-br from-slate-50 via-purple-50/40 to-blue-50/30 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-32 overflow-hidden">
+        {/* Ambient Orbs */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none transform -translate-y-1/2" />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none transform translate-y-1/3" />
+        
+        <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <motion.div
             ref={heroRef}
             initial="hidden"
             animate={heroInView ? 'visible' : 'hidden'}
             variants={stagger}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center"
           >
             {/* Left copy */}
             <div>
+
               <motion.h1
                 variants={fadeUp}
-                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6"
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-cyan-200 leading-tight mb-6"
               >
                 {c.hero.headline}
               </motion.h1>
               <motion.p
                 variants={fadeUp}
-                className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-xl"
+                className="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 max-w-xl"
               >
                 {c.hero.subheadline}
               </motion.p>
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#pilot-form"
-                  className="px-8 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg text-center hover:shadow-lg hover:shadow-purple-500/40 transition-all duration-300"
+                  className="px-8 py-3.5 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg text-center shadow-[0_0_20px_rgba(147,51,234,0.4)] hover:shadow-[0_0_30px_rgba(147,51,234,0.6)] hover:scale-105 transition-all duration-300"
                 >
                   {c.hero.cta1}
                 </a>
                 <a
                   href="#pilot-form"
-                  className="px-8 py-3.5 border-2 border-slate-300 text-slate-700 font-semibold rounded-lg text-center hover:border-purple-500 hover:text-purple-700 transition-all duration-300"
+                  className="px-8 py-3.5 border border-white/20 text-white font-semibold rounded-lg text-center hover:bg-white/5 hover:border-white/40 transition-all duration-300"
                 >
                   {c.hero.cta2}
                 </a>
@@ -513,7 +500,7 @@ const PulsaraIntel = () => {
             </div>
 
             {/* Right dashboard */}
-            <motion.div variants={fadeUp} className="lg:pl-4">
+            <motion.div variants={fadeUp} className="lg:pl-4 perspective-1000">
               <IntelDashboard />
             </motion.div>
           </motion.div>
@@ -523,7 +510,7 @@ const PulsaraIntel = () => {
       {/* ══════════════════════════════════════════
           2. PROBLEM STATEMENT
       ══════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="relative py-24 sm:py-32 border-y border-white/5 bg-slate-900/50">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             ref={problemRef}
@@ -531,23 +518,23 @@ const PulsaraIntel = () => {
             animate={problemInView ? 'visible' : 'hidden'}
             variants={stagger}
           >
-            <motion.div variants={fadeUp} className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">{c.problem.headline}</h2>
+            <motion.div variants={fadeUp} className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.problem.headline}</h2>
             </motion.div>
-            <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
               {c.problem.cards.map((card, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                  className="bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-purple-200 hover:shadow-md transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-red-500/30 hover:bg-white/10 transition-all duration-500 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center mb-4">
-                    <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                    <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">{card.title}</h3>
-                  <p className="text-slate-600 leading-relaxed text-sm">{card.desc}</p>
+                  <h3 className="text-lg font-bold text-slate-200 mb-3">{card.title}</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm">{card.desc}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -558,30 +545,32 @@ const PulsaraIntel = () => {
       {/* ══════════════════════════════════════════
           3. HOW IT WORKS
       ══════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="relative py-24 sm:py-32 overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-purple-600/10 blur-[100px] rounded-full pointer-events-none" />
+        
+        <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <motion.div
             ref={howRef}
             initial="hidden"
             animate={howInView ? 'visible' : 'hidden'}
             variants={stagger}
           >
-            <motion.div variants={fadeUp} className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">{c.howItWorks.headline}</h2>
+            <motion.div variants={fadeUp} className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.howItWorks.headline}</h2>
             </motion.div>
 
             <div className="relative max-w-5xl mx-auto">
-              {/* Connector line (desktop) */}
-              <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-purple-200 via-purple-400 to-blue-300" />
+              {/* Glowing Connector line */}
+              <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-transparent via-purple-500/50 to-transparent shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
 
-              <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                 {c.howItWorks.steps.map((step, i) => (
-                  <motion.div key={i} variants={fadeUp} className="flex flex-col items-center text-center">
-                    <div className="relative z-10 w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mb-5 shadow-lg shadow-purple-500/20">
-                      <span className="text-white font-extrabold text-xl">{step.n}</span>
+                  <motion.div key={i} variants={fadeUp} className="flex flex-col items-center text-center group">
+                    <div className="relative z-10 w-24 h-24 rounded-2xl bg-slate-900 border border-white/10 flex items-center justify-center mb-6 shadow-xl group-hover:-translate-y-2 group-hover:border-purple-500/50 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-500">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-cyan-400 font-extrabold text-3xl">{step.n}</span>
                     </div>
-                    <h3 className="text-base font-bold text-slate-900 mb-2">{step.title}</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">{step.desc}</p>
+                    <h3 className="text-lg font-bold text-slate-200 mb-3">{step.title}</h3>
+                    <p className="text-sm text-slate-400 leading-relaxed px-2">{step.desc}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -591,9 +580,9 @@ const PulsaraIntel = () => {
       </section>
 
       {/* ══════════════════════════════════════════
-          4. FEATURES GRID
+          4. BENTO BOX FEATURES
       ══════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-24 sm:py-32 bg-slate-900/50 border-y border-white/5">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             ref={featRef}
@@ -601,117 +590,131 @@ const PulsaraIntel = () => {
             animate={featInView ? 'visible' : 'hidden'}
             variants={stagger}
           >
-            <motion.div variants={fadeUp} className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">{c.features.headline}</h2>
+            <motion.div variants={fadeUp} className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.features.headline}</h2>
             </motion.div>
-            <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {c.features.items.map((feat, i) => (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mb-4 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
-                    {FeatureIcons[i]}
-                  </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2">{feat.title}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">{feat.desc}</p>
-                </motion.div>
-              ))}
+            
+            {/* Bento Grid */}
+            <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto auto-rows-fr">
+              {c.features.items.map((feat, i) => {
+                // Make the 1st and 4th items span 2 columns on desktop for an asymmetrical bento look
+                const isWide = i === 0 || i === 3;
+                return (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    className={`bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-500 group flex flex-col justify-center ${isWide ? 'md:col-span-2' : 'md:col-span-1'}`}
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-400 transition-all duration-500 shadow-lg">
+                      {FeatureIcons[i]}
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-200 mb-3">{feat.title}</h3>
+                    <p className="text-slate-400 leading-relaxed">{feat.desc}</p>
+                  </motion.div>
+                );
+              })}
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          5. SECTORS
+          5. SECTORS & FAQ
       ══════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 bg-slate-50">
+      <section className="py-24 sm:py-32">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
-            ref={sectRef}
+            ref={faqRef}
             initial="hidden"
-            animate={sectInView ? 'visible' : 'hidden'}
+            animate={faqInView ? 'visible' : 'hidden'}
             variants={stagger}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16"
           >
-            <motion.div variants={fadeUp} className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">{c.sectors.headline}</h2>
-            </motion.div>
-            <motion.div variants={stagger} className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
-              {c.sectors.items.map((sector, i) => (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 hover:border-purple-300 hover:shadow-md transition-all duration-300 text-center"
-                >
-                  <div className="text-4xl mb-4">{sector.emoji}</div>
-                  <p className="text-sm sm:text-base font-semibold text-slate-800">{sector.name}</p>
-                </motion.div>
-              ))}
-            </motion.div>
+            {/* Sectors */}
+            <div>
+              <motion.h2 variants={fadeUp} className="text-3xl font-extrabold text-white mb-8">{c.sectors.headline}</motion.h2>
+              <motion.div variants={stagger} className="grid grid-cols-2 gap-4">
+                {c.sectors.items.map((sector, i) => (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 hover:border-cyan-500/30 transition-colors text-center"
+                  >
+                    <div className="text-4xl mb-4 grayscale group-hover:grayscale-0">{sector.emoji}</div>
+                    <p className="text-sm font-semibold text-slate-300">{sector.name}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* FAQ */}
+            <div>
+              <motion.h2 variants={fadeUp} className="text-3xl font-extrabold text-white mb-8">{c.faq.headline}</motion.h2>
+              <motion.div variants={stagger} className="space-y-4">
+                {c.faq.items.map((item, i) => (
+                  <motion.div key={i} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+                    <button
+                      className="w-full px-6 py-4 text-left font-semibold text-slate-200 flex justify-between items-center hover:bg-white/5 transition-colors"
+                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    >
+                      {item.q}
+                      <span className={`transform transition-transform duration-300 ${openFaq === i ? 'rotate-180' : ''}`}>
+                        ▼
+                      </span>
+                    </button>
+                    {openFaq === i && (
+                      <div className="px-6 pb-5 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        {item.a}
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          6. TRUST / SOCIAL PROOF
+          6. EXCLUSIVE PILOT PORTAL (FORM)
       ══════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            ref={trustRef}
-            initial="hidden"
-            animate={trustInView ? 'visible' : 'hidden'}
-            variants={stagger}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <motion.div variants={fadeUp} className="mb-10">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">{c.trust.headline}</h2>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      <section id="pilot-form" className="relative py-24 sm:py-32 overflow-hidden border-t border-white/10">
+        <div className="absolute inset-0 bg-slate-900/80" />
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
 
-      {/* ══════════════════════════════════════════
-          7. PILOT APPLICATION FORM
-      ══════════════════════════════════════════ */}
-      <section id="pilot-form" className="py-20 sm:py-28 bg-gradient-to-br from-purple-600 to-blue-700">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto">
             {/* Section header */}
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{f.headline}</h2>
-              <p className="text-purple-200 text-lg">{f.subhead}</p>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">{f.headline}</h2>
+              <p className="text-purple-300 text-lg">{f.subhead}</p>
             </div>
 
             {/* Form card */}
-            <div className="bg-white rounded-2xl p-6 sm:p-10 shadow-2xl">
+            <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/10">
               {isThanks && (
-                <div className="mb-8 rounded-xl bg-green-50 border border-green-200 p-5 text-green-800 text-center">
-                  <svg className="w-8 h-8 text-green-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mb-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 p-6 text-emerald-400 text-center shadow-lg">
+                  <svg className="w-10 h-10 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <p className="font-semibold text-lg">{f.thanks}</p>
+                  <p className="font-bold text-lg">{f.thanks}</p>
                 </div>
               )}
 
-              {/*
-                IMPORTANT: Replace YOUR_INTEL_FORMSPREE_ID with your real Formspree form ID.
-                Create a new form at formspree.io and paste the 8-char ID here.
-              */}
               <form
                 action="https://formspree.io/f/YOUR_INTEL_FORMSPREE_ID"
                 method="POST"
                 onSubmit={handleSubmit}
-                className="space-y-6"
+                className="space-y-8"
                 noValidate
               >
                 <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.origin + '/pulsara-intel?thanks=1' : 'https://pulsaraai.com/pulsara-intel?thanks=1'} />
                 <input type="hidden" name="_subject" value="Pulsara Intel — Yeni Pilot Başvurusu" />
                 <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
-                {/* 2-col row: brand + sector */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <Field id="brand" label={f.brand} error={errors.brand} touched={touched.brand} valid={touched.brand && !errors.brand && formData.brand ? f.valid : ''}>
                     <input
                       type="text" id="brand" name="brand" value={formData.brand}
@@ -727,14 +730,13 @@ const PulsaraIntel = () => {
                       onChange={handleChange} onBlur={handleBlur} required
                       className={inputCls(touched.sector, errors.sector)}
                     >
-                      <option value="">{f.sectorPlaceholder}</option>
-                      {f.sectorOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                      <option value="" className="bg-slate-900 text-slate-400">{f.sectorPlaceholder}</option>
+                      {f.sectorOptions.map(o => <option key={o} value={o} className="bg-slate-900 text-white">{o}</option>)}
                     </select>
                   </Field>
                 </div>
 
-                {/* contact + email */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <Field id="contact" label={f.contact} error={errors.contact} touched={touched.contact} valid={touched.contact && !errors.contact && formData.contact ? f.valid : ''}>
                     <input
                       type="text" id="contact" name="contact" value={formData.contact}
@@ -754,8 +756,7 @@ const PulsaraIntel = () => {
                   </Field>
                 </div>
 
-                {/* phone + size */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <Field id="phone" label={f.phone} error={errors.phone} touched={touched.phone} valid={touched.phone && !errors.phone && formData.phone ? f.valid : ''}>
                     <input
                       type="tel" id="phone" name="phone" value={formData.phone}
@@ -771,105 +772,34 @@ const PulsaraIntel = () => {
                       onChange={handleChange} onBlur={handleBlur} required
                       className={inputCls(touched.size, errors.size)}
                     >
-                      <option value="">{f.sizePlaceholder}</option>
-                      {f.sizeOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                      <option value="" className="bg-slate-900 text-slate-400">{f.sizePlaceholder}</option>
+                      {f.sizeOptions.map(o => <option key={o} value={o} className="bg-slate-900 text-white">{o}</option>)}
                     </select>
                   </Field>
                 </div>
 
-                {/* notes */}
                 <div>
-                  <label htmlFor="notes" className="block text-sm font-semibold text-gray-700 mb-2">{f.notes}</label>
+                  <label htmlFor="notes" className="block text-sm font-semibold text-slate-300 mb-2">{f.notes}</label>
                   <textarea
                     id="notes" name="notes" value={formData.notes}
-                    onChange={handleChange} rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-colors resize-none"
+                    onChange={handleChange} rows={4}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 focus:outline-none transition-colors resize-none text-white placeholder-slate-500"
                     placeholder={f.notesPlaceholder}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/40 transition-all duration-300 text-base"
+                  className="w-full px-8 py-5 mt-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(147,51,234,0.3)] hover:shadow-[0_0_40px_rgba(147,51,234,0.5)] transition-all duration-500 text-lg tracking-wide hover:scale-[1.02]"
                 >
                   {f.submit}
                 </button>
 
-                <p className="text-center text-xs text-gray-500 leading-relaxed">{f.privacy}</p>
+                <p className="text-center text-xs text-slate-500 leading-relaxed mt-6">{f.privacy}</p>
               </form>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* ══════════════════════════════════════════
-          8. FAQ
-      ══════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            ref={faqRef}
-            initial="hidden"
-            animate={faqInView ? 'visible' : 'hidden'}
-            variants={stagger}
-            className="max-w-2xl mx-auto"
-          >
-            <motion.div variants={fadeUp} className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">{c.faq.headline}</h2>
-            </motion.div>
-            <motion.div variants={stagger} className="space-y-3">
-              {c.faq.items.map((item, i) => (
-                <motion.div key={i} variants={fadeUp} className="border border-slate-200 rounded-xl overflow-hidden">
-                  <button
-                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-slate-50 transition-colors"
-                  >
-                    <span className="font-semibold text-slate-900 pr-4">{item.q}</span>
-                    <svg
-                      className={`w-5 h-5 text-purple-600 flex-shrink-0 transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`}
-                      fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {openFaq === i && (
-                    <div className="px-6 pb-5 text-slate-600 leading-relaxed text-sm border-t border-slate-100 pt-4">
-                      {item.a}
-                    </div>
-                  )}
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════
-          9. FOOTER CTA
-      ══════════════════════════════════════════ */}
-      <section className="py-20 sm:py-24 bg-slate-900">
-        <motion.div
-          ref={ctaRef}
-          initial="hidden"
-          animate={ctaInView ? 'visible' : 'hidden'}
-          variants={stagger}
-          className="container mx-auto px-4 sm:px-6 text-center"
-        >
-          <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            {c.footerCta.headline}
-          </motion.h2>
-          <motion.p variants={fadeUp} className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-            {c.footerCta.sub}
-          </motion.p>
-          <motion.div variants={fadeUp}>
-            <a
-              href="#pilot-form"
-              className="inline-block px-10 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 text-base"
-            >
-              {c.footerCta.btn}
-            </a>
-          </motion.div>
-        </motion.div>
       </section>
     </div>
   );

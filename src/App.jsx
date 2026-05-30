@@ -15,6 +15,8 @@ import Services from './pages/Services.jsx';
 import Company from './pages/Company.jsx';
 import Ortakliklar from './pages/Ortakliklar.jsx';
 import PulsaraIntel from './pages/PulsaraIntel.jsx';
+import BlogList from './pages/BlogList.jsx';
+import BlogDetail from './pages/BlogDetail.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1436,6 +1438,22 @@ function BusinessApp() {
               <>
                 <Navbar />
                 <Home />
+                <Footer />
+              </>
+            } />
+
+            {/* Blog pages */}
+            <Route path="/blog" element={
+              <>
+                <Navbar />
+                <BlogList />
+                <Footer />
+              </>
+            } />
+            <Route path="/blog/:slug" element={
+              <>
+                <Navbar />
+                <BlogDetail />
                 <Footer />
               </>
             } />

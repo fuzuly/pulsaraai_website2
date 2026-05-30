@@ -420,7 +420,7 @@ const Services = () => {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight tracking-tight max-w-4xl mx-auto"
           >
             {tr
-              ? <>Kurumsal AI,{' '}<span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-300 bg-clip-text text-transparent font-semibold">production'a taşındı.</span><br /><span className="text-slate-400 font-light">Sadece demo için değil.</span></>
+              ? <>Kurumsal AI,{' '}<span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-300 bg-clip-text text-transparent font-semibold">production'a taşındı.</span><br /><span className="text-slate-400 font-light">Demo değil. Gerçek Ürün.</span></>
               : <>Enterprise AI,{' '}<span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-300 bg-clip-text text-transparent font-semibold">built to production.</span><br /><span className="text-slate-400 font-light">Not just to demo.</span></>
             }
           </motion.h1>

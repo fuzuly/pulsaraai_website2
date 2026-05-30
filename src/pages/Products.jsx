@@ -73,13 +73,13 @@ const content = {
       {
         badge: 'Veri & Analitik',
         badgeColor: 'bg-indigo-100 text-indigo-700',
-        name: 'Pulsara Big Data',
+        name: 'Pulsara Intelligence',
         tagline: 'Ham veriden iş kararına',
         taglineColor: 'text-indigo-600',
         description: 'Dağınık veri kaynaklarını birleştiren, gerçek zamanlı analitik paneller ve AI destekli raporlama ile kurumsal karar alma süreçlerini hızlandıran veri zekası platformu.',
         features: [
-          'Çoklu kaynak veri entegrasyonu',
-          'Gerçek zamanlı dashboard ve raporlama',
+          'Uçtan uca rakip analizi',
+          'Fiyat analizi, sosyal medya analizi, haber analizi, web sitesi analizi',
           'AI destekli anomali tespiti ve tahminleme',
           'Özelleştirilebilir KPI takip panelleri',
         ],
@@ -152,13 +152,13 @@ const content = {
       {
         badge: 'Data & Analytics',
         badgeColor: 'bg-indigo-100 text-indigo-700',
-        name: 'Pulsara Big Data',
+        name: 'Pulsara Intelligence',
         tagline: 'From raw data to business decisions',
         taglineColor: 'text-indigo-600',
         description: 'A data intelligence platform that consolidates scattered data sources, accelerating enterprise decision-making with real-time analytics dashboards and AI-powered reporting.',
         features: [
-          'Multi-source data integration',
-          'Real-time dashboards and reporting',
+          'End-to-end competitor analysis',
+          'Price analysis, social media analysis, news analysis, website analysis',
           'AI-powered anomaly detection and forecasting',
           'Customizable KPI tracking panels',
         ],
@@ -187,11 +187,10 @@ const content = {
 const ProductCard = ({ badge, badgeColor, name, tagline, taglineColor, description, features, prominent, learnMore }) => (
   <motion.div
     variants={fadeUp}
-    className={`flex flex-col bg-white rounded-2xl border overflow-hidden transition-shadow duration-300 hover:shadow-xl ${
-      prominent
-        ? 'border-teal-200 hover:shadow-teal-100/60 shadow-md'
-        : 'border-gray-200 hover:shadow-purple-100/60'
-    }`}
+    className={`flex flex-col bg-white rounded-2xl border overflow-hidden transition-shadow duration-300 hover:shadow-xl ${prominent
+      ? 'border-teal-200 hover:shadow-teal-100/60 shadow-md'
+      : 'border-gray-200 hover:shadow-purple-100/60'
+      }`}
   >
     {/* Top accent bar */}
     <div className={`h-1 w-full ${prominent ? 'bg-gradient-to-r from-teal-400 to-cyan-500' : 'bg-gradient-to-r from-violet-600 to-purple-500'}`} />
@@ -224,11 +223,10 @@ const ProductCard = ({ badge, badgeColor, name, tagline, taglineColor, descripti
       {/* CTA */}
       <Link
         to="/contact"
-        className={`mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
-          prominent
-            ? 'bg-teal-50 text-teal-700 border border-teal-200 hover:bg-teal-600 hover:text-white hover:border-teal-600'
-            : 'bg-violet-50 text-violet-700 border border-violet-200 hover:bg-violet-600 hover:text-white hover:border-violet-600'
-        }`}
+        className={`mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${prominent
+          ? 'bg-teal-50 text-teal-700 border border-teal-200 hover:bg-teal-600 hover:text-white hover:border-teal-600'
+          : 'bg-violet-50 text-violet-700 border border-violet-200 hover:bg-violet-600 hover:text-white hover:border-violet-600'
+          }`}
       >
         {learnMore}
         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
