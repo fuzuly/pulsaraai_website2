@@ -97,7 +97,7 @@ const content = {
     },
     form: {
       headline: 'Pilot programına başvurun',
-      subhead: 'İlk 10 marka için 3 ay ücretsiz pilot kullanım',
+      subhead: 'İlk 10 marka için 1 ay ücretsiz pilot kullanım',
       brand: 'Marka Adı',
       sector: 'Sektör',
       sectorPlaceholder: 'Sektör seçin',
@@ -127,7 +127,7 @@ const content = {
     faq: {
       headline: 'Sık sorulan sorular',
       items: [
-        { q: 'Pilot süresi ne kadar?', a: 'Pilot program 3 aydır. İlk 10 başvuran marka için tamamen ücretsizdir.' },
+        { q: 'Pilot süresi ne kadar?', a: 'Pilot program 1 aydır. İlk 10 başvuran marka için tamamen ücretsizdir.' },
         { q: 'Hangi rakiplerimi izleyebilirim?', a: 'Sektörünüzü ve konumunuzu belirttiğinizde sistem otomatik olarak 20 rakip tespit eder. İstediğiniz rakipleri manuel olarak da ekleyebilirsiniz.' },
         { q: 'Veriler nereden geliyor?', a: 'Google Maps yorumları, sosyal medya verileri ve kamuya açık fiyat bilgileri AI tarafından gerçek zamanlı analiz edilir.' },
         { q: 'Sözleşme zorunluluğu var mı?', a: 'Pilot döneminde herhangi bir sözleşme yoktur. Pilot sonrasında aylık veya yıllık abonelik seçenekleri sunulur.' },
@@ -206,7 +206,7 @@ const content = {
     },
     form: {
       headline: 'Apply for the pilot program',
-      subhead: 'Free 3-month pilot for the first 10 brands',
+      subhead: 'Free 1-month pilot for the first 10 brands',
       brand: 'Brand Name',
       sector: 'Sector',
       sectorPlaceholder: 'Select sector',
@@ -236,7 +236,7 @@ const content = {
     faq: {
       headline: 'Frequently asked questions',
       items: [
-        { q: 'How long is the pilot?', a: 'The pilot program runs for 3 months and is completely free for the first 10 applicants.' },
+        { q: 'How long is the pilot?', a: 'The pilot program runs for 1 month and is completely free for the first 10 applicants.' },
         { q: 'Which competitors can I monitor?', a: 'When you specify your sector and location, the system automatically identifies 20 competitors. You can also add competitors manually.' },
         { q: 'Where does the data come from?', a: 'Google Maps reviews, social media data, and publicly available price information are analyzed by AI in real time.' },
         { q: 'Is a contract required?', a: 'No contract during the pilot period. After the pilot, monthly or annual subscription options are available.' },
