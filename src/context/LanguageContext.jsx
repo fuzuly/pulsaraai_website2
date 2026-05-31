@@ -13,7 +13,11 @@ export const useLanguage = () => {
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('language') || 'en';
+      const saved = localStorage.getItem('language');
+      if (saved) return saved;
+      // Default to Turkish for /tr/* routes so Googlebot reads correct language
+      if (window.location.pathname.startsWith('/tr/')) return 'tr';
+      return 'en';
     }
     return 'en';
   });

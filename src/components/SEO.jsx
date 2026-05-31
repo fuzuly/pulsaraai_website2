@@ -83,6 +83,10 @@ const SEO = ({ title, description, datePublished = null, dateModified = null, br
     if (canonicalPath.startsWith('/tr/')) {
       updateLinkTag('alternate', `${baseUrl}${canonicalPath}`, 'tr');
       updateLinkTag('alternate', `${baseUrl}/pulsara-intel`, 'en');
+    } else if (canonicalPath === '/pulsara-intel') {
+      // Reciprocal: /pulsara-intel is the EN counterpart of the Turkish landing pages
+      updateLinkTag('alternate', `${baseUrl}/pulsara-intel`, 'en');
+      updateLinkTag('alternate', `${baseUrl}/tr/rakip-takip/kahve-zincirleri`, 'tr');
     } else {
       updateLinkTag('alternate', `${baseUrl}${canonicalPath}`, 'en');
     }
