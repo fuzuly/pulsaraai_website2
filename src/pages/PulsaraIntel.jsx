@@ -764,7 +764,7 @@ const PulsaraIntel = () => {
               )}
 
               <form
-                action="https://formspree.io/f/YOUR_INTEL_FORMSPREE_ID"
+                action="https://formspree.io/f/xpqylrkk"
                 method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-8"
