@@ -55,7 +55,7 @@ const Product = () => {
   return (
     <div className="bg-[#fafafa] text-slate-900 min-h-screen pt-24 md:pt-32">
       <SEO 
-        title="Product Overview — Pulsara"
+        title="Product Overview , Pulsara"
         description="Privacy-first burnout prevention engine. Learn how Pulsara detects, explains, and helps you act on burnout risk."
       />
 

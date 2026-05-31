@@ -169,7 +169,7 @@ export const blogPosts = [
         They need better decisions.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-8">
-        The future of competitive intelligence is not simply tracking competitors—it is understanding what actions should be taken next.
+        The future of competitive intelligence is not simply tracking competitors,it is understanding what actions should be taken next.
       </p>
 
       <hr class="my-8 border-gray-200" />
@@ -203,7 +203,7 @@ export const blogPosts = [
         Artificial intelligence is changing the world, powering everything from search engines to self-driving cars, code assistants, enterprise analytics, and large-scale automation. But behind the impressive capabilities of modern AI systems lies an uncomfortable reality:
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6 font-semibold">
-        AI consumes enormous amounts of energy and water — far more than most people realize.
+        AI consumes enormous amounts of energy and water , far more than most people realize.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-8">
         As companies rush to integrate AI into daily operations, understanding its environmental footprint has become essential. This isn't a call to stop AI innovation, but a reminder that the infrastructure powering AI has real-world impact.
@@ -217,7 +217,7 @@ export const blogPosts = [
         A 2023 Stanford analysis estimated that training a single large model can use:
       </p>
       <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
-        <li><strong>1 to 5 GWh of electricity</strong> — enough to power hundreds of homes for a year</li>
+        <li><strong>1 to 5 GWh of electricity</strong> , enough to power hundreds of homes for a year</li>
         <li><strong>Hundreds of thousands of kilograms of CO₂ emissions</strong>, depending on the energy grid</li>
       </ul>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -241,7 +241,7 @@ export const blogPosts = [
         Why?
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Because data centers need cooling — and a lot of it.
+        Because data centers need cooling , and a lot of it.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         Most cloud environments (even highly advanced ones) rely on cooling towers that evaporate water to keep server temperatures stable. Every GPU hour generates heat, and that heat has to be removed.
@@ -275,7 +275,7 @@ export const blogPosts = [
         <li>More data center expansions</li>
       </ul>
       <p class="text-lg text-gray-700 leading-relaxed mb-8">
-        This is why major hyperscalers (Google, Microsoft, Amazon) are now reporting double-digit increases in water consumption year over year — driven primarily by AI workloads.
+        This is why major hyperscalers (Google, Microsoft, Amazon) are now reporting double-digit increases in water consumption year over year , driven primarily by AI workloads.
       </p>
 
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">Can AI Be Sustainable?</h2>
@@ -297,7 +297,7 @@ export const blogPosts = [
 
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">A Responsible AI Future</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        AI is unlocking tremendous value — from medical breakthroughs to automation, supply chain optimization, energy efficiency, and productivity. But its environmental cost must be part of the conversation.
+        AI is unlocking tremendous value , from medical breakthroughs to automation, supply chain optimization, energy efficiency, and productivity. But its environmental cost must be part of the conversation.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         Understanding the energy and water footprint of AI isn't a reason to fear progress.
@@ -306,7 +306,7 @@ export const blogPosts = [
         It's a reason to build smarter, choose technologies responsibly, and push for sustainable innovation.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed">
-        The companies that embrace AI and sustainability will lead the next decade — balancing performance with responsibility, scale with efficiency, and innovation with long-term impact.
+        The companies that embrace AI and sustainability will lead the next decade , balancing performance with responsibility, scale with efficiency, and innovation with long-term impact.
       </p>
     `,
   },
@@ -318,17 +318,17 @@ export const blogPosts = [
     description: 'Burnout is now a business-critical risk. Discover how AI-powered wellbeing systems catch stress early, guide leaders, and protect productivity before teams hit a breaking point.',
     content: `
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Burnout used to be quiet. People hid their exhaustion until they resigned, burned out, or completely checked out. In 2025, the problem is front and center — and it’s costing organizations real money in attrition, medical claims, and lost productivity.
+        Burnout used to be quiet. People hid their exhaustion until they resigned, burned out, or completely checked out. In 2025, the problem is front and center , and it’s costing organizations real money in attrition, medical claims, and lost productivity.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         Surveys show burnout is now a top-three reason employees leave. Quiet quitting is at an all-time high. Teams lose 20–40% of their productivity when stress becomes chronic, and HR spends months plus thousands of dollars replacing every burned-out employee.
       </p>
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">Why Burnout Slips Through the Cracks</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-4">
-        Burnout rarely happens in a single moment. It’s a long slope: a little more fatigue, a few missed tasks, less engagement, sharper tone, rising mistakes — then the crash. The warning signs are subtle, and most leaders only see them once the damage is done.
+        Burnout rarely happens in a single moment. It’s a long slope: a little more fatigue, a few missed tasks, less engagement, sharper tone, rising mistakes , then the crash. The warning signs are subtle, and most leaders only see them once the damage is done.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Companies still rely on quarterly surveys, annual reviews, or gut feel. Managers, HR, and executives care — but they simply don’t have the visibility to act early. By the time someone looks visibly exhausted, they’re already well into burnout.
+        Companies still rely on quarterly surveys, annual reviews, or gut feel. Managers, HR, and executives care , but they simply don’t have the visibility to act early. By the time someone looks visibly exhausted, they’re already well into burnout.
       </p>
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">How AI Changes the Game</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-4">
@@ -337,11 +337,11 @@ export const blogPosts = [
       <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
         <li><strong>Micro-signal detection:</strong> AI spots small shifts in workload balance, mood, or engagement that humans miss.</li>
         <li><strong>Early warnings:</strong> Risk indicators surface weeks before performance dips or resignations happen.</li>
-        <li><strong>Actionable guidance:</strong> Leaders don’t just get alerts — they get tailored recommendations tied to root causes like workload, emotional fatigue, or team friction.</li>
+        <li><strong>Actionable guidance:</strong> Leaders don’t just get alerts , they get tailored recommendations tied to root causes like workload, emotional fatigue, or team friction.</li>
       </ul>
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">Where Pulsara Fits</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Pulsara’s wellbeing engine was built around one belief: burnout should never blindside your organization. We capture real signals from how people work each day — not just survey answers — and surface them in real time for HR, managers, and employees.
+        Pulsara’s wellbeing engine was built around one belief: burnout should never blindside your organization. We capture real signals from how people work each day , not just survey answers , and surface them in real time for HR, managers, and employees.
       </p>
       <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
         <li><strong>Catch burnout early:</strong> See risk before it turns into attrition or disengagement.</li>
@@ -350,7 +350,7 @@ export const blogPosts = [
       </ul>
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">Burnout Is a Financial Problem</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Burnout isn’t just an HR issue; it’s a P&L issue. It shows up in lost output, missed deadlines, customer churn, and expensive rehiring cycles. Investing in proactive wellbeing isn’t a perk — it’s a core business strategy.
+        Burnout isn’t just an HR issue; it’s a P&L issue. It shows up in lost output, missed deadlines, customer churn, and expensive rehiring cycles. Investing in proactive wellbeing isn’t a perk , it’s a core business strategy.
       </p>
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">The Future Belongs to Companies That Care</h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -375,7 +375,7 @@ export const blogPosts = [
         It worked… until it didn't.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Today, teams are larger, operations faster-moving, and the expectations of employees higher than ever. Retail, hospitality, healthcare, factories—all struggle with the same problem:
+        Today, teams are larger, operations faster-moving, and the expectations of employees higher than ever. Retail, hospitality, healthcare, factories,all struggle with the same problem:
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-8 font-semibold">
         Manual scheduling is too slow, too chaotic, and too inefficient for 2025.
@@ -400,7 +400,7 @@ export const blogPosts = [
         The shift to AI-driven scheduling is not a "future trend."
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-8 font-semibold">
-        It's happening right now — and early adopters are getting a huge advantage.
+        It's happening right now , and early adopters are getting a huge advantage.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         Here's why:
@@ -438,7 +438,7 @@ export const blogPosts = [
 
       <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 mt-6">3. Zero last-minute chaos</h3>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Shift swaps, absences, sick days, emergencies—the things that used to ruin a schedule—can now be resolved in an instant.
+        Shift swaps, absences, sick days, emergencies,the things that used to ruin a schedule,can now be resolved in an instant.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed mb-8">
         AI proposes replacements in seconds, with skills, availability, and fairness taken into consideration.

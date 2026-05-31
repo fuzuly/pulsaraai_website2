@@ -165,7 +165,7 @@ const icons = {
 
   /* === Updated feature icons (keep same keys your cards already use) === */
 
-  // 1) Predictive Maintenance (MCC) — wrench + cog
+  // 1) Predictive Maintenance (MCC) , wrench + cog
   brainCircuit: (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M15.5 14.5a2.5 2.5 0 1 0 3 3l3 3"/>
@@ -174,7 +174,7 @@ const icons = {
     </svg>
   ),
 
-  // 2) Intelligent Flight Planning (OCC) — route with waypoints
+  // 2) Intelligent Flight Planning (OCC) , route with waypoints
   plane: (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="5" cy="6" r="2" />
@@ -185,7 +185,7 @@ const icons = {
     </svg>
   ),
 
-  // 3) Operational Efficiency Analytics — bars + trend line
+  // 3) Operational Efficiency Analytics , bars + trend line
   barChart: (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 20h18"/>
@@ -194,7 +194,7 @@ const icons = {
     </svg>
   ),
 
-  // 4) Enhanced Safety Protocols — shield + heartbeat
+  // 4) Enhanced Safety Protocols , shield + heartbeat
   shieldCheck: (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10z"/>
@@ -708,7 +708,7 @@ const ContactSection = ({ content }) => {
             <input
               type="hidden"
               name="_subject"
-              value="New Aviation Site Contact — Pulsara"
+              value="New Aviation Site Contact , Pulsara"
             />
             <input type="text" name="_gotcha" style={{ display: "none" }} />
 

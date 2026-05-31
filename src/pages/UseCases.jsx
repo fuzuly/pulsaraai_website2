@@ -35,7 +35,7 @@ const UseCases = () => {
   return (
     <div className="bg-[#fafafa] text-slate-900 min-h-screen pt-24 md:pt-32">
       <SEO 
-        title="Use Cases — Pulsara"
+        title="Use Cases , Pulsara"
         description="See how Pulsara helps different types of teams prevent burnout: engineering teams, high-meeting organizations, fast-growing companies, and customer ops teams."
       />
 

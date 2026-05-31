@@ -10,7 +10,7 @@ const GoogleCloudIntegration = () => {
   const content = {
     en: {
       seo: {
-        title: "Pulsara x Google Cloud — How Pulsara Uses Google Cloud Infrastructure",
+        title: "Pulsara x Google Cloud , How Pulsara Uses Google Cloud Infrastructure",
         description: "Pulsara uses Google Cloud Run, Cloud Functions, and plans to expand with Vertex AI, BigQuery, and Google Workspace integrations. Learn how Google Cloud powers our enterprise AI platform."
       },
       hero: {
@@ -79,7 +79,7 @@ const GoogleCloudIntegration = () => {
           },
           {
             title: "Cloud Run as Core AI Infrastructure",
-            description: "Future Pulsara AI modules—such as risk scoring, mood inference, AI-assisted scheduling, and wellbeing recommendations—will run on Cloud Run for predictable pricing, strong security, and effortless global scale."
+            description: "Future Pulsara AI modules,such as risk scoring, mood inference, AI-assisted scheduling, and wellbeing recommendations,will run on Cloud Run for predictable pricing, strong security, and effortless global scale."
           }
         ]
       },
@@ -109,7 +109,7 @@ const GoogleCloudIntegration = () => {
     },
     tr: {
       seo: {
-        title: "Pulsara x Google Cloud — Pulsara'nın Google Cloud Platform ile entegrasyonu",
+        title: "Pulsara x Google Cloud , Pulsara'nın Google Cloud Platform ile entegrasyonu",
         description: "Pulsara, Google Cloud Run, Cloud Functions kullanıyor ve Vertex AI, BigQuery ve Google Workspace entegrasyonları ile genişlemeyi planlıyor. Google Cloud'un kurumsal AI platformumuzu nasıl güçlendirdiğini öğrenin."
       },
       hero: {

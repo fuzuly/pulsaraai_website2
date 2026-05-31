@@ -150,7 +150,7 @@ const Home = () => {
   return (
     <div className="bg-white text-slate-900 min-h-screen">
       <SEO 
-        title="Pulsara AI — Enterprise AI Solutions for Workforce, Finance & Production"
+        title="Pulsara AI , Enterprise AI Solutions for Workforce, Finance & Production"
         description="AI platforms for workforce intelligence, finance automation, production analytics, and real-time optimization. Built for modern enterprises."
       />
       {/* Hero Section - Full Screen Video */}

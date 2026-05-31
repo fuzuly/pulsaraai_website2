@@ -12,7 +12,7 @@ const SCENARIOS_EN = [
       { text: '$ pulsara init wellbeing-agent', type: 'command' },
       { text: '  → Loading mood signals: 1,240 employees', type: 'muted' },
       { text: '  → Connecting to HR platform: Salesforce OK', type: 'muted' },
-      { text: '  ✓ Agent online — burnout risk alerts active', type: 'success' },
+      { text: '  ✓ Agent online , burnout risk alerts active', type: 'success' },
     ],
   },
   {
@@ -21,7 +21,7 @@ const SCENARIOS_EN = [
       { text: '$ pulsara init roster-agent', type: 'command' },
       { text: '  → Syncing shift data: 86 active locations', type: 'muted' },
       { text: '  → Running compliance rules v4.1', type: 'muted' },
-      { text: '  ✓ Agent online — schedules optimised 3× faster', type: 'success' },
+      { text: '  ✓ Agent online , schedules optimised 3× faster', type: 'success' },
     ],
   },
   {
@@ -30,7 +30,7 @@ const SCENARIOS_EN = [
       { text: '$ pulsara init finance-agent', type: 'command' },
       { text: '  → Parsing invoices: PDF, XLSX, ERP feed', type: 'muted' },
       { text: '  → Accuracy benchmark: 99.1% on test set', type: 'muted' },
-      { text: '  ✓ Agent online — processing 8k docs/day', type: 'success' },
+      { text: '  ✓ Agent online , processing 8k docs/day', type: 'success' },
     ],
   },
 ];
@@ -42,7 +42,7 @@ const SCENARIOS_TR = [
       { text: '$ pulsara init wellbeing-agent', type: 'command' },
       { text: '  → Ruh hali sinyalleri yükleniyor: 1.240 çalışan', type: 'muted' },
       { text: '  → İK platformuna bağlanılıyor: Başarılı', type: 'muted' },
-      { text: '  ✓ Ajan aktif — tükenmişlik uyarıları çalışıyor', type: 'success' },
+      { text: '  ✓ Ajan aktif , tükenmişlik uyarıları çalışıyor', type: 'success' },
     ],
   },
   {
@@ -51,7 +51,7 @@ const SCENARIOS_TR = [
       { text: '$ pulsara init roster-agent', type: 'command' },
       { text: '  → Vardiya verisi senkronize ediliyor: 86 lokasyon', type: 'muted' },
       { text: '  → Uyumluluk kuralları çalıştırılıyor v4.1', type: 'muted' },
-      { text: '  ✓ Ajan aktif — programlar 3× daha hızlı', type: 'success' },
+      { text: '  ✓ Ajan aktif , programlar 3× daha hızlı', type: 'success' },
     ],
   },
   {
@@ -60,7 +60,7 @@ const SCENARIOS_TR = [
       { text: '$ pulsara init finance-agent', type: 'command' },
       { text: '  → Faturalar ayrıştırılıyor: PDF, XLSX, ERP', type: 'muted' },
       { text: '  → Doğruluk kıyaslaması: %99,1', type: 'muted' },
-      { text: '  ✓ Ajan aktif — günlük 8k belge işleniyor', type: 'success' },
+      { text: '  ✓ Ajan aktif , günlük 8k belge işleniyor', type: 'success' },
     ],
   },
 ];
@@ -180,7 +180,7 @@ const HeroVideoHeader = () => {
       className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center bg-white overflow-hidden pt-16"
       aria-label="Hero"
     >
-      {/* Soft violet radial gradient — top right */}
+      {/* Soft violet radial gradient , top right */}
       <div
         aria-hidden="true"
         style={{
@@ -249,7 +249,7 @@ const HeroVideoHeader = () => {
           </motion.div>
         </div>
 
-        {/* ── RIGHT — Terminal card ── */}
+        {/* ── RIGHT , Terminal card ── */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}

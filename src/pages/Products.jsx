@@ -25,7 +25,7 @@ const stagger = {
 const content = {
   tr: {
     seo: {
-      title: 'Pulsara Ürünleri — Kurumsal AI Platformları',
+      title: 'Pulsara Ürünleri , Kurumsal AI Platformları',
       description: 'Wellbeing, işgücü planlama, büyük veri analitiği ve endüstriyel IoT için kurumsal yapay zeka platformları.',
     },
     eyebrow: 'Ürünlerimiz',
@@ -35,7 +35,7 @@ const content = {
     cat2: 'Endüstriyel & Veri Çözümleri',
     cta: {
       heading: 'Hangi ürün işinize yarar?',
-      sub: 'Ekibimiz, ihtiyaçlarınızı dinleyip size en uygun platformu önerir — ücretsiz.',
+      sub: 'Ekibimiz, ihtiyaçlarınızı dinleyip size en uygun platformu önerir , ücretsiz.',
       btn: 'Uzmanla Konuşun',
     },
     learnMore: 'Daha Fazla Bilgi',
@@ -94,7 +94,7 @@ const content = {
         description: 'Gıda, üretim ve lojistik sektörleri için tasarlanmış IoT tabanlı sıcaklık/nem izleme, merkezi alarm sistemi ve üretim otomasyon zekası platformu. Tüm lokasyonlar tek ekranda.',
         features: [
           'Gerçek zamanlı sıcaklık & nem ölçümü',
-          'Merkezi izleme paneli — tüm şubeler tek ekranda',
+          'Merkezi izleme paneli , tüm şubeler tek ekranda',
           'Eşik aşımlarında otomatik alarm (SMS, e-posta, uygulama)',
           'Üretim otomasyon entegrasyonu & AI analitik',
         ],
@@ -104,7 +104,7 @@ const content = {
   },
   en: {
     seo: {
-      title: 'Pulsara Products — Enterprise AI Platforms',
+      title: 'Pulsara Products , Enterprise AI Platforms',
       description: 'Enterprise AI platforms for wellbeing, workforce planning, big data analytics, and industrial IoT. Built for scale.',
     },
     eyebrow: 'Our Products',
@@ -114,7 +114,7 @@ const content = {
     cat2: 'Industrial & Data Solutions',
     cta: {
       heading: 'Not sure which product fits?',
-      sub: 'Our team will listen to your needs and recommend the right platform — for free.',
+      sub: 'Our team will listen to your needs and recommend the right platform , for free.',
       btn: 'Talk to an Expert',
     },
     learnMore: 'Learn More',
@@ -173,7 +173,7 @@ const content = {
         description: 'An IoT-based temperature/humidity monitoring, centralized alarm system, and production automation intelligence platform designed for food, manufacturing, and logistics. All locations, one screen.',
         features: [
           'Real-time temperature & humidity measurement',
-          'Centralized monitoring — all branches on one screen',
+          'Centralized monitoring , all branches on one screen',
           'Automatic alerts on threshold breach (SMS, email, app)',
           'Production automation integration & AI analytics',
         ],

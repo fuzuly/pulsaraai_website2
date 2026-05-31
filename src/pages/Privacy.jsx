@@ -7,7 +7,7 @@ const Privacy = () => {
   return (
     <div className="bg-[#fafafa] text-slate-900 min-h-screen pt-24 md:pt-32">
       <SEO 
-        title="Privacy Principles — Pulsara"
+        title="Privacy Principles , Pulsara"
         description="Privacy-first by design. Learn what we collect, what we never collect, and how we protect your team's data."
       />
 

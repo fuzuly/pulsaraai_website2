@@ -34,13 +34,13 @@ const stagger = {
 const content = {
   tr: {
     seo: {
-      title: 'Pulsara Intel — AI Destekli Rakip Takip Platformu',
-      description: 'Türk perakende ve F&B markaları için rakip analizi, fiyat takibi ve haftalık AI raporları — hepsi tek platformda.',
+      title: 'Pulsara Intel , AI Destekli Rakip Takip Platformu',
+      description: 'Türk perakende ve F&B markaları için rakip analizi, fiyat takibi ve haftalık AI raporları , hepsi tek platformda.',
     },
     hero: {
       badge: 'Yeni Ürün',
       headline: 'Rakiplerinizi sizin için izleyen yapay zeka',
-      subheadline: 'Türk perakende ve F&B markaları için rakip analizi, fiyat takibi ve haftalık AI raporları — hepsi tek platformda.',
+      subheadline: 'Türk perakende ve F&B markaları için rakip analizi, fiyat takibi ve haftalık AI raporları , hepsi tek platformda.',
       cta1: 'Pilot Başvurusu',
       cta2: 'Demo İste',
     },
@@ -66,7 +66,7 @@ const content = {
       steps: [
         { n: '01', title: 'Sektörünüzü seçin', desc: '20 rakip otomatik bulunur ve izlemeye başlanır.' },
         { n: '02', title: 'AI yorumları analiz eder', desc: 'Türkçe sentiment analizi ve kategori etiketleme ile kritik içgörüler.' },
-        { n: '03', title: 'Fiyatlar 24/7 takip edilir', desc: 'Değişimde anlık uyarı — hiçbir hamleyi kaçırmayın.' },
+        { n: '03', title: 'Fiyatlar 24/7 takip edilir', desc: 'Değişimde anlık uyarı , hiçbir hamleyi kaçırmayın.' },
         { n: '04', title: 'Haftalık hazır rapor', desc: 'Her Pazartesi yönetime sunuma hazır AI raporu.' },
       ],
     },
@@ -143,13 +143,13 @@ const content = {
   },
   en: {
     seo: {
-      title: 'Pulsara Intel — AI-Powered Competitor Monitoring Platform',
-      description: 'Competitor analysis, price tracking and weekly AI reports for Turkish retail and F&B brands — all in one platform.',
+      title: 'Pulsara Intel , AI-Powered Competitor Monitoring Platform',
+      description: 'Competitor analysis, price tracking and weekly AI reports for Turkish retail and F&B brands , all in one platform.',
     },
     hero: {
       badge: 'New Product',
       headline: 'The AI that monitors your competitors for you',
-      subheadline: 'Competitor analysis, price tracking, and weekly AI reports for Turkish retail and F&B brands — all in one platform.',
+      subheadline: 'Competitor analysis, price tracking, and weekly AI reports for Turkish retail and F&B brands , all in one platform.',
       cta1: 'Apply for Pilot',
       cta2: 'Request Demo',
     },
@@ -162,7 +162,7 @@ const content = {
         },
         {
           title: "You don't know which review is critical",
-          desc: "Hundreds of reviews — you can't tell which complaints matter most.",
+          desc: "Hundreds of reviews , you can't tell which complaints matter most.",
         },
         {
           title: 'Price changes are spotted too late',
@@ -175,7 +175,7 @@ const content = {
       steps: [
         { n: '01', title: 'Select your sector', desc: '20 competitors are automatically found and monitored.' },
         { n: '02', title: 'AI analyzes reviews', desc: 'Turkish sentiment analysis and category tagging for critical insights.' },
-        { n: '03', title: 'Prices tracked 24/7', desc: 'Instant alerts on changes — never miss a move.' },
+        { n: '03', title: 'Prices tracked 24/7', desc: 'Instant alerts on changes , never miss a move.' },
         { n: '04', title: 'Weekly ready report', desc: 'Every Monday, a presentation-ready AI report for leadership.' },
       ],
     },
@@ -241,7 +241,7 @@ const content = {
         { q: 'Where does the data come from?', a: 'Google Maps reviews, social media data, and publicly available price information are analyzed by AI in real time.' },
         { q: 'Is a contract required?', a: 'No contract during the pilot period. After the pilot, monthly or annual subscription options are available.' },
         { q: 'What about post-pilot pricing?', a: 'Pricing is determined by number of branches and competitors tracked. A personalized quote is provided during the pilot.' },
-        { q: 'Is integration or installation required?', a: 'No. Pulsara Intel is fully cloud-based — no installation or technical integration required.' },
+        { q: 'Is integration or installation required?', a: 'No. Pulsara Intel is fully cloud-based , no installation or technical integration required.' },
       ],
     },
     footerCta: {
@@ -711,7 +711,7 @@ const PulsaraIntel = () => {
                 noValidate
               >
                 <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.origin + '/pulsara-intel?thanks=1' : 'https://pulsaraai.com/pulsara-intel?thanks=1'} />
-                <input type="hidden" name="_subject" value="Pulsara Intel — Yeni Pilot Başvurusu" />
+                <input type="hidden" name="_subject" value="Pulsara Intel , Yeni Pilot Başvurusu" />
                 <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

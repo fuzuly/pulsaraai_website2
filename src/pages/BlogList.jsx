@@ -21,7 +21,7 @@ const BlogList = () => {
   return (
     <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 bg-white min-h-screen">
       <SEO 
-        title="Pulsara Blog — Insights & Articles on AI, Workforce & Operations"
+        title="Pulsara Blog , Insights & Articles on AI, Workforce & Operations"
         description="Read insights and articles about AI-powered workforce management, retail operations, and enterprise automation from Pulsara."
       />
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">

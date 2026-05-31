@@ -84,7 +84,7 @@ const openaiPills = ['GPT-4o', 'o1', 'Assistants API', 'Fine-tuning', 'DALL·E',
 const content = {
   tr: {
     seo: {
-      title: 'Teknoloji Ortaklıkları — Pulsara | Google Cloud & OpenAI',
+      title: 'Teknoloji Ortaklıkları , Pulsara | Google Cloud & OpenAI',
       description: "Pulsara, Google Cloud ve OpenAI'ın resmi ortağı olarak işletmenize en ileri yapay zeka ve bulut çözümlerini sunar.",
     },
     hero: {
@@ -113,7 +113,7 @@ const content = {
         { icon: 'brain',    title: 'En İleri AI Modelleri',   desc: "GPT-4o ve Gemini'ye doğrudan kurumsal erişim ile rakiplerinizin önüne geçin." },
         { icon: 'cloud',    title: 'Küresel Bulut Altyapısı', desc: "Google'ın dünya genelindeki veri merkezleri ile düşük gecikme ve yüksek erişilebilirlik." },
         { icon: 'shield',   title: 'Kurumsal Güvenlik',       desc: 'SOC2, GDPR ve KVKK uyumlu deployment ile verileriniz her zaman güvende.' },
-        { icon: 'bolt',     title: 'Hızlı Entegrasyon',       desc: "8 haftada production'a çıkma garantisi — sertifikalı ekibimizle hızlı sonuç alın." },
+        { icon: 'bolt',     title: 'Hızlı Entegrasyon',       desc: "8 haftada production'a çıkma garantisi , sertifikalı ekibimizle hızlı sonuç alın." },
         { icon: 'currency', title: 'Maliyet Avantajı',        desc: 'Partner kredileri ve özel fiyatlandırma ile bütçenizi verimli kullanın.' },
         { icon: 'support',  title: 'Öncelikli Destek',        desc: 'Her iki platformdan doğrudan teknik destek hattı ile kesintisiz operasyon.' },
       ],
@@ -147,7 +147,7 @@ const content = {
   },
   en: {
     seo: {
-      title: 'Technology Partnerships — Pulsara | Google Cloud & OpenAI',
+      title: 'Technology Partnerships , Pulsara | Google Cloud & OpenAI',
       description: 'Pulsara is an official partner of Google Cloud and OpenAI, delivering cutting-edge AI and cloud solutions to your enterprise.',
     },
     hero: {
@@ -176,7 +176,7 @@ const content = {
         { icon: 'brain',    title: 'Most Advanced AI Models',   desc: 'Get ahead of the competition with direct enterprise access to GPT-4o and Gemini.' },
         { icon: 'cloud',    title: 'Global Cloud Infrastructure', desc: "Low latency and high availability through Google's worldwide data centers." },
         { icon: 'shield',   title: 'Enterprise Security',       desc: 'SOC2, GDPR and KVKK compliant deployment keeps your data secure at all times.' },
-        { icon: 'bolt',     title: 'Fast Integration',          desc: 'Guaranteed go-live in 8 weeks — fast results with our certified team.' },
+        { icon: 'bolt',     title: 'Fast Integration',          desc: 'Guaranteed go-live in 8 weeks , fast results with our certified team.' },
         { icon: 'currency', title: 'Cost Advantage',            desc: 'Use your budget efficiently with partner credits and custom pricing.' },
         { icon: 'support',  title: 'Priority Support',          desc: 'Uninterrupted operations with a direct technical support line from both platforms.' },
       ],
@@ -260,7 +260,7 @@ export default function Ortakliklar() {
       <SEO title={c.seo.title} description={c.seo.description} />
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 1 — HERO
+          SECTION 1 , HERO
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#07071A]">
 
@@ -369,7 +369,7 @@ export default function Ortakliklar() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 2 — DUAL PARTNERSHIP SHOWCASE
+          SECTION 2 , DUAL PARTNERSHIP SHOWCASE
       ══════════════════════════════════════════════════════════════════════ */}
       <section id="partners-section" className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -482,7 +482,7 @@ export default function Ortakliklar() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 3 — COMBINED BENEFITS
+          SECTION 3 , COMBINED BENEFITS
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 bg-[#F8F7FF]">
         <div className="container mx-auto px-4 md:px-6">
@@ -524,7 +524,7 @@ export default function Ortakliklar() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 4 — STATS BAR
+          SECTION 4 , STATS BAR
       ══════════════════════════════════════════════════════════════════════ */}
       <section
         ref={statsRef}
@@ -544,7 +544,7 @@ export default function Ortakliklar() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 5 — HOW IT WORKS
+          SECTION 5 , HOW IT WORKS
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -587,7 +587,7 @@ export default function Ortakliklar() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          SECTION 6 — CTA
+          SECTION 6 , CTA
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 bg-[#F8F7FF] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

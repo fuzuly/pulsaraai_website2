@@ -27,7 +27,7 @@ const BlogDetail = () => {
   return (
     <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 bg-white min-h-screen">
       <SEO 
-        title={`${post.title} — Pulsara Blog`}
+        title={`${post.title} , Pulsara Blog`}
         description={post.description}
       />
       <div className="container mx-auto px-4 sm:px-6 max-w-3xl">

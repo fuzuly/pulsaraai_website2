@@ -276,7 +276,7 @@ const Company = () => {
   return (
     <div className="bg-white min-h-screen">
       <SEO 
-        title="About Pulsara — Enterprise AI Company Building the Future of Operations"
+        title="About Pulsara , Enterprise AI Company Building the Future of Operations"
         description="Discover Pulsara's mission, values, and journey in building AI platforms that transform operations across industries."
       />
       {/* Hero Section */}

@@ -1221,7 +1221,7 @@ const AboutPage = ({ language }) => {
             <div className="bg-white/60 backdrop-blur-md p-8 md:p-10 rounded-2xl shadow-xl border border-gray-200/50">
               {isThanks && (
                 <div className="mb-6 rounded-lg bg-green-50 border border-green-200 p-4 text-green-800">
-                  {t.thankYou} — {t.demoSuccess}
+                  {t.thankYou} , {t.demoSuccess}
                 </div>
               )}
   
@@ -1235,7 +1235,7 @@ const AboutPage = ({ language }) => {
                   name="_next"
                   value={typeof window !== "undefined" ? window.location.origin + "/business?thanks=1" : "https://pulsara.com.tr/business?thanks=1"}
                 />
-                <input type="hidden" name="_subject" value="New Demo Request — Pulsara" />
+                <input type="hidden" name="_subject" value="New Demo Request , Pulsara" />
                 <input type="text" name="_gotcha" style={{ display: "none" }} />
   
                 <div className="space-y-6">

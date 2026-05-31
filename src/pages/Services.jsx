@@ -39,7 +39,7 @@ const fadeIn = {
    VISUAL COMPONENTS
 ════════════════════════════════════════════════════════════ */
 
-/* Visual 1 — AI Readiness Score Dashboard */
+/* Visual 1 , AI Readiness Score Dashboard */
 const AIReadinessDashboard = () => (
   <div className="srv-visual group">
     <div className="visual-header">
@@ -95,10 +95,10 @@ const AIReadinessDashboard = () => (
   </div>
 );
 
-/* Visual 2 — Code Terminal */
+/* Visual 2 , Code Terminal */
 const CodeTerminal = () => {
   const lines = [
-    { type: 'comment', text: '# pulsara build — custom AI system' },
+    { type: 'comment', text: '# pulsara build , custom AI system' },
     { type: 'cmd',     text: '$ pulsara init --template agentic-workflow' },
     { type: 'muted',   text: '  → Scaffolding project structure...' },
     { type: 'muted',   text: '  → Connecting vector store: Pinecone OK' },
@@ -107,7 +107,7 @@ const CodeTerminal = () => {
     { type: 'cmd',     text: '$ pulsara deploy --env production' },
     { type: 'muted',   text: '  → Building Docker image...' },
     { type: 'muted',   text: '  → Pushing to Cloud Run...' },
-    { type: 'success', text: '  ✓ Live at api.client.com — 0 errors' },
+    { type: 'success', text: '  ✓ Live at api.client.com , 0 errors' },
   ];
   const colors = {
     comment: 'text-slate-500',
@@ -136,7 +136,7 @@ const CodeTerminal = () => {
   );
 };
 
-/* Visual 3 — Integration Flow */
+/* Visual 3 , Integration Flow */
 const IntegrationFlow = () => {
   const tools = [
     { name: 'ServiceNow', color: 'border-green-500/40 text-green-400' },
@@ -183,7 +183,7 @@ const IntegrationFlow = () => {
   );
 };
 
-/* Visual 4 — CI/CD Pipeline */
+/* Visual 4 , CI/CD Pipeline */
 const CIPipeline = () => {
   const stages = [
     { name: 'Build',   status: 'pass', duration: '1m 12s' },
@@ -222,7 +222,7 @@ const CIPipeline = () => {
   );
 };
 
-/* Visual 5 — Uptime Monitor */
+/* Visual 5 , Uptime Monitor */
 const UptimeMonitor = () => {
   const bars = Array.from({ length: 40 }, (_, i) => ({
     height: Math.random() > 0.08 ? 100 : Math.floor(Math.random() * 40 + 20),
@@ -246,7 +246,7 @@ const UptimeMonitor = () => {
           />
         ))}
       </div>
-      <p className="text-xs text-slate-500 mb-5">Last 90 days — 99.97% uptime</p>
+      <p className="text-xs text-slate-500 mb-5">Last 90 days , 99.97% uptime</p>
       <div className="space-y-2">
         {[
           { name: 'API Gateway',      ping: '12ms',  ok: true },
@@ -279,7 +279,7 @@ const Services = () => {
       id: 'strategy',
       num: '01',
       title:    tr ? 'AI & Veri Stratejisi'          : 'AI & Data Strategy',
-      headline: tr ? 'Hangi AI\'ı inşa edeceğinizi tam olarak bilin — ve nedenini' : 'Know exactly which AI to build — and why',
+      headline: tr ? 'Hangi AI\'ı inşa edeceğinizi tam olarak bilin , ve nedenini' : 'Know exactly which AI to build , and why',
       desc:     tr
         ? 'Operasyonlarınızı denetliyor, AI hazırlık puanınızı çıkarıyor ve önceliklendirilmiş bir yol haritası sunuyoruz. Belirsiz strateji sunumları yok. Her girişim için ROI tahmini içeren somut bir plan.'
         : 'We audit your operations, score your AI readiness, and hand you a prioritized roadmap. No vague strategy decks. A concrete plan with ROI estimates per initiative.',
@@ -296,7 +296,7 @@ const Services = () => {
       headline: tr ? '8 haftada production-grade AI sistemleri' : 'Production-grade AI systems in 8 weeks',
       desc:     tr
         ? 'Uçtan uca tasarlıyor, geliştiriyor ve deploy ediyoruz. Agentic workflow\'lardan müşteriye yönelik uygulamalara kadar, ekibinizin ilk günden itibaren kullandığı yazılımı teslim ediyoruz.'
-        : 'We design, build, and deploy — end to end. From agentic workflows to customer-facing apps, we ship software your team uses on day one.',
+        : 'We design, build, and deploy , end to end. From agentic workflows to customer-facing apps, we ship software your team uses on day one.',
       bullets: tr
         ? ['Üretim ortamına hazır web ve mobil uygulamalar', 'Sistemlerinizi birleştiren API geliştirme', 'Ölçeklenebilir mikroservis ve bulut mimarisi', 'Haftalık demo ile şeffaf Agile süreç']
         : ['Production-ready web and mobile applications', 'API development that unifies your systems', 'Scalable microservices and cloud architecture', 'Transparent agile delivery with weekly demos'],
@@ -309,8 +309,8 @@ const Services = () => {
       title:    tr ? 'Entegrasyonlar & Otomasyon'         : 'Integrations & Automation',
       headline: tr ? 'Mevcut araçlarınız, sonunda birlikte çalışıyor' : 'Your existing tools, finally working together',
       desc:     tr
-        ? 'ServiceNow, Jira, AWS ve iç sistemleriniz — bağlı ve otomatik. Ekibinizin zamanını sessizce tüketen manuel işi ortadan kaldırıyoruz.'
-        : 'ServiceNow, Jira, AWS, and your internal systems — connected and automated. We eliminate the manual work that\'s silently draining your team\'s time.',
+        ? 'ServiceNow, Jira, AWS ve iç sistemleriniz , bağlı ve otomatik. Ekibinizin zamanını sessizce tüketen manuel işi ortadan kaldırıyoruz.'
+        : 'ServiceNow, Jira, AWS, and your internal systems , connected and automated. We eliminate the manual work that\'s silently draining your team\'s time.',
       bullets: tr
         ? ['Kurumsal araç entegrasyonları (ServiceNow, Jira, AWS)', 'Tekrarlayan görevleri ortadan kaldıran iş akışı otomasyonu', 'Temiz, güvenilir veri akışı için ETL süreçleri', 'API yönetimi ve gerçek zamanlı izleme']
         : ['Enterprise tool integrations (ServiceNow, Jira, AWS)', 'Workflow automation that eliminates repetitive tasks', 'ETL processes for clean, reliable data flow', 'API management and real-time monitoring'],
@@ -323,8 +323,8 @@ const Services = () => {
       title:    tr ? 'Bulut, DevOps & İzlenebilirlik'    : 'Cloud, DevOps & Observability',
       headline: tr ? 'Her zaman çalışan, kendi kendini ölçekleyen altyapı' : 'Infrastructure that runs itself and scales with you',
       desc:     tr
-        ? 'Ölçeklenebilir bulut altyapısı, CI/CD pipeline\'ları ve kapsamlı izleme — hepsini bir arada. Sistemlerinizin her zaman çalışır durumda kalmasını sağlıyoruz.'
-        : 'Scalable cloud infrastructure, CI/CD pipelines, and comprehensive monitoring — all in one. We keep your systems running at all times.',
+        ? 'Ölçeklenebilir bulut altyapısı, CI/CD pipeline\'ları ve kapsamlı izleme , hepsini bir arada. Sistemlerinizin her zaman çalışır durumda kalmasını sağlıyoruz.'
+        : 'Scalable cloud infrastructure, CI/CD pipelines, and comprehensive monitoring , all in one. We keep your systems running at all times.',
       bullets: tr
         ? ['AWS, Azure ve GCP altyapı kurulumu ve optimizasyonu', 'Güvenilir teslimat için CI/CD pipeline otomasyonu', 'Kubernetes ve Docker konteyner orkestrasyonu', 'Log yönetimi ve gerçek zamanlı performans izleme']
         : ['AWS, Azure, and GCP infrastructure setup and optimization', 'CI/CD pipeline automation for reliable delivery', 'Kubernetes and Docker container orchestration', 'Log management and real-time performance monitoring'],
@@ -337,8 +337,8 @@ const Services = () => {
       title:    tr ? '7/24 Destek'                        : '24/7 Support',
       headline: tr ? 'Sistemler durduğunda, biz zaten haberdarız' : 'When systems go down, we already know',
       desc:     tr
-        ? 'Kesintisiz teknik destek ve proaktif bakım. Sorun sizi bulmadan biz buluruz — ve çözeriz.'
-        : 'Uninterrupted technical support and proactive maintenance. We find the problem before it finds you — and we fix it.',
+        ? 'Kesintisiz teknik destek ve proaktif bakım. Sorun sizi bulmadan biz buluruz , ve çözeriz.'
+        : 'Uninterrupted technical support and proactive maintenance. We find the problem before it finds you , and we fix it.',
       bullets: tr
         ? ['7/24 teknik destek hattı ve garantili yanıt süreleri', 'Sorunları önceden yakalayan proaktif sistem izleme', 'Hızlı incident çözümü ve kök neden analizi', 'Düzenli güvenlik güncellemeleri ve patch yönetimi']
         : ['24/7 technical support with guaranteed response times', 'Proactive system monitoring that catches issues before they escalate', 'Fast incident resolution with root-cause analysis', 'Regular security updates and patch management'],
@@ -364,7 +364,7 @@ const Services = () => {
   return (
     <div className="bg-white overflow-x-hidden">
       <SEO
-        title="Pulsara Services — AI Consulting, Integrations & Enterprise Automation"
+        title="Pulsara Services , AI Consulting, Integrations & Enterprise Automation"
         description="Enterprise AI consulting, integrations, automations and custom ML development to build intelligent workflows."
       />
 
@@ -460,7 +460,7 @@ const Services = () => {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          SERVICES — ALTERNATING SECTIONS
+          SERVICES , ALTERNATING SECTIONS
       ══════════════════════════════════════════════════════ */}
       <section className="py-4">
         {services.map((svc, idx) => (
@@ -720,7 +720,7 @@ function CTASection({ tr }) {
           <p className="relative text-purple-200 text-base md:text-lg mb-10 max-w-xl mx-auto">
             {tr
               ? 'En büyük operasyonel darboğazınızı bize anlatın. Ücretsiz, somut bir AI önerisiyle geri döneceğiz.'
-              : "Tell us your biggest operational bottleneck. We'll come back with a concrete AI proposal — free."}
+              : "Tell us your biggest operational bottleneck. We'll come back with a concrete AI proposal , free."}
           </p>
           <div className="relative flex flex-wrap justify-center gap-4">
             <Link

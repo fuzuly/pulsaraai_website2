@@ -184,7 +184,7 @@ const Contact = () => {
   return (
     <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 bg-white">
       <SEO 
-        title="Contact Pulsara — Talk to Our AI & Engineering Team"
+        title="Contact Pulsara , Talk to Our AI & Engineering Team"
         description="Get in touch for demos, partnerships, enterprise AI consulting, and product inquiries."
       />
       <div className="container mx-auto px-4 sm:px-6">
@@ -221,7 +221,7 @@ const Contact = () => {
                 name="_next"
                 value={typeof window !== "undefined" ? window.location.origin + "/contact?thanks=1" : "https://pulsara.com.tr/contact?thanks=1"}
               />
-              <input type="hidden" name="_subject" value="New Contact Form Submission — Pulsara" />
+              <input type="hidden" name="_subject" value="New Contact Form Submission , Pulsara" />
               <input type="text" name="_gotcha" style={{ display: "none" }} />
 
               <div>
