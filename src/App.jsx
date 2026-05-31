@@ -19,6 +19,12 @@ import BlogList from './pages/BlogList.jsx';
 import BlogDetail from './pages/BlogDetail.jsx';
 import Privacy from './pages/Privacy.jsx';
 import AI from './pages/AI.jsx';
+import KahveZincirleriPage from './pages/tr/KahveZincirleriPage.jsx';
+import RestoranlarRakipTakip from './pages/tr/RestoranlarRakipTakip.jsx';
+import FastFoodRakipTakip from './pages/tr/FastFoodRakipTakip.jsx';
+import GoogleMapsRestoranlar from './pages/tr/GoogleMapsRestoranlar.jsx';
+import GoogleMapsKahve from './pages/tr/GoogleMapsKahve.jsx';
+import IstanbulKahveZinciri from './pages/tr/IstanbulKahveZinciri.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1524,6 +1530,26 @@ function BusinessApp() {
                 <Privacy />
                 <Footer />
               </>
+            } />
+
+            {/* Turkish SEO landing pages */}
+            <Route path="/tr/rakip-takip/kahve-zincirleri" element={
+              <><Navbar /><KahveZincirleriPage /><Footer /></>
+            } />
+            <Route path="/tr/rakip-takip/restoranlar" element={
+              <><Navbar /><RestoranlarRakipTakip /><Footer /></>
+            } />
+            <Route path="/tr/rakip-takip/fast-food-restoranlar" element={
+              <><Navbar /><FastFoodRakipTakip /><Footer /></>
+            } />
+            <Route path="/tr/google-haritalar-izleme/restoranlar" element={
+              <><Navbar /><GoogleMapsRestoranlar /><Footer /></>
+            } />
+            <Route path="/tr/google-haritalar-izleme/kahve-dukkanlari" element={
+              <><Navbar /><GoogleMapsKahve /><Footer /></>
+            } />
+            <Route path="/tr/istanbul/kahve-zinciri-rakip-analizi" element={
+              <><Navbar /><IstanbulKahveZinciri /><Footer /></>
             } />
 
             {/* Business site (old version) */}

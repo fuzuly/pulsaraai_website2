@@ -95,6 +95,19 @@ const content = {
       note: 'Referans logolar yakında eklenecek.',
       items: ['Kahve zinciri', 'Moda markası', 'Fast food zinciri', 'Süpermarket grubu'],
     },
+    useCases: {
+      headline: 'Sektörünüze özel rehberler',
+      sub: 'Rakip takibini kendi sektörünüz için nasıl kullandığını keşfedin.',
+      items: [
+        { emoji: '☕', name: 'Kahve & Kafe', desc: 'Fiyat savaşlarına hazır olun, yorum körleşmesini bitirin.', href: '/tr/rakip-takip/kahve-zincirleri' },
+        { emoji: '🍽️', name: 'Restoranlar', desc: 'Rakip restoran hamlelerini anlık izleyin.', href: '/tr/rakip-takip/restoranlar' },
+        { emoji: '🍔', name: 'Fast Food', desc: 'Kampanya ve fiyat değişimlerinde öne geçin.', href: '/tr/rakip-takip/fast-food-restoranlar' },
+        { emoji: '📍', name: 'Google Haritalar — Restoranlar', desc: 'Google Maps sıralamasını rakiplerinizden önce analiz edin.', href: '/tr/google-haritalar-izleme/restoranlar' },
+        { emoji: '☕', name: 'Google Haritalar — Kahve', desc: 'Kahve dükkanı keşfedilebilirliğini artırın.', href: '/tr/google-haritalar-izleme/kahve-dukkanlari' },
+        { emoji: '🏙️', name: 'İstanbul Kahve Zincirleri', desc: "İstanbul'da kahve zinciri rekabetini analiz edin.", href: '/tr/istanbul/kahve-zinciri-rakip-analizi' },
+      ],
+      cta: 'Detaylı incele →',
+    },
     form: {
       headline: 'Pilot programına başvurun',
       subhead: 'İlk 10 marka için 1 ay ücretsiz pilot kullanım',
@@ -203,6 +216,19 @@ const content = {
       headline: "Built for Turkey's leading brands",
       note: 'Reference logos coming soon.',
       items: ['Coffee chain', 'Fashion brand', 'Fast food chain', 'Supermarket group'],
+    },
+    useCases: {
+      headline: 'Sector-specific guides',
+      sub: 'Discover how competitor monitoring works for your sector.',
+      items: [
+        { emoji: '☕', name: 'Coffee & Café', desc: 'Be ready for price wars, end review blindness.', href: '/tr/rakip-takip/kahve-zincirleri' },
+        { emoji: '🍽️', name: 'Restaurants', desc: 'Monitor competitor restaurant moves in real time.', href: '/tr/rakip-takip/restoranlar' },
+        { emoji: '🍔', name: 'Fast Food', desc: 'Stay ahead of campaign and price changes.', href: '/tr/rakip-takip/fast-food-restoranlar' },
+        { emoji: '📍', name: 'Google Maps — Restaurants', desc: 'Analyze Google Maps rankings before your competitors.', href: '/tr/google-haritalar-izleme/restoranlar' },
+        { emoji: '☕', name: 'Google Maps — Coffee', desc: 'Improve coffee shop discoverability.', href: '/tr/google-haritalar-izleme/kahve-dukkanlari' },
+        { emoji: '🏙️', name: 'Istanbul Coffee Chains', desc: 'Analyze coffee chain competition in Istanbul.', href: '/tr/istanbul/kahve-zinciri-rakip-analizi' },
+      ],
+      cta: 'Read guide →',
     },
     form: {
       headline: 'Apply for the pilot program',
@@ -676,7 +702,41 @@ const PulsaraIntel = () => {
       </section>
 
       {/* ══════════════════════════════════════════
-          6. EXCLUSIVE PILOT PORTAL (FORM)
+          6. USE CASES
+      ══════════════════════════════════════════ */}
+      <section className="py-24 sm:py-32 border-t border-white/10">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={stagger}
+          >
+            <motion.div variants={fadeUp} className="text-center mb-14">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{c.useCases.headline}</h2>
+              <p className="text-slate-400 text-lg max-w-xl mx-auto">{c.useCases.sub}</p>
+            </motion.div>
+            <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+              {c.useCases.items.map((item, i) => (
+                <motion.a
+                  key={i}
+                  variants={fadeUp}
+                  href={item.href}
+                  className="bg-white/5 border border-white/10 hover:border-purple-500/40 hover:bg-white/10 rounded-2xl p-6 transition-all duration-300 group block"
+                >
+                  <div className="text-3xl mb-3">{item.emoji}</div>
+                  <h3 className="text-base font-bold text-white mb-2">{item.name}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed mb-4">{item.desc}</p>
+                  <span className="text-sm text-purple-400 group-hover:text-purple-300 font-semibold transition-colors">{c.useCases.cta}</span>
+                </motion.a>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          7. EXCLUSIVE PILOT PORTAL (FORM)
       ══════════════════════════════════════════ */}
       <section id="pilot-form" className="relative py-24 sm:py-32 overflow-hidden border-t border-white/10">
         <div className="absolute inset-0 bg-slate-900/80" />

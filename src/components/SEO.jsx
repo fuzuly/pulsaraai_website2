@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
-const SEO = ({ title, description, datePublished = null, dateModified = null }) => {
+const SEO = ({ title, description, datePublished = null, dateModified = null, breadcrumbData = null }) => {
   const location = useLocation();
   const { language } = useLanguage();
 
@@ -75,6 +75,19 @@ const SEO = ({ title, description, datePublished = null, dateModified = null }) 
     updateMetaTag('name', 'description', description);
     updateLinkTag('canonical', canonicalUrl);
 
+    // ── Hreflang ──────────────────────────────────────────────────────────
+    ['tr', 'en', 'x-default'].forEach(lang => {
+      const el = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
+      if (el) el.remove();
+    });
+    if (canonicalPath.startsWith('/tr/')) {
+      updateLinkTag('alternate', `${baseUrl}${canonicalPath}`, 'tr');
+      updateLinkTag('alternate', `${baseUrl}/pulsara-intel`, 'en');
+    } else {
+      updateLinkTag('alternate', `${baseUrl}${canonicalPath}`, 'en');
+    }
+    updateLinkTag('alternate', `${baseUrl}/`, 'x-default');
+
     updateMetaTag('property', 'og:title', title);
     updateMetaTag('property', 'og:description', description);
     updateMetaTag('property', 'og:image', `${baseUrl}/og-default.png`);
@@ -113,6 +126,7 @@ const SEO = ({ title, description, datePublished = null, dateModified = null }) 
 
     // ── 3. BreadcrumbList Schema ───────────────────────────────────────────
     const isBlogPost = canonicalPath.startsWith('/blog/') && canonicalPath.length > '/blog/'.length;
+    const isTurkishLandingPage = canonicalPath.startsWith('/tr/');
 
     if (canonicalPath === '/' || canonicalPath === '/home') {
       removeJSONLD('breadcrumb-schema');
@@ -125,6 +139,17 @@ const SEO = ({ title, description, datePublished = null, dateModified = null }) 
           { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://pulsaraai.com/" },
           { "@type": "ListItem", "position": 2, "name": "Blog",  "item": "https://pulsaraai.com/blog" },
           { "@type": "ListItem", "position": 3, "name": title || "Article", "item": `${baseUrl}${canonicalPath}` }
+        ]
+      });
+    } else if (isTurkishLandingPage && breadcrumbData) {
+      // 3-level: Home > Category > Page (Turkish landing pages)
+      injectJSONLD('breadcrumb-schema', {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://pulsaraai.com/" },
+          { "@type": "ListItem", "position": 2, "name": breadcrumbData.cat, "item": breadcrumbData.catUrl },
+          { "@type": "ListItem", "position": 3, "name": breadcrumbData.page, "item": `${baseUrl}${canonicalPath}` }
         ]
       });
     } else {
@@ -152,6 +177,21 @@ const SEO = ({ title, description, datePublished = null, dateModified = null }) 
       } else {
         removeJSONLD('breadcrumb-schema');
       }
+    }
+
+    // ── 3b. WebPage Schema for Turkish landing pages ──────────────────────
+    if (isTurkishLandingPage) {
+      injectJSONLD('webpage-schema', {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "description": description,
+        "url": `${baseUrl}${canonicalPath}`,
+        "inLanguage": "tr",
+        "isPartOf": { "@type": "WebSite", "url": "https://pulsaraai.com" }
+      });
+    } else {
+      removeJSONLD('webpage-schema');
     }
 
     // ── 4. Product Schemas (/products only) — Finance Manager + ProdiX removed
@@ -249,7 +289,7 @@ const SEO = ({ title, description, datePublished = null, dateModified = null }) 
       removeJSONLD('article-schema');
     }
 
-  }, [title, description, datePublished, dateModified, location.pathname, language]);
+  }, [title, description, datePublished, dateModified, breadcrumbData, location.pathname, language]);
 
   return null;
 };
