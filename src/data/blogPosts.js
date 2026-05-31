@@ -2,6 +2,176 @@
 // Note: Images are handled via imports in the components
 export const blogPosts = [
   {
+    id: 5,
+    title: 'The Hidden Cost of Employee Burnout: Why Companies Notice It Too Late',
+    slug: 'hidden-cost-of-employee-burnout',
+    date: '2026-05-31',
+    description: 'Employee burnout is no longer just an HR concern. Discover why burnout develops silently, its real business impact, and how forward-thinking companies use data and AI to identify warning signs early.',
+    content: `
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Employee burnout is no longer just an HR concern.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        It has become a business problem.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Organizations invest heavily in recruitment, training, benefits, and workplace culture. Yet many companies still struggle with declining productivity, disengaged employees, and increasing turnover rates.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The reason is simple: burnout often develops silently.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8">
+        By the time managers recognize the warning signs, the damage has already been done.
+      </p>
+
+      <hr class="my-8 border-gray-200" />
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">What Is Employee Burnout?</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Burnout is a state of physical, emotional, and mental exhaustion caused by prolonged workplace stress.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Unlike temporary fatigue, burnout affects motivation, performance, and overall wellbeing.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Common symptoms include:
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
+        <li>Reduced productivity</li>
+        <li>Loss of motivation</li>
+        <li>Increased absenteeism</li>
+        <li>Emotional exhaustion</li>
+        <li>Difficulty concentrating</li>
+        <li>Higher employee turnover</li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8">
+        The challenge for organizations is that these symptoms are often detected too late.
+      </p>
+
+      <hr class="my-8 border-gray-200" />
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">The Business Impact of Burnout</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Many leaders underestimate the financial impact of employee wellbeing.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Burnout can lead to:
+      </p>
+
+      <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 mt-6">Increased Turnover</h3>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Replacing an experienced employee is expensive.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Beyond recruitment costs, organizations lose valuable knowledge, productivity, and team stability.
+      </p>
+
+      <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 mt-6">Lower Productivity</h3>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Burned-out employees may still be present at work, but their effectiveness decreases significantly.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        This phenomenon, known as presenteeism, often costs companies more than absenteeism.
+      </p>
+
+      <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 mt-6">Reduced Innovation</h3>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Employees experiencing chronic stress are less likely to contribute new ideas, collaborate effectively, or engage in problem-solving activities.
+      </p>
+
+      <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 mt-6">Negative Workplace Culture</h3>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Burnout is rarely isolated.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8">
+        Stress often spreads across teams, affecting morale and employee satisfaction.
+      </p>
+
+      <hr class="my-8 border-gray-200" />
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">Why Traditional Surveys Are Not Enough</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Most organizations rely on annual or quarterly employee surveys.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        While surveys provide useful insights, they have limitations:
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
+        <li>Feedback is collected infrequently</li>
+        <li>Employees may hesitate to share concerns openly</li>
+        <li>Problems are identified after they have already escalated</li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8">
+        Organizations need a more proactive approach.
+      </p>
+
+      <hr class="my-8 border-gray-200" />
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">The Future of Employee Wellbeing</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Forward-thinking companies are beginning to use data and artificial intelligence to identify early warning signs.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Rather than waiting for employees to reach a crisis point, modern wellbeing programs focus on prevention.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Key indicators can include:
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
+        <li>Engagement trends</li>
+        <li>Workload patterns</li>
+        <li>Communication behavior</li>
+        <li>Team sentiment</li>
+        <li>Employee feedback signals</li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        The goal is not surveillance.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8">
+        The goal is helping organizations identify risks early and provide support before burnout affects performance and retention.
+      </p>
+
+      <hr class="my-8 border-gray-200" />
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">Creating a Healthier Workplace</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Reducing burnout requires more than wellness initiatives.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Successful organizations focus on:
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
+        <li>Clear communication</li>
+        <li>Sustainable workloads</li>
+        <li>Employee recognition</li>
+        <li>Psychological safety</li>
+        <li>Continuous feedback</li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Employee wellbeing should not be viewed as a cost center.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8 font-semibold">
+        It is a long-term investment in productivity, retention, and organizational performance.
+      </p>
+
+      <hr class="my-8 border-gray-200" />
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 mt-8">Final Thoughts</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Burnout rarely appears overnight.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        It develops gradually through repeated stress, disengagement, and lack of support.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Organizations that learn to identify early warning signs will be better positioned to retain talent, improve productivity, and build healthier workplaces.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed font-semibold">
+        The companies that prioritize employee wellbeing today will be the ones that attract and keep the best talent tomorrow.
+      </p>
+    `,
+  },
+  {
     id: 4,
     title: 'How to Monitor Competitors Without Wasting Hours Every Week',
     slug: 'how-to-monitor-competitors',
