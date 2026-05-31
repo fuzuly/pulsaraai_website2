@@ -51,28 +51,6 @@ export const translations = {
             'Integrations with HR and time-tracking tools',
           ],
         },
-        financeManager: {
-          name: 'Finance Manager',
-          tagline: 'Financial Operations',
-          description: 'Centralize contracts, invoices, and financial performance. See the real profitability of customers, projects, and teams in one place.',
-          features: [
-            'Contract & SLA tracking',
-            'Automated recurring invoices',
-            'Revenue, margin, and cost analytics',
-            'Alerts for anomalies and overdue items',
-          ],
-        },
-        prodix: {
-          name: 'ProdiX',
-          tagline: 'Factory Intelligence',
-          description: 'AI-driven production intelligence for factories. Track SKT, stock levels, line performance, and quality in real time to reduce waste and downtime.',
-          features: [
-            'SKT (expiry date) monitoring & alerts',
-            'Stock and material flow visibility',
-            'Line performance & OEE analytics',
-            'Predictive warnings for delays and issues',
-          ],
-        },
       },
       cta: {
         title: 'Ready to Transform Your Business?',
@@ -168,28 +146,6 @@ export const translations = {
             'Yetenek, sözleşme ve uyumluluk bilinçli vardiyalar',
             'Gerçek zamanlı kapsama ve fazla mesai görünürlüğü',
             'İK ve zaman takip araçları ile entegrasyonlar',
-          ],
-        },
-        financeManager: {
-          name: 'Finance Manager',
-          tagline: 'Finansal Operasyonlar',
-          description: 'Sözleşmeleri, faturaları ve finansal performansı merkezileştirin. Müşterilerin, projelerin ve ekiplerin gerçek karlılığını tek bir yerde görün.',
-          features: [
-            'Sözleşme ve SLA takibi',
-            'Otomatik tekrarlayan faturalar',
-            'Gelir, marj ve maliyet analitiği',
-            'Anomali ve gecikmiş öğeler için uyarılar',
-          ],
-        },
-        prodix: {
-          name: 'ProdiX',
-          tagline: 'Fabrika Zekası',
-          description: 'Fabrikalar için AI destekli üretim zekası. SKT\'yi, stok seviyelerini, hat performansını ve kaliteyi gerçek zamanlı olarak takip ederek israfı ve duruş süresini azaltın.',
-          features: [
-            'SKT (son kullanma tarihi) izleme ve uyarılar',
-            'Stok ve malzeme akışı görünürlüğü',
-            'Hat performansı ve OEE analitiği',
-            'Gecikmeler ve sorunlar için tahmine dayalı uyarılar',
           ],
         },
       },

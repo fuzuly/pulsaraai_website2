@@ -27,11 +27,11 @@ const Home = () => {
         ? 'Kurumsal AI Platformları ile Verimliliği Artırın'
         : 'Increase Efficiency with Enterprise AI Platforms',
       description1: language === 'tr'
-        ? 'Pulsara\'nın AI platformları, işgücü yönetimi, Wellbeing takibi ve finansal operasyonlar için kurumsal düzeyde çözümler sunar. Yapay zeka destekli sistemlerle operasyonlarınızı optimize edin.'
-        : 'Pulsara\'s AI platforms deliver enterprise-grade solutions for workforce management, wellbeing tracking, and financial operations. Optimize your operations with AI-powered systems.',
+        ? 'Pulsara\'nın AI platformları, işgücü yönetimi, Wellbeing takibi ve rakip zekası için kurumsal düzeyde çözümler sunar. Yapay zeka destekli sistemlerle operasyonlarınızı optimize edin.'
+        : 'Pulsara\'s AI platforms deliver enterprise-grade solutions for workforce management, wellbeing tracking, and competitive intelligence. Optimize your operations with AI-powered systems.',
       description2: language === 'tr'
-        ? 'Wellbeing Manager, Roster Manager ve Finance Manager gibi platformlarımız, verilerinizi tek bir yerde toplayarak gerçek zamanlı içgörüler ve otomatik karar destek sistemleri sağlar.'
-        : 'Our platforms like Wellbeing Manager, Roster Manager, and Finance Manager centralize your data to provide real-time insights and automated decision support systems.',
+        ? 'Wellbeing Manager, Roster Manager ve Pulsara Intel gibi platformlarımız, verilerinizi tek bir yerde toplayarak gerçek zamanlı içgörüler ve otomatik karar destek sistemleri sağlar.'
+        : 'Our platforms like Wellbeing Manager, Roster Manager, and Pulsara Intel centralize your data to provide real-time insights and automated decision support systems.',
       hint: language === 'tr'
         ? 'AI platformları ile işgücü yönetimini dijitalleştirerek tüm süreçleri tek bir platformda gerçek zamanlı olarak takip edebilirsiniz.'
         : 'Digitize workforce management with AI platforms to track all processes in real-time on a single platform.',
@@ -150,8 +150,8 @@ const Home = () => {
   return (
     <div className="bg-white text-slate-900 min-h-screen">
       <SEO 
-        title="Pulsara AI , Enterprise AI Solutions for Workforce, Finance & Production"
-        description="AI platforms for workforce intelligence, finance automation, production analytics, and real-time optimization. Built for modern enterprises."
+        title="Pulsara AI , Enterprise AI Solutions for Workforce & Intelligence"
+        description="AI platforms for workforce wellbeing, scheduling, and competitive intelligence. Built for modern enterprises."
       />
       {/* Hero Section - Full Screen Video */}
       <HeroVideoHeader />
@@ -290,55 +290,6 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">
-                  {t.products.financeManager.tagline}
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-light text-gray-900 mb-4">
-                  {t.products.financeManager.name}
-                </h3>
-                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                  {t.products.financeManager.description}
-                </p>
-              </div>
-              <ul className="space-y-3 mb-6">
-                {t.products.financeManager.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700 text-sm sm:text-base">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/products" className="text-green-600 font-semibold hover:underline">
-                {language === 'tr' ? 'Daha fazla bilgi' : 'Learn more'} →
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <span className="inline-block px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-semibold mb-4">
-                  {t.products.prodix.tagline}
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-light text-gray-900 mb-4">
-                  {t.products.prodix.name}
-                </h3>
-                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                  {t.products.prodix.description}
-                </p>
-              </div>
-              <ul className="space-y-3 mb-6">
-                {t.products.prodix.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700 text-sm sm:text-base">
-                    <span className="text-yellow-600 mt-1">•</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/products" className="text-yellow-600 font-semibold hover:underline">
-                {language === 'tr' ? 'Daha fazla bilgi' : 'Learn more'} →
-              </Link>
-            </div>
           </div>
         </div>
       </section>

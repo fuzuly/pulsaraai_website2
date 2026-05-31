@@ -17,6 +17,8 @@ import Ortakliklar from './pages/Ortakliklar.jsx';
 import PulsaraIntel from './pages/PulsaraIntel.jsx';
 import BlogList from './pages/BlogList.jsx';
 import BlogDetail from './pages/BlogDetail.jsx';
+import Privacy from './pages/Privacy.jsx';
+import AI from './pages/AI.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1502,6 +1504,24 @@ function BusinessApp() {
               <>
                 <Navbar />
                 <PulsaraIntel />
+                <Footer />
+              </>
+            } />
+
+            {/* AI solutions page */}
+            <Route path="/ai" element={
+              <>
+                <Navbar />
+                <AI />
+                <Footer />
+              </>
+            } />
+
+            {/* Privacy policy */}
+            <Route path="/privacy" element={
+              <>
+                <Navbar />
+                <Privacy />
                 <Footer />
               </>
             } />

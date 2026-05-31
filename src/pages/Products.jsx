@@ -26,13 +26,11 @@ const content = {
   tr: {
     seo: {
       title: 'Pulsara Ürünleri , Kurumsal AI Platformları',
-      description: 'Wellbeing, işgücü planlama, büyük veri analitiği ve endüstriyel IoT için kurumsal yapay zeka platformları.',
+      description: 'Wellbeing, işgücü planlama ve veri analitiği için kurumsal yapay zeka platformları.',
     },
     eyebrow: 'Ürünlerimiz',
     heading: 'Ürünlerimiz',
     subtitle: 'İşletmenizin her katmanı için kurumsal yapay zeka çözümleri',
-    cat1: 'İnsan & Operasyon Zekası',
-    cat2: 'Endüstriyel & Veri Çözümleri',
     cta: {
       heading: 'Hangi ürün işinize yarar?',
       sub: 'Ekibimiz, ihtiyaçlarınızı dinleyip size en uygun platformu önerir , ücretsiz.',
@@ -85,33 +83,16 @@ const content = {
         ],
         prominent: false,
       },
-      {
-        badge: 'Endüstriyel IoT',
-        badgeColor: 'bg-teal-100 text-teal-700',
-        name: 'ProdiX',
-        tagline: 'Üretim ve saha operasyonlarını yapay zeka ile izleyin',
-        taglineColor: 'text-teal-600',
-        description: 'Gıda, üretim ve lojistik sektörleri için tasarlanmış IoT tabanlı sıcaklık/nem izleme, merkezi alarm sistemi ve üretim otomasyon zekası platformu. Tüm lokasyonlar tek ekranda.',
-        features: [
-          'Gerçek zamanlı sıcaklık & nem ölçümü',
-          'Merkezi izleme paneli , tüm şubeler tek ekranda',
-          'Eşik aşımlarında otomatik alarm (SMS, e-posta, uygulama)',
-          'Üretim otomasyon entegrasyonu & AI analitik',
-        ],
-        prominent: true,
-      },
     ],
   },
   en: {
     seo: {
       title: 'Pulsara Products , Enterprise AI Platforms',
-      description: 'Enterprise AI platforms for wellbeing, workforce planning, big data analytics, and industrial IoT. Built for scale.',
+      description: 'Enterprise AI platforms for wellbeing, workforce planning, and data analytics. Built for scale.',
     },
     eyebrow: 'Our Products',
     heading: 'Our Products',
     subtitle: 'Enterprise AI solutions for every layer of your business',
-    cat1: 'People & Operations Intelligence',
-    cat2: 'Industrial & Data Solutions',
     cta: {
       heading: 'Not sure which product fits?',
       sub: 'Our team will listen to your needs and recommend the right platform , for free.',
@@ -163,21 +144,6 @@ const content = {
           'Customizable KPI tracking panels',
         ],
         prominent: false,
-      },
-      {
-        badge: 'Industrial IoT',
-        badgeColor: 'bg-teal-100 text-teal-700',
-        name: 'ProdiX',
-        tagline: 'Monitor production & field operations with AI',
-        taglineColor: 'text-teal-600',
-        description: 'An IoT-based temperature/humidity monitoring, centralized alarm system, and production automation intelligence platform designed for food, manufacturing, and logistics. All locations, one screen.',
-        features: [
-          'Real-time temperature & humidity measurement',
-          'Centralized monitoring , all branches on one screen',
-          'Automatic alerts on threshold breach (SMS, email, app)',
-          'Production automation integration & AI analytics',
-        ],
-        prominent: true,
       },
     ],
   },
@@ -238,22 +204,10 @@ const ProductCard = ({ badge, badgeColor, name, tagline, taglineColor, descripti
 );
 
 /* ─── Category Header ─── */
-const CategoryHeader = ({ label }) => (
-  <div className="flex items-center gap-4 mb-8 sm:mb-10">
-    <div className="flex-shrink-0">
-      <span className="inline-block px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-xs font-semibold tracking-widest uppercase">
-        {label}
-      </span>
-    </div>
-    <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent" />
-  </div>
-);
-
 /* ─── Main Page ─── */
 const Products = () => {
   const { language } = useLanguage();
   const c = content[language === 'tr' ? 'tr' : 'en'];
-  const [cat1p1, cat1p2, cat2p1, cat2p2] = c.products;
 
   return (
     <div className="bg-white min-h-screen">
@@ -284,30 +238,16 @@ const Products = () => {
       <section className="pb-20 sm:pb-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
 
-          {/* Category 1 */}
-          <CategoryHeader label={c.cat1} />
           <motion.div
             variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
           >
-            <ProductCard {...cat1p1} learnMore={c.learnMore} />
-            <ProductCard {...cat1p2} learnMore={c.learnMore} />
-          </motion.div>
-
-          {/* Category 2 */}
-          <CategoryHeader label={c.cat2} />
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
-          >
-            <ProductCard {...cat2p1} learnMore={c.learnMore} />
-            <ProductCard {...cat2p2} learnMore={c.learnMore} />
+            {c.products.map((product, i) => (
+              <ProductCard key={i} {...product} learnMore={c.learnMore} />
+            ))}
           </motion.div>
         </div>
       </section>

@@ -26,9 +26,11 @@ const BlogDetail = () => {
 
   return (
     <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 bg-white min-h-screen">
-      <SEO 
-        title={`${post.title} , Pulsara Blog`}
+      <SEO
+        title={`${post.title} — Pulsara Blog`}
         description={post.description}
+        datePublished={post.date}
+        dateModified={post.date}
       />
       <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
         {/* Back Link */}
