@@ -297,9 +297,9 @@ const IntelDashboard = () => (
         <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Rakip Sıralama</p>
         <div className="space-y-2">
           {[
-            { name: 'Caffe Nero', rating: 4.6, delta: '+0.2', up: true, price: '₺75' },
-            { name: 'Starbucks', rating: 4.1, delta: '-0.3', up: false, price: '₺95' },
-            { name: 'Espresso Lab', rating: 3.8, delta: '-0.1', up: false, price: '₺42' },
+            { name: 'Rakip Marka A', rating: 4.6, delta: '+0.2', up: true, price: '₺75' },
+            { name: 'Rakip Marka B', rating: 4.1, delta: '-0.3', up: false, price: '₺95' },
+            { name: 'Rakip Marka C', rating: 3.8, delta: '-0.1', up: false, price: '₺42' },
           ].map((c, i) => (
             <div key={i} className="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors border border-white/5 rounded-xl px-4 py-3">
               <div className="flex items-center gap-3">
@@ -323,7 +323,7 @@ const IntelDashboard = () => (
         </svg>
         <div>
           <p className="text-sm font-bold text-amber-500">Fiyat Değişimi Algılandı</p>
-          <p className="text-sm text-amber-200/80 mt-0.5">Starbucks büyük boy ürünü ₺95 → ₺85'e indirdi</p>
+          <p className="text-sm text-amber-200/80 mt-0.5">Rakip Marka B büyük boy ürünü ₺95 → ₺85'e indirdi</p>
         </div>
       </div>
 
