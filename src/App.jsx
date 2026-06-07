@@ -98,7 +98,7 @@ const translations = {
       careersSubtitle: "We're building the future of aviation with AI. Apply below.",
       openPositions: "Open Positions",
       jobFullstackTitle: "Fullstack Engineer",
-      jobFullstackLocation: "Remote / Hybrid Istanbul",
+      jobFullstackLocation: "Remote / Hybrid · Cheyenne, WY",
       jobFullstackType: "Full-time",
       performanceTitle: "Performance Manager",
 performanceDesc: "Set goals, track KPIs, run reviews, and coach teams with AI insights.",

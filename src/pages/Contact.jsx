@@ -142,7 +142,7 @@ const Contact = () => {
         title: 'Contact Information',
         email: 'Email',
         location: 'Location',
-        locationValue: 'Istanbul, Turkey',
+        locationValue: 'Cheyenne, Wyoming, USA',
       },
       schedule: {
         title: 'Schedule a Consultation',
@@ -169,7 +169,7 @@ const Contact = () => {
         title: 'İletişim Bilgileri',
         email: 'E-posta',
         location: 'Konum',
-        locationValue: 'İstanbul, Türkiye',
+        locationValue: 'Cheyenne, Wyoming, ABD',
       },
       schedule: {
         title: 'Danışmanlık Planla',
