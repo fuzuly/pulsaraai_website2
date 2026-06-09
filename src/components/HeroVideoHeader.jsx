@@ -1,311 +1,234 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { translations } from '../translations';
 
-// ─── Terminal scenarios ────────────────────────────────────────────────────────
-const SCENARIOS_EN = [
-  {
-    comment: 'initialising workforce-wellbeing agent',
-    lines: [
-      { text: '$ pulsara init wellbeing-agent', type: 'command' },
-      { text: '  → Loading mood signals: 1,240 employees', type: 'muted' },
-      { text: '  → Connecting to HR platform: Salesforce OK', type: 'muted' },
-      { text: '  ✓ Agent online , burnout risk alerts active', type: 'success' },
-    ],
+/* ─── Bilingual copy ─── */
+const COPY = {
+  en: {
+    headline: 'Clarity. Focus. Impact.',
+    subtitle: 'We turn complex ideas into effortless experiences',
   },
-  {
-    comment: 'initialising roster-optimisation agent',
-    lines: [
-      { text: '$ pulsara init roster-agent', type: 'command' },
-      { text: '  → Syncing shift data: 86 active locations', type: 'muted' },
-      { text: '  → Running compliance rules v4.1', type: 'muted' },
-      { text: '  ✓ Agent online , schedules optimised 3× faster', type: 'success' },
-    ],
+  tr: {
+    headline: 'Netlik. Odak. Etki.',
+    subtitle: 'Karmaşık fikirleri zahmetsiz deneyimlere dönüştürüyoruz.',
   },
-  {
-    comment: 'initialising finance-automation agent',
-    lines: [
-      { text: '$ pulsara init finance-agent', type: 'command' },
-      { text: '  → Parsing invoices: PDF, XLSX, ERP feed', type: 'muted' },
-      { text: '  → Accuracy benchmark: 99.1% on test set', type: 'muted' },
-      { text: '  ✓ Agent online , processing 8k docs/day', type: 'success' },
-    ],
-  },
-];
+};
 
-const SCENARIOS_TR = [
-  {
-    comment: 'wellbeing ajanı başlatılıyor',
-    lines: [
-      { text: '$ pulsara init wellbeing-agent', type: 'command' },
-      { text: '  → Ruh hali sinyalleri yükleniyor: 1.240 çalışan', type: 'muted' },
-      { text: '  → İK platformuna bağlanılıyor: Başarılı', type: 'muted' },
-      { text: '  ✓ Ajan aktif , tükenmişlik uyarıları çalışıyor', type: 'success' },
-    ],
-  },
-  {
-    comment: 'vardiya optimizasyon ajanı başlatılıyor',
-    lines: [
-      { text: '$ pulsara init roster-agent', type: 'command' },
-      { text: '  → Vardiya verisi senkronize ediliyor: 86 lokasyon', type: 'muted' },
-      { text: '  → Uyumluluk kuralları çalıştırılıyor v4.1', type: 'muted' },
-      { text: '  ✓ Ajan aktif , programlar 3× daha hızlı', type: 'success' },
-    ],
-  },
-  {
-    comment: 'finans otomasyon ajanı başlatılıyor',
-    lines: [
-      { text: '$ pulsara init finance-agent', type: 'command' },
-      { text: '  → Faturalar ayrıştırılıyor: PDF, XLSX, ERP', type: 'muted' },
-      { text: '  → Doğruluk kıyaslaması: %99,1', type: 'muted' },
-      { text: '  ✓ Ajan aktif , günlük 8k belge işleniyor', type: 'success' },
-    ],
-  },
-];
+/* ─── Animated wave canvas ─── */
+const WaveCanvas = () => {
+  const ref = useRef(null);
 
-const METRICS_EN = [
-  { value: '40+', label: 'AI systems live' },
-  { value: '3×', label: 'Efficiency gain' },
-  { value: '8wk', label: 'Time to production' },
-  { value: '99%+', label: 'Accuracy rate' },
-];
-
-const METRICS_TR = [
-  { value: '40+', label: 'Aktif AI sistemi' },
-  { value: '3×', label: 'Verimlilik artışı' },
-  { value: '8hf', label: 'Yayına alma süresi' },
-  { value: '99%+', label: 'Doğruluk oranı' },
-];
-
-// ─── Line colour helper ────────────────────────────────────────────────────────
-function lineColour(type) {
-  switch (type) {
-    case 'command': return '#a387fd';
-    case 'success': return '#4ade80';
-    default:        return '#6b7280';
-  }
-}
-
-// ─── Terminal animation ────────────────────────────────────────────────────────
-function TerminalDisplay({ scenario, onDone }) {
-  const [completedLines, setCompletedLines] = useState([]);
-  const [typingLine, setTypingLine]         = useState(0);
-  const [typingChars, setTypingChars]       = useState(0);
-  const [showCursor, setShowCursor]         = useState(true);
-  const onDoneRef = useRef(onDone);
-  onDoneRef.current = onDone;
-
-  // Cursor blink
   useEffect(() => {
-    const id = setInterval(() => setShowCursor(c => !c), 530);
-    return () => clearInterval(id);
+    const canvas = ref.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let rafId;
+    let tick = 0;
+
+    const resize = () => {
+      const dpr = window.devicePixelRatio || 1;
+      const w   = canvas.offsetWidth;
+      const h   = canvas.offsetHeight;
+      canvas.width  = w * dpr;
+      canvas.height = h * dpr;
+      ctx.scale(dpr, dpr);
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
+    /* Draw one filled wave layer */
+    const drawLayer = (w, h, baseY, amp, freq, sp, phase, stops) => {
+      ctx.beginPath();
+      ctx.moveTo(0, h);
+
+      /* Smooth quadratic curve through sampled points */
+      const pts = [];
+      for (let x = 0; x <= w; x += 4) {
+        const nx = x / w;
+        const t1 = nx * Math.PI * 2 * freq  + tick * sp        + phase;
+        const t2 = nx * Math.PI * 2 * freq * 0.43 + tick * sp * 1.6 + phase * 1.9;
+        pts.push({ x, y: baseY + Math.sin(t1) * amp + Math.sin(t2) * amp * 0.38 });
+      }
+
+      ctx.lineTo(pts[0].x, pts[0].y);
+      for (let i = 1; i < pts.length - 1; i++) {
+        const mx = (pts[i].x + pts[i + 1].x) / 2;
+        const my = (pts[i].y + pts[i + 1].y) / 2;
+        ctx.quadraticCurveTo(pts[i].x, pts[i].y, mx, my);
+      }
+      const last = pts[pts.length - 1];
+      ctx.lineTo(last.x, last.y);
+      ctx.lineTo(w, h);
+      ctx.closePath();
+
+      const g = ctx.createLinearGradient(0, 0, w, 0);
+      stops.forEach(([pos, col]) => g.addColorStop(pos, col));
+      ctx.fillStyle = g;
+      ctx.fill();
+    };
+
+    const render = () => {
+      const w = canvas.offsetWidth;
+      const h = canvas.offsetHeight;
+      ctx.clearRect(0, 0, w, h);
+
+      /* ── Wave layers back → front ── */
+      /* deep base */
+      drawLayer(w, h, h * 0.80, 44, 1.1, 0.0018, 0.00,  [
+        [0,    'rgba(90,10,3,0.75)'],
+        [0.38, 'rgba(170,35,5,0.85)'],
+        [0.65, 'rgba(55,85,12,0.65)'],
+        [1,    'rgba(18,38,5,0.50)'],
+      ]);
+
+      /* mid layer */
+      drawLayer(w, h, h * 0.68, 38, 1.45, 0.0024, 2.10, [
+        [0,    'rgba(130,18,5,0.60)'],
+        [0.30, 'rgba(215,58,8,0.78)'],
+        [0.60, 'rgba(70,105,16,0.55)'],
+        [1,    'rgba(25,52,8,0.42)'],
+      ]);
+
+      /* top accent */
+      drawLayer(w, h, h * 0.58, 28, 1.85, 0.0030, 4.20, [
+        [0,    'rgba(75,7,2,0.50)'],
+        [0.28, 'rgba(195,48,6,0.70)'],
+        [0.58, 'rgba(38,68,7,0.58)'],
+        [1,    'rgba(12,28,4,0.38)'],
+      ]);
+
+      /* narrow bright crest */
+      drawLayer(w, h, h * 0.73, 22, 2.40, 0.0038, 1.55, [
+        [0,    'rgba(110,14,3,0.45)'],
+        [0.35, 'rgba(240,70,10,0.60)'],
+        [0.62, 'rgba(45,78,10,0.50)'],
+        [1,    'rgba(15,32,4,0.32)'],
+      ]);
+
+      /* ── Glow blobs ── */
+      const gx = w * (0.32 + 0.06 * Math.sin(tick * 0.0012));
+      const gy = h * (0.55 + 0.05 * Math.cos(tick * 0.0009));
+      ctx.save();
+      ctx.globalCompositeOperation = 'screen';
+      ctx.globalAlpha = 0.55;
+      // orange-red glow
+      const rg1 = ctx.createRadialGradient(gx, gy, 0, gx, gy, w * 0.28);
+      rg1.addColorStop(0,   'rgba(255,80,10,0.55)');
+      rg1.addColorStop(0.5, 'rgba(200,40,5,0.20)');
+      rg1.addColorStop(1,   'rgba(0,0,0,0)');
+      ctx.fillStyle = rg1;
+      ctx.fillRect(0, 0, w, h);
+      // subtle green glow right side
+      const gx2 = w * (0.68 + 0.04 * Math.sin(tick * 0.0010 + 1.8));
+      const gy2 = h * (0.65 + 0.04 * Math.cos(tick * 0.0007 + 0.9));
+      const rg2 = ctx.createRadialGradient(gx2, gy2, 0, gx2, gy2, w * 0.22);
+      rg2.addColorStop(0,   'rgba(60,120,15,0.45)');
+      rg2.addColorStop(0.5, 'rgba(30,80,8,0.15)');
+      rg2.addColorStop(1,   'rgba(0,0,0,0)');
+      ctx.fillStyle = rg2;
+      ctx.fillRect(0, 0, w, h);
+      ctx.restore();
+
+      /* ── Top fade: hard black → transparent (hides top of wave) ── */
+      const fadeTop = ctx.createLinearGradient(0, 0, 0, h * 0.52);
+      fadeTop.addColorStop(0, 'rgba(0,0,0,1)');
+      fadeTop.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = fadeTop;
+      ctx.fillRect(0, 0, w, h);
+
+      /* ── Bottom fade to black ── */
+      const fadeBot = ctx.createLinearGradient(0, h * 0.82, 0, h);
+      fadeBot.addColorStop(0, 'rgba(0,0,0,0)');
+      fadeBot.addColorStop(1, 'rgba(0,0,0,1)');
+      ctx.fillStyle = fadeBot;
+      ctx.fillRect(0, 0, w, h);
+
+      tick++;
+      rafId = requestAnimationFrame(render);
+    };
+
+    render();
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('resize', resize);
+    };
   }, []);
 
-  // Typewriter
-  useEffect(() => {
-    if (typingLine >= scenario.lines.length) {
-      onDoneRef.current();
-      return;
-    }
-    const lineText = scenario.lines[typingLine].text;
-    if (typingChars < lineText.length) {
-      const id = setTimeout(() => setTypingChars(c => c + 1), 26);
-      return () => clearTimeout(id);
-    } else {
-      const id = setTimeout(() => {
-        setCompletedLines(prev => [...prev, lineText]);
-        setTypingLine(l => l + 1);
-        setTypingChars(0);
-      }, 85);
-      return () => clearTimeout(id);
-    }
-  }, [typingLine, typingChars, scenario]);
-
   return (
-    <div style={{ fontFamily: 'monospace', fontSize: '0.78rem', lineHeight: '1.75', minHeight: '110px' }}>
-      <div style={{ color: '#6b7280', marginBottom: '4px' }}># {scenario.comment}</div>
-
-      {completedLines.map((line, i) => (
-        <div key={i} style={{ color: lineColour(scenario.lines[i].type) }}>{line}</div>
-      ))}
-
-      {typingLine < scenario.lines.length && (
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <span style={{ color: lineColour(scenario.lines[typingLine].type) }}>
-            {scenario.lines[typingLine].text.slice(0, typingChars)}
-          </span>
-          <span style={{ color: '#fff', opacity: showCursor ? 1 : 0, transition: 'opacity 0.07s' }}>▋</span>
-        </div>
-      )}
-
-      {typingLine >= scenario.lines.length && (
-        <span style={{ color: '#fff', opacity: showCursor ? 1 : 0, transition: 'opacity 0.07s' }}>▋</span>
-      )}
-    </div>
+    <canvas
+      ref={ref}
+      aria-hidden="true"
+      style={{
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '50%',
+        display: 'block',
+        pointerEvents: 'none',
+      }}
+    />
   );
-}
+};
 
-// ─── Hero ──────────────────────────────────────────────────────────────────────
+/* ─── Hero ─── */
 const HeroVideoHeader = () => {
   const { language } = useLanguage();
-  const t = (translations[language]?.home?.hero) ?? translations.en.home.hero;
-
-  const scenarios = language === 'tr' ? SCENARIOS_TR : SCENARIOS_EN;
-  const metrics   = language === 'tr' ? METRICS_TR   : METRICS_EN;
-
-  const [scenarioIdx, setScenarioIdx] = useState(0);
-  const [terminalKey, setTerminalKey] = useState(0);
-
-  const advanceScenario = useCallback(() => {
-    const id = setTimeout(() => {
-      setScenarioIdx(prev => (prev + 1) % scenarios.length);
-      setTerminalKey(k => k + 1);
-    }, 3000);
-    return () => clearTimeout(id);
-  }, [scenarios.length]);
-
-  const trustSignals = language === 'tr'
-    ? ['Kurumsal hazır', 'Gizlilik öncelikli', '8 haftada yayında']
-    : ['Enterprise-ready', 'Privacy-first', '8-week delivery'];
-
-  const fadeUp = {
-    initial: { opacity: 0, y: 22 },
-    animate: { opacity: 1, y: 0 },
-  };
+  const c = COPY[language] || COPY.en;
 
   return (
     <section
-      className="relative min-h-[80vh] sm:min-h-[90vh] flex items-center bg-white overflow-hidden pt-16"
       aria-label="Hero"
+      style={{
+        position: 'relative',
+        minHeight: '100vh',
+        background: '#000',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+      }}
     >
-      {/* Soft violet radial gradient , top right */}
+      {/* Text */}
       <div
-        aria-hidden="true"
         style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          width: '60%',
-          height: '85%',
-          background: 'radial-gradient(ellipse at top right, rgba(124,92,252,0.09) 0%, transparent 68%)',
-          pointerEvents: 'none',
+          position: 'relative',
+          zIndex: 10,
+          textAlign: 'center',
+          padding: '0 1.5rem',
+          userSelect: 'none',
         }}
-      />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 lg:py-20 w-full grid lg:grid-cols-[55fr_45fr] gap-8 sm:gap-12 lg:gap-16 items-center">
-
-        {/* ── LEFT ── */}
-        <div>
-          {/* H1 */}
-          <motion.h1
-            {...fadeUp}
-            transition={{ duration: 0.55, delay: 0.1 }}
-            className="font-bold text-slate-900 mb-7 leading-tight tracking-tight"
-            style={{ fontSize: 'clamp(2.6rem, 5.5vw, 5.25rem)', lineHeight: 1.05, letterSpacing: '-0.02em' }}
-          >
-            {t.titlePart1}{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-              {t.titlePart2}
-            </span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            {...fadeUp}
-            transition={{ duration: 0.55, delay: 0.2 }}
-            className="text-base sm:text-lg text-slate-500 font-light leading-relaxed mb-9 max-w-full sm:max-w-[460px]"
-          >
-            {t.subtitle}
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.55, delay: 0.3 }}
-            className="flex items-center gap-4 mb-8 flex-wrap"
-          >
-            <Link
-              to="/contact"
-              className="px-7 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-sm shadow-lg hover:shadow-purple-500/40 transition-all duration-300 text-sm"
-            >
-              {t.talkToTeam}
-            </Link>
-          </motion.div>
-
-          {/* Trust signals */}
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.55, delay: 0.4 }}
-            className="flex items-center gap-3 sm:gap-6 flex-wrap"
-          >
-            {trustSignals.map(signal => (
-              <span key={signal} className="text-xs text-slate-400 flex items-center gap-1.5">
-                <span className="text-purple-500 font-medium">✓</span>
-                {signal}
-              </span>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* ── RIGHT , Terminal card ── */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.35, type: 'spring', stiffness: 75, damping: 20 }}
-          className="bg-white border border-slate-200 rounded-2xl shadow-[0_8px_48px_rgba(124,92,252,0.10)] overflow-hidden"
+      >
+        <h1
+          style={{
+            fontSize: 'clamp(2.8rem, 7.5vw, 7rem)',
+            fontWeight: 300,
+            letterSpacing: '-0.025em',
+            lineHeight: 1.08,
+            background: 'linear-gradient(90deg, #7dd3fc 0%, #a78bfa 40%, #f472b6 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            margin: '0 0 1.4rem 0',
+          }}
         >
-          {/* Terminal top bar */}
-          <div
-            className="flex items-center gap-2 px-4 py-3 border-b border-slate-100"
-            style={{ background: '#f5f3ff' }}
-          >
-            <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f57', display: 'inline-block' }} />
-            <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }} />
-            <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#28ca41', display: 'inline-block' }} />
-            <span
-              className="ml-3 text-slate-400 select-none"
-              style={{ fontFamily: 'monospace', fontSize: '0.75rem' }}
-            >
-              pulsara-agent.py
-            </span>
-          </div>
-
-          {/* Terminal body */}
-          <div
-            className="px-5 py-5"
-            style={{ background: '#0a0812' }}
-          >
-            <TerminalDisplay
-              key={terminalKey}
-              scenario={scenarios[scenarioIdx]}
-              onDone={advanceScenario}
-            />
-          </div>
-
-          {/* Metrics 2×2 */}
-          <div
-            className="grid grid-cols-2"
-            style={{ gap: '1px', background: '#e8e4f8' }}
-            role="list"
-            aria-label={language === 'tr' ? 'Canlı metrikler' : 'Live metrics'}
-          >
-            {metrics.map(metric => (
-              <div key={metric.label} className="bg-white px-3 sm:px-5 py-3 sm:py-4" role="listitem">
-                <div
-                  className="font-bold leading-none mb-1"
-                  style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', color: '#7c5cfc', fontVariantNumeric: 'tabular-nums' }}
-                >
-                  {metric.value}
-                </div>
-                <div className="text-xs text-slate-400">{metric.label}</div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
+          {c.headline}
+        </h1>
+        <p
+          style={{
+            color: '#6b7280',
+            fontSize: 'clamp(0.9rem, 1.8vw, 1.1rem)',
+            fontWeight: 300,
+            letterSpacing: '0.01em',
+            margin: 0,
+          }}
+        >
+          {c.subtitle}
+        </p>
       </div>
+
+      {/* Wave */}
+      <WaveCanvas />
     </section>
   );
 };
