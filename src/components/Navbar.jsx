@@ -52,7 +52,7 @@ const Navbar = () => {
             <img 
               src={pulsaraLogo} 
               alt="Pulsara" 
-              className={`h-16 sm:h-20 md:h-24 w-auto transition-all duration-300 ${
+              className={`h-32 sm:h-40 md:h-48 w-auto transition-all duration-300 ${
                 !isDarkModeActive
                   ? ''
                   : 'brightness-0 invert'
