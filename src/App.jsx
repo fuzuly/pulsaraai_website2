@@ -113,6 +113,7 @@ explorePerformance: "Explore Performance",
         navPricing: "Pricing",
         navCareers: "Careers",
         requestDemo: "Request a Demo",
+        businessEyebrow: "For Businesses",
         heroTitle: "Finance, Rostering, & Wellbeing Together",
         heroSubtitle: "Pulsara integrates wellbeing, finance, and scheduling into one intelligent platform, empowering you to make smarter decisions and foster a thriving workplace.",
         platformTitle: "One Platform, Total Control",
@@ -224,6 +225,7 @@ explorePerformance: "Performans’ı Keşfet",
         navPricing: "Fiyatlandırma",
         navCareers: "Kariyer",
         requestDemo: "Demo Talep Et",
+        businessEyebrow: "İşletmeler",
         heroTitle: "Finans, Vardiya ve Wellbeing Tek Çatıda",
         heroSubtitle: "Pulsara, wellbeing, finans ve vardiyayı tek bir akıllı platformda birleştirerek daha akıllı kararlar almanızı ve gelişen bir iş yeri oluşturmanızı sağlar.",
         platformTitle: "Tek Platform, Tam Kontrol",
@@ -497,59 +499,40 @@ const Header = ({ activePage, setActivePage, language, setLanguage }) => {
 
     return (
         <header className="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
-                <div className="cursor-pointer" onClick={() => handleNavClick('home')}>
+                {/* Logo — always left */}
+                <div className="cursor-pointer flex-shrink-0" onClick={() => handleNavClick('home')}>
                     <PulsaraLogo />
                 </div>
-                <nav className="hidden md:flex items-center space-x-8">
-                    <NavLink onClick={() => handleNavClick('home')} active={activePage === 'home'}>{t.navHome}</NavLink>
-                    <NavLink onClick={() => handleNavClick('products')} active={activePage === 'products'}>{t.navProducts}</NavLink>
-                    <NavLink onClick={() => handleNavClick('pricing')} active={activePage === 'pricing'}>{t.navPricing}</NavLink>
-                    <NavLink onClick={() => handleNavClick('careers')} active={activePage === 'careers'}>{t.navCareers}</NavLink>
-                    <NavLink onClick={() => handleNavClick('portfolio')} active={activePage === 'portfolio'}>
-  Portfolio
-</NavLink>
 
-                </nav>
-                <div className="hidden md:flex items-center gap-4">
-  {/* Language selector */}
-  <div className="flex items-center border border-gray-300 rounded-full">
-    <button
-      onClick={() => setLanguage('en')}
-      className={`px-3 py-1 text-sm rounded-full ${language === 'en' ? 'bg-purple-600 text-white' : 'text-gray-600'}`}
-    >
-      EN
-    </button>
-    <button
-      onClick={() => setLanguage('tr')}
-      className={`px-3 py-1 text-sm rounded-full ${language === 'tr' ? 'bg-purple-600 text-white' : 'text-gray-600'}`}
-    >
-      TR
-    </button>
-  </div>
-
-  {/* 🟣 New Login Button */}
-  <a
-    href="https://wellbeing.pulsara.com.tr/auth"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
-  >
-    Login
-  </a>
-
-  {/* Existing Demo Button */}
-  <CTAButton onClick={() => handleNavClick('contact')}>
-    {t.requestDemo}
-  </CTAButton>
-</div>
-
-                <div className="md:hidden">
-                    <button onClick={() => setIsOpen(!isOpen)} className="text-gray-800 focus:outline-none">
-                        {isOpen ? <IconX className="w-6 h-6" /> : <IconMenu className="w-6 h-6" />}
-                    </button>
+                {/* Desktop: nav + actions — hidden on mobile */}
+                <div className="hidden md:flex items-center gap-8">
+                    <nav className="flex items-center space-x-8">
+                        <NavLink onClick={() => handleNavClick('home')} active={activePage === 'home'}>{t.navHome}</NavLink>
+                        <NavLink onClick={() => handleNavClick('products')} active={activePage === 'products'}>{t.navProducts}</NavLink>
+                        <NavLink onClick={() => handleNavClick('pricing')} active={activePage === 'pricing'}>{t.navPricing}</NavLink>
+                        <NavLink onClick={() => handleNavClick('careers')} active={activePage === 'careers'}>{t.navCareers}</NavLink>
+                        <NavLink onClick={() => handleNavClick('portfolio')} active={activePage === 'portfolio'}>Portfolio</NavLink>
+                    </nav>
+                    <div className="flex items-center gap-4">
+                        <div className="flex items-center border border-gray-300 rounded-full">
+                            <button onClick={() => setLanguage('en')} className={`px-3 py-1 text-sm rounded-full ${language === 'en' ? 'bg-purple-600 text-white' : 'text-gray-600'}`}>EN</button>
+                            <button onClick={() => setLanguage('tr')} className={`px-3 py-1 text-sm rounded-full ${language === 'tr' ? 'bg-purple-600 text-white' : 'text-gray-600'}`}>TR</button>
+                        </div>
+                        <a href="https://wellbeing.pulsara.com.tr/auth" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">Login</a>
+                        <CTAButton onClick={() => handleNavClick('contact')}>{t.requestDemo}</CTAButton>
+                    </div>
                 </div>
+
+                {/* Hamburger — mobile only, always right */}
+                <button
+                    className="md:hidden text-gray-800 focus:outline-none p-1"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
+                >
+                    {isOpen ? <IconX className="w-6 h-6" /> : <IconMenu className="w-6 h-6" />}
+                </button>
             </div>
    
 
@@ -575,13 +558,11 @@ const Header = ({ activePage, setActivePage, language, setLanguage }) => {
     </button>
   </div>
 
-  <a onClick={() => handleNavClick('home')} className="block text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navHome}</a>
-  <a onClick={() => handleNavClick('products')} className="block text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navProducts}</a>
-  <a onClick={() => handleNavClick('pricing')} className="block text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navPricing}</a>
-  <a onClick={() => handleNavClick('careers')} className="block text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navCareers}</a>
-  <a onClick={() => handleNavClick('portfolio')} className="block text-gray-800 hover:text-purple-600 font-semibold py-2">
-  Portfolio
-</a>
+  <a onClick={() => handleNavClick('home')} className="block cursor-pointer text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navHome}</a>
+  <a onClick={() => handleNavClick('products')} className="block cursor-pointer text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navProducts}</a>
+  <a onClick={() => handleNavClick('pricing')} className="block cursor-pointer text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navPricing}</a>
+  <a onClick={() => handleNavClick('careers')} className="block cursor-pointer text-gray-800 hover:text-purple-600 font-semibold py-2">{t.navCareers}</a>
+  <a onClick={() => handleNavClick('portfolio')} className="block cursor-pointer text-gray-800 hover:text-purple-600 font-semibold py-2">Portfolio</a>
 
 
   <CTAButton onClick={() => handleNavClick('contact')} className="w-full mt-2">
@@ -605,6 +586,11 @@ const HomePage = ({ setActivePage, language }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
                         <div className="text-center md:text-left">
+                            <div
+                              style={{ fontFamily: "'Dancing Script', cursive", fontSize: 'clamp(1.6rem, 4vw, 2.8rem)', fontWeight: 700, color: '#7c3aed', marginBottom: '0.5rem', lineHeight: 1.2 }}
+                            >
+                              {t.businessEyebrow}
+                            </div>
                              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
                                 {t.heroTitle.split('&').map((part, i) => i === 1 ? <span key={i} className="text-purple-600">& {part}</span> : part)}
                             </h1>
@@ -1048,18 +1034,17 @@ const PricingPage = ({ setActivePage, language }) => {
 const CareersPage = ({ setActivePage, language }) => {
     const t = translations[language];
     const JobOpening = ({ title, location, type }) => (
-        <div className="bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex justify-between items-center border border-gray-200/50">
+        <div className="bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col sm:flex-row justify-between sm:items-center gap-4 border border-gray-200/50">
             <div>
                 <h3 className="text-xl font-bold text-gray-800">{title}</h3>
                 <p className="text-gray-600 mt-1">{location} &middot; {type}</p>
             </div>
             <a
-  href="mailto:careers@pulsara.com.tr?subject=Job Application – Fullstack Engineer"
-  className="bg-purple-100 text-purple-700 font-semibold px-5 py-2 rounded-lg hover:bg-purple-200 transition-colors inline-block"
->
-  Apply
-</a>
-
+              href="mailto:careers@pulsara.com.tr?subject=Job Application – Fullstack Engineer"
+              className="bg-purple-100 text-purple-700 font-semibold px-5 py-2 rounded-lg hover:bg-purple-200 transition-colors inline-block self-start sm:self-auto flex-shrink-0"
+            >
+              Apply
+            </a>
         </div>
     );
 
