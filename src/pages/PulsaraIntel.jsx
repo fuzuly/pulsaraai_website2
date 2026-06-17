@@ -34,51 +34,68 @@ const stagger = {
 const content = {
   tr: {
     seo: {
-      title: 'Pulsara Intel , AI Destekli Rakip Takip Platformu',
-      description: 'Türk perakende ve F&B markaları için rakip analizi, fiyat takibi ve haftalık AI raporları , hepsi tek platformda.',
+      title: 'Pulsara Intel — Rakip İstihbarat Departmanınız',
+      description: 'Rakiplerinizi biz izleriz, siz kararı verin. Haftalık brifing, anlık öneri uyarıları ve aylık strateji raporu ile Türk perakende ve F&B markalarının rekabet yönetimi ortağı.',
     },
     hero: {
-      badge: 'Yeni Ürün',
-      headline: 'Rakiplerinizi sizin için izleyen yapay zeka',
-      subheadline: 'Türk perakende ve F&B markaları için rakip analizi, fiyat takibi ve haftalık AI raporları , hepsi tek platformda.',
-      cta1: 'Pilot Başvurusu',
-      cta2: 'Demo İste',
+      eyebrow: 'Rakip İstihbaratı Hizmeti',
+      headline: 'Rakiplerinizi biz izleriz.\nSiz sadece kararı verin.',
+      subheadline: 'Pulsara Intel bir dashboard değil. Rakiplerinizi 7/24 izleyen, haftalık brifing hazırlayan ve her önemli hamlede ne yapmanız gerektiğini söyleyen bir ekip.',
+      cta1: 'Ücretsiz Brifing Alın',
+      cta2: 'Nasıl Çalışır',
     },
     problem: {
-      headline: 'Rakip takibi neden bu kadar zor?',
+      eyebrow: 'Sorun',
+      headline: 'Rekabeti takip etmek tam zamanlı bir iş.',
+      sub: 'Rakipleriniz hareket ediyor. Siz operasyonla meşgulsünüz.',
       cards: [
         {
-          title: 'Manuel takip günler alıyor',
-          desc: 'Manuel Excel takibi günler alıyor, yine eksik kalıyor.',
+          title: 'Fiyat değişimi geç fark edildi',
+          desc: 'Rakip fiyatı düşürdüğünde müşterileriniz zaten gitmiş oluyor. Tepki veremeden kaybediyorsunuz.',
         },
         {
-          title: 'Hangi yorum kritik bilinmiyor',
-          desc: 'Yüzlerce yorum arasında hangi şikayet kritik olduğunu bilemiyorsunuz.',
+          title: 'Yorumlar okunamıyor',
+          desc: 'Haftada 200+ rakip yorumu geliyor. Kritik şikayeti bulmak saatler alıyor — ya da hiç bulunmuyor.',
         },
         {
-          title: 'Fiyat değişimleri geç fark ediliyor',
-          desc: 'Rakip fiyat değişimini fark ettiğinizde zaten geç oluyor.',
+          title: 'Strateji değil, sezgi',
+          desc: 'Rakip analizi olmadan her karar reaktif. Veriye değil, tahmine dayanıyorsunuz.',
         },
       ],
     },
-    howItWorks: {
-      headline: 'Pulsara Intel nasıl çalışır?',
-      steps: [
-        { n: '01', title: 'Sektörünüzü seçin', desc: '20 rakip otomatik bulunur ve izlemeye başlanır.' },
-        { n: '02', title: 'AI yorumları analiz eder', desc: 'Türkçe sentiment analizi ve kategori etiketleme ile kritik içgörüler.' },
-        { n: '03', title: 'Fiyatlar 24/7 takip edilir', desc: 'Değişimde anlık uyarı , hiçbir hamleyi kaçırmayın.' },
-        { n: '04', title: 'Haftalık hazır rapor', desc: 'Her Pazartesi yönetime sunuma hazır AI raporu.' },
-      ],
-    },
-    features: {
-      headline: 'Tüm özellikler',
+    deliver: {
+      eyebrow: 'Ne Alıyorsunuz',
+      headline: 'Analizi biz yaparız.\nSize sadece karar gelir.',
+      sub: 'Pulsara Intel bir araç değil. Her hafta masa başınızda hazır olan rakip istihbarat departmanınız.',
       items: [
-        { title: 'Otomatik Rakip Keşfi', desc: 'Sektörünüzü girin, platform rakiplerinizi otomatik belirler.' },
-        { title: 'Türkçe AI Yorum Analizi', desc: 'Google Maps yorumlarını Türkçe sentiment ile kategorize eder.' },
-        { title: 'Fiyat Değişim Takibi', desc: 'Rakip fiyatlarını sürekli izler, değişimde anında bildirir.' },
-        { title: 'Haftalık AI Raporu (PDF)', desc: 'Her Pazartesi yönetime hazır, okunabilir PDF raporu.' },
-        { title: 'Anlık Uyarılar', desc: 'Kritik değişimlerde SMS, e-posta veya push bildirim.' },
-        { title: 'Çoklu Şube Yönetimi', desc: 'Tüm şubelerinizi ve rakiplerini tek ekrandan takip edin.' },
+        {
+          icon: 'briefing',
+          title: "Haftalık Rekabet Brifing'i",
+          desc: 'Her Pazartesi sabahı gelen net rapor: bu hafta rakiplerinizde ne oldu, ne anlama geliyor ve ne yapmanız öneriliyor.',
+          detail: 'PDF + e-posta · Yönetim sunumuna hazır',
+        },
+        {
+          icon: 'alert',
+          title: 'Anlık Öneri Uyarıları',
+          desc: 'Rakip fiyat değiştirdiğinde, büyük şikayet aldığında veya kampanya başlattığında SMS/WhatsApp ile bildirim + bizim önerimiz.',
+          detail: 'Sadece veri değil — ne yapmalısınız?',
+        },
+        {
+          icon: 'strategy',
+          title: 'Aylık Strateji Analizi',
+          desc: 'Trend analizi, rakip konumlandırma haritası ve önümüzdeki ay için üç stratejik öneri. Yönetim kurulu sunumuna hazır.',
+          detail: 'Uzman incelemesi ile · Derinlemesine',
+        },
+      ],
+    },
+    process: {
+      eyebrow: 'Nasıl Çalışır',
+      headline: 'Bir şey yapmanıza gerek yok.',
+      steps: [
+        { n: '01', title: 'Onboarding (1 gün)', desc: 'Sektörünüzü, rakiplerinizi ve önceliklerinizi öğreniriz. Sonrasını biz hallederiz.' },
+        { n: '02', title: 'Sürekli İzleme', desc: 'AI + insan analistlerimiz rakiplerinizi 7/24 takip eder. Fiyat, yorum, kampanya, sosyal medya.' },
+        { n: '03', title: 'Biz Analiz Ederiz', desc: 'Ham veriyi değil, gürültüden arındırılmış içgörüleri sunuyoruz. Ne önemli, ne değil — biz karar veririz.' },
+        { n: '04', title: 'Aksiyon Teslimi', desc: 'Her hafta brifing, her kritik gelişmede anlık öneri. Siz kararı verirsiniz, biz zeminini hazırlarız.' },
       ],
     },
     sectors: {
@@ -90,14 +107,9 @@ const content = {
         { name: 'Market & Süpermarket', emoji: '🛒' },
       ],
     },
-    trust: {
-      headline: "Türkiye'nin önde gelen markaları için geliştirildi",
-      note: 'Referans logolar yakında eklenecek.',
-      items: ['Kahve zinciri', 'Moda markası', 'Fast food zinciri', 'Süpermarket grubu'],
-    },
     useCases: {
       headline: 'Sektörünüze özel rehberler',
-      sub: 'Rakip takibini kendi sektörünüz için nasıl kullandığını keşfedin.',
+      sub: 'Rakip istihbaratının kendi sektörünüzde nasıl çalıştığını keşfedin.',
       items: [
         { emoji: '☕', name: 'Kahve & Kafe', desc: 'Fiyat savaşlarına hazır olun, yorum körleşmesini bitirin.', href: '/tr/rakip-takip/kahve-zincirleri' },
         { emoji: '🍽️', name: 'Restoranlar', desc: 'Rakip restoran hamlelerini anlık izleyin.', href: '/tr/rakip-takip/restoranlar' },
@@ -108,9 +120,20 @@ const content = {
       ],
       cta: 'Detaylı incele →',
     },
+    faq: {
+      headline: 'Sık sorulan sorular',
+      items: [
+        { q: 'Bu bir yazılım mı yoksa hizmet mi?', a: 'Bir hizmet. Herhangi bir dashboard veya araç kullanmanız gerekmiyor. Ekibimiz ve AI sistemlerimiz rakiplerinizi izler, analiz eder ve size her hafta hazır brifing + anlık öneri olarak sunar.' },
+        { q: 'Pilot süresi ne kadar?', a: 'Pilot program 1 aydır. İlk 10 başvuran marka için tamamen ücretsizdir. Pilot sonunda memnun kalmazsanız herhangi bir ücret ödemeniz gerekmez.' },
+        { q: 'Hangi rakiplerinizi izliyorsunuz?', a: 'Onboarding sırasında sektörünüzü ve lokasyonunuzu öğreniyoruz. Rakiplerinizi birlikte belirliyoruz — istediğinizi ekleyebilir ya da çıkartabilirsiniz.' },
+        { q: 'Haftalık brifing ne içeriyor?', a: 'Bu hafta rakiplerinizde öne çıkan gelişmeler, fiyat değişimleri, yorum trendleri ve bizim aksiyon önerilerimiz. Yönetim sunumuna hazır, sade ve okunabilir format.' },
+        { q: 'Sözleşme zorunluluğu var mı?', a: 'Pilot döneminde herhangi bir sözleşme yoktur. Pilot sonrasında aylık veya yıllık hizmet seçenekleri sunulur.' },
+        { q: 'Kurulum veya entegrasyon gerekiyor mu?', a: 'Hayır. Hiçbir kurulum, entegrasyon veya teknik iş gerekmez. Brifingler e-posta ve PDF ile, uyarılar SMS/WhatsApp ile gelir.' },
+      ],
+    },
     form: {
-      headline: 'Pilot programına başvurun',
-      subhead: 'İlk 10 marka için 1 ay ücretsiz pilot kullanım',
+      headline: 'Ücretsiz pilot için başvurun',
+      subhead: 'İlk 10 marka için 1 ay ücretsiz — kurulum yok, sözleşme yok',
       brand: 'Marka Adı',
       sector: 'Sektör',
       sectorPlaceholder: 'Sektör seçin',
@@ -118,14 +141,14 @@ const content = {
       contact: 'Şirket Yetkilisi Adı',
       email: 'E-posta',
       phone: 'Telefon',
-      size: 'Şirket Büyüklüğü',
-      sizePlaceholder: 'Büyüklük seçin',
+      size: 'Şube Sayısı',
+      sizePlaceholder: 'Şube sayısı seçin',
       sizeOptions: ['1-10 şube', '11-50 şube', '50+ şube'],
-      notes: 'Notlar / Sorular',
-      notesPlaceholder: 'Varsa ek sorularınızı yazabilirsiniz...',
-      submit: 'Başvuruyu Gönder',
+      notes: 'Öncelikli rakipleriniz veya sorularınız',
+      notesPlaceholder: 'Hangi rakipleri izlememizi istiyorsunuz? Özel sorularınız var mı?',
+      submit: 'Ücretsiz Pilot Başvurusu',
       privacy: 'Verileriniz KVKK kapsamında korunur, üçüncü taraflarla paylaşılmaz.',
-      thanks: 'Başvurunuz alındı. 48 saat içinde size dönüş yapacağız.',
+      thanks: 'Başvurunuz alındı. 48 saat içinde sizi arayacağız.',
       valid: 'Geçerli',
       errors: {
         brand: 'Marka adı gereklidir',
@@ -134,73 +157,79 @@ const content = {
         emailRequired: 'E-posta gereklidir',
         emailInvalid: 'Geçerli bir e-posta adresi giriniz',
         phone: 'Telefon numarası gereklidir',
-        size: 'Şirket büyüklüğü seçimi gereklidir',
+        size: 'Şube sayısı seçimi gereklidir',
       },
     },
-    faq: {
-      headline: 'Sık sorulan sorular',
-      items: [
-        { q: 'Pilot süresi ne kadar?', a: 'Pilot program 1 aydır. İlk 10 başvuran marka için tamamen ücretsizdir.' },
-        { q: 'Hangi rakiplerimi izleyebilirim?', a: 'Sektörünüzü ve konumunuzu belirttiğinizde sistem otomatik olarak 20 rakip tespit eder. İstediğiniz rakipleri manuel olarak da ekleyebilirsiniz.' },
-        { q: 'Veriler nereden geliyor?', a: 'Google Maps yorumları, sosyal medya verileri ve kamuya açık fiyat bilgileri AI tarafından gerçek zamanlı analiz edilir.' },
-        { q: 'Sözleşme zorunluluğu var mı?', a: 'Pilot döneminde herhangi bir sözleşme yoktur. Pilot sonrasında aylık veya yıllık abonelik seçenekleri sunulur.' },
-        { q: 'Pilot sonrası fiyatlandırma nasıl?', a: 'Fiyatlandırma şube sayısı ve takip edilen rakip sayısına göre belirlenir. Pilot süresince kişiselleştirilmiş bir teklif sunulur.' },
-        { q: 'Entegrasyon veya kurulum gerekiyor mu?', a: 'Hayır. Pulsara Intel tamamen bulut tabanlıdır, herhangi bir kurulum veya teknik entegrasyon gerekmez.' },
-      ],
-    },
     footerCta: {
-      headline: 'Hazır mısınız?',
-      sub: 'İlk 10 pilot hakkı hızla dolduruluyor. Hemen başvurun.',
+      headline: "İlk brifing'inizi ücretsiz alın.",
+      sub: 'İlk 10 pilot hakkı dolmadan başvurun.',
       btn: 'Pilot Başvurusu',
     },
   },
   en: {
     seo: {
-      title: 'Pulsara Intel , AI-Powered Competitor Monitoring Platform',
-      description: 'Competitor analysis, price tracking and weekly AI reports for Turkish retail and F&B brands , all in one platform.',
+      title: 'Pulsara Intel — Your Outsourced Competitor Intelligence Department',
+      description: 'We monitor your competitors. You make the calls. Weekly briefings, real-time action alerts, and monthly strategy reports for Turkish retail and F&B brands.',
     },
     hero: {
-      badge: 'New Product',
-      headline: 'The AI that monitors your competitors for you',
-      subheadline: 'Competitor analysis, price tracking, and weekly AI reports for Turkish retail and F&B brands , all in one platform.',
-      cta1: 'Apply for Pilot',
-      cta2: 'Request Demo',
+      eyebrow: 'Competitor Intelligence Service',
+      headline: 'We monitor your competitors.\nYou make the decisions.',
+      subheadline: "Pulsara Intel is not a dashboard. It's a dedicated team that watches your competitors 24/7, prepares weekly briefings, and tells you what to do when something important happens.",
+      cta1: 'Get a Free Briefing',
+      cta2: 'See How It Works',
     },
     problem: {
-      headline: 'Why is competitor tracking so hard?',
+      eyebrow: 'The Problem',
+      headline: 'Competitor intelligence is a full-time job.',
+      sub: "Your competitors are moving. You're busy running the business.",
       cards: [
         {
-          title: 'Manual tracking takes days',
-          desc: 'Manual spreadsheet tracking takes days and is still incomplete.',
+          title: 'Price changes spotted too late',
+          desc: "By the time you notice a competitor dropped their price, your customers have already left.",
         },
         {
-          title: "You don't know which review is critical",
-          desc: "Hundreds of reviews , you can't tell which complaints matter most.",
+          title: 'Reviews go unread',
+          desc: '200+ competitor reviews per week. Finding the critical complaint takes hours — or never happens.',
         },
         {
-          title: 'Price changes are spotted too late',
-          desc: "By the time you notice a competitor's price change, it's already too late.",
+          title: 'Strategy based on gut, not data',
+          desc: "Without structured intelligence, every decision is reactive. You're always a step behind.",
         },
       ],
     },
-    howItWorks: {
-      headline: 'How does Pulsara Intel work?',
-      steps: [
-        { n: '01', title: 'Select your sector', desc: '20 competitors are automatically found and monitored.' },
-        { n: '02', title: 'AI analyzes reviews', desc: 'Turkish sentiment analysis and category tagging for critical insights.' },
-        { n: '03', title: 'Prices tracked 24/7', desc: 'Instant alerts on changes , never miss a move.' },
-        { n: '04', title: 'Weekly ready report', desc: 'Every Monday, a presentation-ready AI report for leadership.' },
-      ],
-    },
-    features: {
-      headline: 'All features',
+    deliver: {
+      eyebrow: 'What You Receive',
+      headline: 'We do the analysis.\nYou get the decisions.',
+      sub: "Pulsara Intel is not a tool. It's your competitor intelligence department — ready every week, without any effort from your team.",
       items: [
-        { title: 'Automatic Competitor Discovery', desc: 'Enter your sector and the platform identifies your competitors automatically.' },
-        { title: 'Turkish AI Review Analysis', desc: 'Categorizes Google Maps reviews with Turkish sentiment analysis.' },
-        { title: 'Price Change Tracking', desc: 'Continuously monitors competitor prices, instant notification on change.' },
-        { title: 'Weekly AI Report (PDF)', desc: 'Every Monday, a readable, presentation-ready PDF report.' },
-        { title: 'Instant Alerts', desc: 'SMS, email, or push notification on critical changes.' },
-        { title: 'Multi-Branch Management', desc: 'Track all your branches and competitors from one screen.' },
+        {
+          icon: 'briefing',
+          title: 'Weekly Intelligence Briefing',
+          desc: 'Every Monday morning: what happened with your competitors this week, what it means, and what we recommend you do.',
+          detail: 'PDF + email · Boardroom-ready',
+        },
+        {
+          icon: 'alert',
+          title: 'Real-Time Action Alerts',
+          desc: "When a competitor changes a price, receives a surge of negative reviews, or launches a campaign — SMS/WhatsApp with our recommended response.",
+          detail: 'Not just data — what should you do next?',
+        },
+        {
+          icon: 'strategy',
+          title: 'Monthly Strategy Report',
+          desc: 'Trend analysis, competitor positioning map, and three strategic recommendations for the month ahead.',
+          detail: 'In-depth · Expert-reviewed',
+        },
+      ],
+    },
+    process: {
+      eyebrow: 'How It Works',
+      headline: "You don't have to do anything.",
+      steps: [
+        { n: '01', title: 'Onboarding (1 day)', desc: 'We learn your sector, competitors, and priorities. Then we handle everything.' },
+        { n: '02', title: 'Continuous Monitoring', desc: 'Our AI + human analysts track your competitors 24/7. Prices, reviews, campaigns, social media.' },
+        { n: '03', title: 'We Analyze', desc: "We don't send raw data. We filter noise, identify what matters, and form a clear view." },
+        { n: '04', title: 'Action Delivery', desc: 'Weekly briefings, instant alerts on critical moves. You decide — we give you the ground truth.' },
       ],
     },
     sectors: {
@@ -212,14 +241,9 @@ const content = {
         { name: 'Grocery & Supermarket', emoji: '🛒' },
       ],
     },
-    trust: {
-      headline: "Built for Turkey's leading brands",
-      note: 'Reference logos coming soon.',
-      items: ['Coffee chain', 'Fashion brand', 'Fast food chain', 'Supermarket group'],
-    },
     useCases: {
       headline: 'Sector-specific guides',
-      sub: 'Discover how competitor monitoring works for your sector.',
+      sub: 'Discover how competitor intelligence works for your sector.',
       items: [
         { emoji: '☕', name: 'Coffee & Café', desc: 'Be ready for price wars, end review blindness.', href: '/tr/rakip-takip/kahve-zincirleri' },
         { emoji: '🍽️', name: 'Restaurants', desc: 'Monitor competitor restaurant moves in real time.', href: '/tr/rakip-takip/restoranlar' },
@@ -230,9 +254,20 @@ const content = {
       ],
       cta: 'Read guide →',
     },
+    faq: {
+      headline: 'Frequently asked questions',
+      items: [
+        { q: 'Is this a software tool or a service?', a: "A service. You don't use any dashboard or tool. Our team and AI systems monitor your competitors, analyze the data, and deliver weekly briefings + real-time action alerts directly to you." },
+        { q: 'How long is the pilot?', a: "The pilot runs for 1 month and is completely free for the first 10 applicants. If you're not satisfied, you pay nothing." },
+        { q: 'Which competitors do you monitor?', a: 'During onboarding we learn your sector and location. We identify competitors together — you can add or remove any of them.' },
+        { q: "What's in the weekly briefing?", a: 'Key developments from your competitors this week, price changes, review trends, and our action recommendations. Clear, readable, boardroom-ready.' },
+        { q: 'Is a contract required?', a: 'No contract during the pilot period. After the pilot, monthly or annual service options are available.' },
+        { q: 'Is any setup or integration required?', a: 'None. No installation, integration, or technical work needed. Briefings arrive via email and PDF; alerts via SMS/WhatsApp.' },
+      ],
+    },
     form: {
-      headline: 'Apply for the pilot program',
-      subhead: 'Free 1-month pilot for the first 10 brands',
+      headline: 'Apply for your free pilot',
+      subhead: 'Free for the first 10 brands — no setup, no contract',
       brand: 'Brand Name',
       sector: 'Sector',
       sectorPlaceholder: 'Select sector',
@@ -240,14 +275,14 @@ const content = {
       contact: 'Company Representative Name',
       email: 'Email',
       phone: 'Phone',
-      size: 'Company Size',
-      sizePlaceholder: 'Select size',
+      size: 'Number of Branches',
+      sizePlaceholder: 'Select branch count',
       sizeOptions: ['1-10 branches', '11-50 branches', '50+ branches'],
-      notes: 'Notes / Questions',
-      notesPlaceholder: 'Feel free to add any additional questions...',
-      submit: 'Submit Application',
+      notes: 'Priority competitors or questions',
+      notesPlaceholder: 'Which competitors do you want us to monitor? Any specific questions?',
+      submit: 'Apply for Free Pilot',
       privacy: 'Your data is protected under KVKK and will not be shared with third parties.',
-      thanks: 'Your application has been received. We will get back to you within 48 hours.',
+      thanks: "Application received. We'll call you within 48 hours.",
       valid: 'Valid',
       errors: {
         brand: 'Brand name is required',
@@ -256,128 +291,131 @@ const content = {
         emailRequired: 'Email is required',
         emailInvalid: 'Please enter a valid email address',
         phone: 'Phone number is required',
-        size: 'Company size selection is required',
+        size: 'Branch count selection is required',
       },
     },
-    faq: {
-      headline: 'Frequently asked questions',
-      items: [
-        { q: 'How long is the pilot?', a: 'The pilot program runs for 1 month and is completely free for the first 10 applicants.' },
-        { q: 'Which competitors can I monitor?', a: 'When you specify your sector and location, the system automatically identifies 20 competitors. You can also add competitors manually.' },
-        { q: 'Where does the data come from?', a: 'Google Maps reviews, social media data, and publicly available price information are analyzed by AI in real time.' },
-        { q: 'Is a contract required?', a: 'No contract during the pilot period. After the pilot, monthly or annual subscription options are available.' },
-        { q: 'What about post-pilot pricing?', a: 'Pricing is determined by number of branches and competitors tracked. A personalized quote is provided during the pilot.' },
-        { q: 'Is integration or installation required?', a: 'No. Pulsara Intel is fully cloud-based , no installation or technical integration required.' },
-      ],
-    },
     footerCta: {
-      headline: 'Ready to start?',
-      sub: 'The first 10 pilot spots are filling fast. Apply now.',
+      headline: 'Get your first briefing free.',
+      sub: 'Apply before the first 10 pilot spots fill up.',
       btn: 'Apply for Pilot',
     },
   },
 };
 
-/* ─── Feature icons (inline SVG) ─── */
-const FeatureIcons = [
-  <svg key="0" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><path strokeLinecap="round" strokeLinejoin="round" d="m21 21-4.35-4.35" /></svg>,
-  <svg key="1" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>,
-  <svg key="2" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>,
-  <svg key="3" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
-  <svg key="4" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>,
-  <svg key="5" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>,
-];
+/* ─── Deliver section icons ─── */
+const DeliverIcons = {
+  briefing: (
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6M5 8h14M3 6a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6z" />
+    </svg>
+  ),
+  alert: (
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
+  ),
+  strategy: (
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v4m0 12v4M2 12h4m12 0h4m-4.93-7.07-2.83 2.83M9.76 14.24l-2.83 2.83m0-12.14 2.83 2.83m4.48 4.48 2.83 2.83" />
+    </svg>
+  ),
+};
 
-/* ─── Hero dashboard mockup ─── */
-const IntelDashboard = () => (
+const deliverColors = {
+  briefing: { ring: 'text-purple-400', bg: 'bg-purple-500/10 border-purple-500/20', pill: 'bg-purple-500/10 text-purple-300 border-purple-500/20' },
+  alert:    { ring: 'text-amber-400',  bg: 'bg-amber-500/10 border-amber-500/20',   pill: 'bg-amber-500/10 text-amber-300 border-amber-500/20'   },
+  strategy: { ring: 'text-cyan-400',   bg: 'bg-cyan-500/10 border-cyan-500/20',     pill: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20'       },
+};
+
+/* ─── Weekly Briefing mockup ─── */
+const IntelBriefing = () => (
   <div className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl shadow-[0_0_80px_-15px_rgba(168,85,247,0.3)] border border-white/10 overflow-hidden">
     {/* Window chrome */}
     <div className="bg-white/5 border-b border-white/5 px-4 py-3 flex items-center gap-2">
       <span className="w-3 h-3 rounded-full bg-red-500/80" />
       <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
       <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-      <span className="text-xs text-slate-400 font-mono ml-3 truncate">intel.pulsaraai.com</span>
-      <span className="ml-auto bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5">
-        <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" /> Canlı
+      <span className="text-xs text-slate-400 font-mono ml-3 truncate">Haftalık Rekabet Brifing'i</span>
+      <span className="ml-auto text-xs text-slate-500 font-mono">15 Haz 2025</span>
+      <span className="ml-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+        <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" /> Teslim Edildi ✓
       </span>
     </div>
+
     <div className="p-4 sm:p-6">
-      {/* KPI row */}
-      <div className="grid grid-cols-3 gap-3 mb-5">
-        <div className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 hover:bg-white/10 transition-colors">
-          <p className="text-xs text-slate-400 mb-1">Takipte</p>
-          <p className="text-2xl sm:text-3xl font-extrabold text-white">20</p>
+      {/* Summary row */}
+      <div className="flex items-center justify-between mb-5">
+        <div>
+          <p className="text-xs text-slate-500 uppercase tracking-wider mb-0.5">Bu hafta</p>
+          <p className="text-xl font-bold text-white">3 kritik gelişme</p>
         </div>
-        <div className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 hover:bg-white/10 transition-colors">
-          <p className="text-xs text-slate-400 mb-1">Yorum / hf</p>
-          <p className="text-2xl sm:text-3xl font-extrabold text-white">847</p>
-        </div>
-        <div className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 hover:bg-white/10 transition-colors">
-          <p className="text-xs text-slate-400 mb-1">Uyarı</p>
-          <p className="text-2xl sm:text-3xl font-extrabold text-amber-400">3</p>
+        <div className="text-right">
+          <p className="text-xs text-slate-500">Analiz edildi</p>
+          <p className="text-sm font-semibold text-slate-300">847 yorum · 20 rakip</p>
         </div>
       </div>
 
-      {/* Competitor table */}
-      <div className="mb-5">
-        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Rakip Sıralama</p>
-        <div className="space-y-2">
-          {[
-            { name: 'Rakip Marka A', rating: 4.6, delta: '+0.2', up: true, price: '₺75' },
-            { name: 'Rakip Marka B', rating: 4.1, delta: '-0.3', up: false, price: '₺95' },
-            { name: 'Rakip Marka C', rating: 3.8, delta: '-0.1', up: false, price: '₺42' },
-          ].map((c, i) => (
-            <div key={i} className="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors border border-white/5 rounded-xl px-4 py-3">
-              <div className="flex items-center gap-3">
-                <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 text-xs flex items-center justify-center font-bold flex-shrink-0">{i + 1}</span>
-                <span className="text-sm font-semibold text-slate-200">{c.name}</span>
-              </div>
-              <div className="flex items-center gap-3 sm:gap-4">
-                <span className="text-sm text-slate-400">★ {c.rating}</span>
-                <span className={`text-sm font-bold ${c.up ? 'text-emerald-400' : 'text-red-400'}`}>{c.delta}</span>
-                <span className="text-sm font-mono text-slate-300 bg-black/30 px-2 py-0.5 rounded">{c.price}</span>
+      {/* Briefing items */}
+      <div className="space-y-3 mb-5">
+        {/* Warning */}
+        <div className="bg-red-500/8 border border-red-500/20 rounded-xl p-4">
+          <div className="flex items-start gap-3">
+            <span className="text-xl flex-shrink-0 mt-0.5">⚠️</span>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-bold text-red-300">Fiyat Hamlesi — Rakip A</p>
+              <p className="text-xs text-slate-400 mt-0.5">Büyük boy ₺95 → ₺79'a düştü</p>
+              <div className="mt-2.5 bg-slate-900/60 border border-white/5 rounded-lg px-3 py-2">
+                <p className="text-xs text-slate-300 leading-relaxed">🎯 <span className="font-semibold text-purple-300">Önerimiz:</span> Sadık müşteri kampanyası başlatın, fiyata yanıt vermeyin</p>
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Opportunity */}
+        <div className="bg-emerald-500/8 border border-emerald-500/20 rounded-xl p-4">
+          <div className="flex items-start gap-3">
+            <span className="text-xl flex-shrink-0 mt-0.5">📉</span>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-bold text-emerald-300">Şikayet Artışı — Rakip B</p>
+              <p className="text-xs text-slate-400 mt-0.5">Servis hızı şikayetleri %34 arttı</p>
+              <div className="mt-2.5 bg-slate-900/60 border border-white/5 rounded-lg px-3 py-2">
+                <p className="text-xs text-slate-300 leading-relaxed">🎯 <span className="font-semibold text-purple-300">Önerimiz:</span> "Hızlı Servis" mesajını öne çıkarın</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Neutral */}
+        <div className="bg-white/4 border border-white/8 rounded-xl p-4">
+          <div className="flex items-start gap-3">
+            <span className="text-xl flex-shrink-0 mt-0.5">👀</span>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-bold text-slate-300">Yeni Ürün — Rakip C</p>
+              <p className="text-xs text-slate-400 mt-0.5">Sezonluk içecek serisi duyuruldu</p>
+              <div className="mt-2.5 bg-slate-900/60 border border-white/5 rounded-lg px-3 py-2">
+                <p className="text-xs text-slate-300 leading-relaxed">🎯 <span className="font-semibold text-purple-300">Önerimiz:</span> İzleyin — şu an tepki gerekmez</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Alert card */}
-      <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl px-4 py-3 flex items-start gap-3 mb-5 hover:bg-amber-500/20 transition-colors">
-        <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-        <div>
-          <p className="text-sm font-bold text-amber-500">Fiyat Değişimi Algılandı</p>
-          <p className="text-sm text-amber-200/80 mt-0.5">Rakip Marka B büyük boy ürünü ₺95 → ₺85'e indirdi</p>
-        </div>
-      </div>
-
-      {/* Sentiment bar */}
-      <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-        <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Bu Hafta Sentiment</p>
-        <div className="flex h-2.5 rounded-full overflow-hidden bg-black/50">
-          <div className="bg-emerald-500 h-full shadow-[0_0_10px_rgba(16,185,129,0.8)]" style={{ width: '58%' }} />
-          <div className="bg-slate-500 h-full" style={{ width: '22%' }} />
-          <div className="bg-red-500 h-full shadow-[0_0_10px_rgba(239,68,68,0.8)]" style={{ width: '20%' }} />
-        </div>
-        <div className="flex justify-between text-xs text-slate-400 mt-2.5">
-          <span className="text-emerald-400 font-bold">Olumlu 58%</span>
-          <span>Nötr 22%</span>
-          <span className="text-red-400 font-bold">Olumsuz 20%</span>
-        </div>
+      {/* Footer */}
+      <div className="border-t border-white/5 pt-4 flex items-center justify-between">
+        <p className="text-xs text-slate-500 italic">Analizi biz yaptık. Karar sizin.</p>
+        <button className="text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors">Tam raporu oku →</button>
       </div>
     </div>
   </div>
 );
 
-/* ─── Validation helper ─── */
+/* ─── Validation ─── */
 const validateEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
-/* ─── Form validation ─── */
 function validateField(name, value, f) {
-  if (name === 'brand') return value.trim() ? '' : f.errors.brand;
-  if (name === 'sector') return value ? '' : f.errors.sector;
+  if (name === 'brand')   return value.trim() ? '' : f.errors.brand;
+  if (name === 'sector')  return value ? '' : f.errors.sector;
   if (name === 'contact') return value.trim() ? '' : f.errors.contact;
   if (name === 'email') {
     if (!value.trim()) return f.errors.emailRequired;
@@ -385,11 +423,10 @@ function validateField(name, value, f) {
     return '';
   }
   if (name === 'phone') return value.trim() ? '' : f.errors.phone;
-  if (name === 'size') return value ? '' : f.errors.size;
+  if (name === 'size')  return value ? '' : f.errors.size;
   return '';
 }
 
-/* ─── Reusable validated input ─── */
 const Field = ({ id, label, error, touched, valid, children }) => (
   <div>
     <label htmlFor={id} className="block text-sm font-semibold text-slate-300 mb-2">{label}</label>
@@ -430,12 +467,9 @@ const PulsaraIntel = () => {
   const c = content[language] || content.tr;
   const f = c.form;
 
-  /* ── FAQ state ── */
   const [openFaq, setOpenFaq] = useState(null);
-
-  /* ── Form state ── */
   const [formData, setFormData] = useState({ brand: '', sector: '', contact: '', email: '', phone: '', size: '', notes: '' });
-  const [errors, setErrors] = useState({ brand: '', sector: '', contact: '', email: '', phone: '', size: '' });
+  const [errors, setErrors]   = useState({ brand: '', sector: '', contact: '', email: '', phone: '', size: '' });
   const [touched, setTouched] = useState({ brand: false, sector: false, contact: false, email: false, phone: false, size: false });
 
   const isThanks = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('thanks') === '1';
@@ -443,49 +477,41 @@ const PulsaraIntel = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    if (touched[name]) {
-      setErrors(prev => ({ ...prev, [name]: validateField(name, value, f) }));
-    }
+    if (touched[name]) setErrors(prev => ({ ...prev, [name]: validateField(name, value, f) }));
   };
-
   const handleBlur = (e) => {
     const { name, value } = e.target;
     setTouched(prev => ({ ...prev, [name]: true }));
     setErrors(prev => ({ ...prev, [name]: validateField(name, value, f) }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const required = ['brand', 'sector', 'contact', 'email', 'phone', 'size'];
     const allTouched = Object.fromEntries(required.map(k => [k, true]));
-    const newErrors = Object.fromEntries(required.map(k => [k, validateField(k, formData[k], f)]));
+    const newErrors  = Object.fromEntries(required.map(k => [k, validateField(k, formData[k], f)]));
     setTouched(allTouched);
     setErrors(newErrors);
-    if (required.every(k => !newErrors[k])) {
-      e.target.submit();
-    }
+    if (required.every(k => !newErrors[k])) e.target.submit();
   };
 
-  /* ── Section refs for scroll animations ── */
-  const [heroRef, heroInView] = useInView(0.05);
+  const [heroRef,    heroInView]    = useInView(0.05);
   const [problemRef, problemInView] = useInView();
-  const [howRef, howInView] = useInView();
-  const [featRef, featInView] = useInView();
-  const [sectRef, sectInView] = useInView();
-  const [faqRef, faqInView] = useInView();
+  const [deliverRef, deliverInView] = useInView();
+  const [processRef, processInView] = useInView();
+  const [sectRef,    sectInView]    = useInView();
+  const [faqRef,     faqInView]     = useInView();
 
   return (
     <div className="bg-slate-950 min-h-screen text-slate-300 selection:bg-purple-500/30">
       <SEO title={c.seo.title} description={c.seo.description} />
 
       {/* ══════════════════════════════════════════
-          1. HERO (Deep Space AI)
+          1. HERO
       ══════════════════════════════════════════ */}
       <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-32 overflow-hidden">
-        {/* Ambient Orbs */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none transform -translate-y-1/2" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none transform translate-y-1/3" />
-        
+
         <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <motion.div
             ref={heroRef}
@@ -496,10 +522,16 @@ const PulsaraIntel = () => {
           >
             {/* Left copy */}
             <div>
+              <motion.div variants={fadeUp} className="mb-5">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-semibold tracking-wide uppercase">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+                  {c.hero.eyebrow}
+                </span>
+              </motion.div>
 
               <motion.h1
                 variants={fadeUp}
-                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-cyan-200 leading-tight mb-6"
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-cyan-200 leading-tight mb-6 whitespace-pre-line"
               >
                 {c.hero.headline}
               </motion.h1>
@@ -517,7 +549,7 @@ const PulsaraIntel = () => {
                   {c.hero.cta1}
                 </a>
                 <a
-                  href="#pilot-form"
+                  href="#process"
                   className="px-8 py-3.5 border border-white/20 text-white font-semibold rounded-lg text-center hover:bg-white/5 hover:border-white/40 transition-all duration-300"
                 >
                   {c.hero.cta2}
@@ -525,16 +557,16 @@ const PulsaraIntel = () => {
               </motion.div>
             </div>
 
-            {/* Right dashboard */}
-            <motion.div variants={fadeUp} className="lg:pl-4 perspective-1000">
-              <IntelDashboard />
+            {/* Right — briefing mockup */}
+            <motion.div variants={fadeUp} className="lg:pl-4">
+              <IntelBriefing />
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          2. PROBLEM STATEMENT
+          2. PROBLEM
       ══════════════════════════════════════════ */}
       <section className="relative py-24 sm:py-32 border-y border-white/5 bg-slate-900/50">
         <div className="container mx-auto px-4 sm:px-6">
@@ -545,7 +577,11 @@ const PulsaraIntel = () => {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.problem.headline}</h2>
+              <span className="inline-block mb-4 px-3 py-1 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-semibold tracking-wide uppercase">
+                {c.problem.eyebrow}
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">{c.problem.headline}</h2>
+              <p className="text-slate-400 text-lg max-w-xl mx-auto">{c.problem.sub}</p>
             </motion.div>
             <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
               {c.problem.cards.map((card, i) => (
@@ -569,28 +605,81 @@ const PulsaraIntel = () => {
       </section>
 
       {/* ══════════════════════════════════════════
-          3. HOW IT WORKS
+          3. WHAT YOU RECEIVE
       ══════════════════════════════════════════ */}
       <section className="relative py-24 sm:py-32 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-purple-600/10 blur-[100px] rounded-full pointer-events-none" />
-        
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-purple-600/8 blur-[100px] rounded-full pointer-events-none" />
+
         <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <motion.div
-            ref={howRef}
+            ref={deliverRef}
             initial="hidden"
-            animate={howInView ? 'visible' : 'hidden'}
+            animate={deliverInView ? 'visible' : 'hidden'}
+            variants={stagger}
+          >
+            <motion.div variants={fadeUp} className="text-center mb-16">
+              <span className="inline-block mb-4 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-semibold tracking-wide uppercase">
+                {c.deliver.eyebrow}
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 whitespace-pre-line">{c.deliver.headline}</h2>
+              <p className="text-slate-400 text-lg max-w-2xl mx-auto">{c.deliver.sub}</p>
+            </motion.div>
+
+            <motion.div variants={stagger} className="flex flex-col gap-5 max-w-4xl mx-auto">
+              {c.deliver.items.map((item, i) => {
+                const col = deliverColors[item.icon];
+                return (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    className="bg-white/4 backdrop-blur-sm rounded-2xl border border-white/8 hover:border-white/15 hover:bg-white/8 transition-all duration-400 group"
+                  >
+                    <div className="flex flex-col sm:flex-row items-start gap-6 p-7 sm:p-8">
+                      {/* Icon */}
+                      <div className={`w-16 h-16 rounded-2xl border flex items-center justify-center flex-shrink-0 ${col.bg} ${col.ring} group-hover:scale-110 transition-transform duration-400`}>
+                        {DeliverIcons[item.icon]}
+                      </div>
+                      {/* Text */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-3 mb-3">
+                          <h3 className="text-xl font-bold text-slate-100">{item.title}</h3>
+                          <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${col.pill}`}>
+                            {item.detail}
+                          </span>
+                        </div>
+                        <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          4. OUR PROCESS
+      ══════════════════════════════════════════ */}
+      <section id="process" className="relative py-24 sm:py-32 bg-slate-900/50 border-y border-white/5 overflow-hidden">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6">
+          <motion.div
+            ref={processRef}
+            initial="hidden"
+            animate={processInView ? 'visible' : 'hidden'}
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.howItWorks.headline}</h2>
+              <span className="inline-block mb-4 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-semibold tracking-wide uppercase">
+                {c.process.eyebrow}
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.process.headline}</h2>
             </motion.div>
 
             <div className="relative max-w-5xl mx-auto">
-              {/* Glowing Connector line */}
-              <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-transparent via-purple-500/50 to-transparent shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
-
+              <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
               <motion.div variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-                {c.howItWorks.steps.map((step, i) => (
+                {c.process.steps.map((step, i) => (
                   <motion.div key={i} variants={fadeUp} className="flex flex-col items-center text-center group">
                     <div className="relative z-10 w-24 h-24 rounded-2xl bg-slate-900 border border-white/10 flex items-center justify-center mb-6 shadow-xl group-hover:-translate-y-2 group-hover:border-purple-500/50 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-500">
                       <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-cyan-400 font-extrabold text-3xl">{step.n}</span>
@@ -606,53 +695,14 @@ const PulsaraIntel = () => {
       </section>
 
       {/* ══════════════════════════════════════════
-          4. BENTO BOX FEATURES
-      ══════════════════════════════════════════ */}
-      <section className="py-24 sm:py-32 bg-slate-900/50 border-y border-white/5">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            ref={featRef}
-            initial="hidden"
-            animate={featInView ? 'visible' : 'hidden'}
-            variants={stagger}
-          >
-            <motion.div variants={fadeUp} className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.features.headline}</h2>
-            </motion.div>
-            
-            {/* Bento Grid */}
-            <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto auto-rows-fr">
-              {c.features.items.map((feat, i) => {
-                // Make the 1st and 4th items span 2 columns on desktop for an asymmetrical bento look
-                const isWide = i === 0 || i === 3;
-                return (
-                  <motion.div
-                    key={i}
-                    variants={fadeUp}
-                    className={`bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-500 group flex flex-col justify-center ${isWide ? 'md:col-span-2' : 'md:col-span-1'}`}
-                  >
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-400 transition-all duration-500 shadow-lg">
-                      {FeatureIcons[i]}
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-200 mb-3">{feat.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">{feat.desc}</p>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════
           5. SECTORS & FAQ
       ══════════════════════════════════════════ */}
       <section className="py-24 sm:py-32">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
-            ref={faqRef}
+            ref={sectRef}
             initial="hidden"
-            animate={faqInView ? 'visible' : 'hidden'}
+            animate={sectInView ? 'visible' : 'hidden'}
             variants={stagger}
             className="grid grid-cols-1 lg:grid-cols-2 gap-16"
           >
@@ -666,7 +716,7 @@ const PulsaraIntel = () => {
                     variants={fadeUp}
                     className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 hover:border-cyan-500/30 transition-colors text-center"
                   >
-                    <div className="text-4xl mb-4 grayscale group-hover:grayscale-0">{sector.emoji}</div>
+                    <div className="text-4xl mb-4">{sector.emoji}</div>
                     <p className="text-sm font-semibold text-slate-300">{sector.name}</p>
                   </motion.div>
                 ))}
@@ -674,9 +724,21 @@ const PulsaraIntel = () => {
             </div>
 
             {/* FAQ */}
-            <div>
-              <motion.h2 variants={fadeUp} className="text-3xl font-extrabold text-white mb-8">{c.faq.headline}</motion.h2>
-              <motion.div variants={stagger} className="space-y-4">
+            <div ref={faqRef}>
+              <motion.h2
+                initial="hidden"
+                animate={sectInView ? 'visible' : 'hidden'}
+                variants={fadeUp}
+                className="text-3xl font-extrabold text-white mb-8"
+              >
+                {c.faq.headline}
+              </motion.h2>
+              <motion.div
+                initial="hidden"
+                animate={sectInView ? 'visible' : 'hidden'}
+                variants={stagger}
+                className="space-y-4"
+              >
                 {c.faq.items.map((item, i) => (
                   <motion.div key={i} variants={fadeUp} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
                     <button
@@ -684,9 +746,7 @@ const PulsaraIntel = () => {
                       onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     >
                       {item.q}
-                      <span className={`transform transition-transform duration-300 ${openFaq === i ? 'rotate-180' : ''}`}>
-                        ▼
-                      </span>
+                      <span className={`transform transition-transform duration-300 flex-shrink-0 ml-4 ${openFaq === i ? 'rotate-180' : ''}`}>▼</span>
                     </button>
                     {openFaq === i && (
                       <div className="px-6 pb-5 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4">
@@ -736,23 +796,20 @@ const PulsaraIntel = () => {
       </section>
 
       {/* ══════════════════════════════════════════
-          7. EXCLUSIVE PILOT PORTAL (FORM)
+          7. PILOT FORM
       ══════════════════════════════════════════ */}
       <section id="pilot-form" className="relative py-24 sm:py-32 overflow-hidden border-t border-white/10">
         <div className="absolute inset-0 bg-slate-900/80" />
-        {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-purple-600/20 blur-[150px] rounded-full pointer-events-none" />
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            {/* Section header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">{f.headline}</h2>
               <p className="text-purple-300 text-lg">{f.subhead}</p>
             </div>
 
-            {/* Form card */}
             <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/10">
               {isThanks && (
                 <div className="mb-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 p-6 text-emerald-400 text-center shadow-lg">
@@ -771,25 +828,15 @@ const PulsaraIntel = () => {
                 noValidate
               >
                 <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.origin + '/pulsara-intel?thanks=1' : 'https://pulsaraai.com/pulsara-intel?thanks=1'} />
-                <input type="hidden" name="_subject" value="Pulsara Intel , Yeni Pilot Başvurusu" />
+                <input type="hidden" name="_subject" value="Pulsara Intel — Yeni Pilot Başvurusu" />
                 <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <Field id="brand" label={f.brand} error={errors.brand} touched={touched.brand} valid={touched.brand && !errors.brand && formData.brand ? f.valid : ''}>
-                    <input
-                      type="text" id="brand" name="brand" value={formData.brand}
-                      onChange={handleChange} onBlur={handleBlur} required
-                      className={inputCls(touched.brand, errors.brand)}
-                      placeholder="Pulsara Kafe"
-                    />
+                    <input type="text" id="brand" name="brand" value={formData.brand} onChange={handleChange} onBlur={handleBlur} required className={inputCls(touched.brand, errors.brand)} placeholder="Pulsara Kafe" />
                   </Field>
-
                   <Field id="sector" label={f.sector} error={errors.sector} touched={touched.sector} valid={touched.sector && !errors.sector && formData.sector ? f.valid : ''}>
-                    <select
-                      id="sector" name="sector" value={formData.sector}
-                      onChange={handleChange} onBlur={handleBlur} required
-                      className={inputCls(touched.sector, errors.sector)}
-                    >
+                    <select id="sector" name="sector" value={formData.sector} onChange={handleChange} onBlur={handleBlur} required className={inputCls(touched.sector, errors.sector)}>
                       <option value="" className="bg-slate-900 text-slate-400">{f.sectorPlaceholder}</option>
                       {f.sectorOptions.map(o => <option key={o} value={o} className="bg-slate-900 text-white">{o}</option>)}
                     </select>
@@ -798,40 +845,19 @@ const PulsaraIntel = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <Field id="contact" label={f.contact} error={errors.contact} touched={touched.contact} valid={touched.contact && !errors.contact && formData.contact ? f.valid : ''}>
-                    <input
-                      type="text" id="contact" name="contact" value={formData.contact}
-                      onChange={handleChange} onBlur={handleBlur} required
-                      className={inputCls(touched.contact, errors.contact)}
-                      placeholder="Ahmet Yılmaz"
-                    />
+                    <input type="text" id="contact" name="contact" value={formData.contact} onChange={handleChange} onBlur={handleBlur} required className={inputCls(touched.contact, errors.contact)} placeholder="Ahmet Yılmaz" />
                   </Field>
-
                   <Field id="email" label={f.email} error={errors.email} touched={touched.email} valid={touched.email && !errors.email && formData.email ? f.valid : ''}>
-                    <input
-                      type="email" id="email" name="email" value={formData.email}
-                      onChange={handleChange} onBlur={handleBlur} required
-                      className={inputCls(touched.email, errors.email)}
-                      placeholder="ahmet@pulsarakafe.com"
-                    />
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} onBlur={handleBlur} required className={inputCls(touched.email, errors.email)} placeholder="ahmet@pulsarakafe.com" />
                   </Field>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <Field id="phone" label={f.phone} error={errors.phone} touched={touched.phone} valid={touched.phone && !errors.phone && formData.phone ? f.valid : ''}>
-                    <input
-                      type="tel" id="phone" name="phone" value={formData.phone}
-                      onChange={handleChange} onBlur={handleBlur} required
-                      className={inputCls(touched.phone, errors.phone)}
-                      placeholder="+90 532 000 00 00"
-                    />
+                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} onBlur={handleBlur} required className={inputCls(touched.phone, errors.phone)} placeholder="+90 532 000 00 00" />
                   </Field>
-
                   <Field id="size" label={f.size} error={errors.size} touched={touched.size} valid={touched.size && !errors.size && formData.size ? f.valid : ''}>
-                    <select
-                      id="size" name="size" value={formData.size}
-                      onChange={handleChange} onBlur={handleBlur} required
-                      className={inputCls(touched.size, errors.size)}
-                    >
+                    <select id="size" name="size" value={formData.size} onChange={handleChange} onBlur={handleBlur} required className={inputCls(touched.size, errors.size)}>
                       <option value="" className="bg-slate-900 text-slate-400">{f.sizePlaceholder}</option>
                       {f.sizeOptions.map(o => <option key={o} value={o} className="bg-slate-900 text-white">{o}</option>)}
                     </select>
@@ -840,9 +866,7 @@ const PulsaraIntel = () => {
 
                 <div>
                   <label htmlFor="notes" className="block text-sm font-semibold text-slate-300 mb-2">{f.notes}</label>
-                  <textarea
-                    id="notes" name="notes" value={formData.notes}
-                    onChange={handleChange} rows={4}
+                  <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} rows={4}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 focus:outline-none transition-colors resize-none text-white placeholder-slate-500"
                     placeholder={f.notesPlaceholder}
                   />
@@ -854,7 +878,6 @@ const PulsaraIntel = () => {
                 >
                   {f.submit}
                 </button>
-
                 <p className="text-center text-xs text-slate-500 leading-relaxed mt-6">{f.privacy}</p>
               </form>
             </div>
