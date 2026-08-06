@@ -38,7 +38,6 @@ const content = {
       description: 'Rakiplerinizi biz izleriz, siz kararı verin. Haftalık brifing, anlık öneri uyarıları ve aylık strateji raporu ile Türk perakende ve F&B markalarının rekabet yönetimi ortağı.',
     },
     hero: {
-      eyebrow: 'Rakip İstihbaratı Hizmeti',
       headline: 'Rakiplerinizi biz izleriz.\nSiz sadece kararı verin.',
       subheadline: 'Clarus bir dashboard değil. Rakiplerinizi 7/24 izleyen, haftalık brifing hazırlayan ve her önemli hamlede ne yapmanız gerektiğini söyleyen bir ekip.',
       cta1: 'Ücretsiz Brifing Alın',
@@ -172,7 +171,6 @@ const content = {
       description: 'We monitor your competitors. You make the calls. Weekly briefings, real-time action alerts, and monthly strategy reports for Turkish retail and F&B brands.',
     },
     hero: {
-      eyebrow: 'Competitor Intelligence Service',
       headline: 'We monitor your competitors.\nYou make the decisions.',
       subheadline: "Clarus is not a dashboard. It's a dedicated team that watches your competitors 24/7, prepares weekly briefings, and tells you what to do when something important happens.",
       cta1: 'Get a Free Briefing',
@@ -522,13 +520,6 @@ const PulsaraIntel = () => {
           >
             {/* Left copy */}
             <div>
-              <motion.div variants={fadeUp} className="mb-5">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-semibold tracking-wide uppercase">
-                  <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
-                  {c.hero.eyebrow}
-                </span>
-              </motion.div>
-
               <motion.h1
                 variants={fadeUp}
                 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-cyan-200 leading-tight mb-6 whitespace-pre-line"
