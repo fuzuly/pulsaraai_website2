@@ -34,13 +34,13 @@ const stagger = {
 const content = {
   tr: {
     seo: {
-      title: 'Pulsara Intel — Rakip İstihbarat Departmanınız',
+      title: 'Clarus — Rakip İstihbarat Departmanınız',
       description: 'Rakiplerinizi biz izleriz, siz kararı verin. Haftalık brifing, anlık öneri uyarıları ve aylık strateji raporu ile Türk perakende ve F&B markalarının rekabet yönetimi ortağı.',
     },
     hero: {
       eyebrow: 'Rakip İstihbaratı Hizmeti',
       headline: 'Rakiplerinizi biz izleriz.\nSiz sadece kararı verin.',
-      subheadline: 'Pulsara Intel bir dashboard değil. Rakiplerinizi 7/24 izleyen, haftalık brifing hazırlayan ve her önemli hamlede ne yapmanız gerektiğini söyleyen bir ekip.',
+      subheadline: 'Clarus bir dashboard değil. Rakiplerinizi 7/24 izleyen, haftalık brifing hazırlayan ve her önemli hamlede ne yapmanız gerektiğini söyleyen bir ekip.',
       cta1: 'Ücretsiz Brifing Alın',
       cta2: 'Nasıl Çalışır',
     },
@@ -66,7 +66,7 @@ const content = {
     deliver: {
       eyebrow: 'Ne Alıyorsunuz',
       headline: 'Analizi biz yaparız.\nSize sadece karar gelir.',
-      sub: 'Pulsara Intel bir araç değil. Her hafta masa başınızda hazır olan rakip istihbarat departmanınız.',
+      sub: 'Clarus bir araç değil. Her hafta masa başınızda hazır olan rakip istihbarat departmanınız.',
       items: [
         {
           icon: 'briefing',
@@ -168,13 +168,13 @@ const content = {
   },
   en: {
     seo: {
-      title: 'Pulsara Intel — Your Outsourced Competitor Intelligence Department',
+      title: 'Clarus — Your Outsourced Competitor Intelligence Department',
       description: 'We monitor your competitors. You make the calls. Weekly briefings, real-time action alerts, and monthly strategy reports for Turkish retail and F&B brands.',
     },
     hero: {
       eyebrow: 'Competitor Intelligence Service',
       headline: 'We monitor your competitors.\nYou make the decisions.',
-      subheadline: "Pulsara Intel is not a dashboard. It's a dedicated team that watches your competitors 24/7, prepares weekly briefings, and tells you what to do when something important happens.",
+      subheadline: "Clarus is not a dashboard. It's a dedicated team that watches your competitors 24/7, prepares weekly briefings, and tells you what to do when something important happens.",
       cta1: 'Get a Free Briefing',
       cta2: 'See How It Works',
     },
@@ -200,7 +200,7 @@ const content = {
     deliver: {
       eyebrow: 'What You Receive',
       headline: 'We do the analysis.\nYou get the decisions.',
-      sub: "Pulsara Intel is not a tool. It's your competitor intelligence department — ready every week, without any effort from your team.",
+      sub: "Clarus is not a tool. It's your competitor intelligence department — ready every week, without any effort from your team.",
       items: [
         {
           icon: 'briefing',
@@ -828,7 +828,7 @@ const PulsaraIntel = () => {
                 noValidate
               >
                 <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.origin + '/pulsara-intel?thanks=1' : 'https://pulsaraai.com/pulsara-intel?thanks=1'} />
-                <input type="hidden" name="_subject" value="Pulsara Intel — Yeni Pilot Başvurusu" />
+                <input type="hidden" name="_subject" value="Clarus — Yeni Pilot Başvurusu" />
                 <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

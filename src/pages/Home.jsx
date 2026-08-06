@@ -30,8 +30,8 @@ const Home = () => {
         ? 'Pulsara\'nın AI platformları, işgücü yönetimi, Wellbeing takibi ve rakip zekası için kurumsal düzeyde çözümler sunar. Yapay zeka destekli sistemlerle operasyonlarınızı optimize edin.'
         : 'Pulsara\'s AI platforms deliver enterprise-grade solutions for workforce management, wellbeing tracking, and competitive intelligence. Optimize your operations with AI-powered systems.',
       description2: language === 'tr'
-        ? 'Wellbeing Manager, Roster Manager ve Pulsara Intel gibi platformlarımız, verilerinizi tek bir yerde toplayarak gerçek zamanlı içgörüler ve otomatik karar destek sistemleri sağlar.'
-        : 'Our platforms like Wellbeing Manager, Roster Manager, and Pulsara Intel centralize your data to provide real-time insights and automated decision support systems.',
+        ? 'Wellbeing Manager, Roster Manager ve Clarus gibi platformlarımız, verilerinizi tek bir yerde toplayarak gerçek zamanlı içgörüler ve otomatik karar destek sistemleri sağlar.'
+        : 'Our platforms like Wellbeing Manager, Roster Manager, and Clarus centralize your data to provide real-time insights and automated decision support systems.',
       hint: language === 'tr'
         ? 'AI platformları ile işgücü yönetimini dijitalleştirerek tüm süreçleri tek bir platformda gerçek zamanlı olarak takip edebilirsiniz.'
         : 'Digitize workforce management with AI platforms to track all processes in real-time on a single platform.',
@@ -290,7 +290,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right column: Pulsara Intel — dark, col-span-2, full height */}
+            {/* Right column: Clarus — dark, col-span-2, full height */}
             <div className="lg:col-span-2 relative bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:shadow-[0_0_50px_-10px_rgba(168,85,247,0.35)] transition-all duration-500 group flex flex-col">
               {/* Ambient orbs */}
               <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600/15 rounded-full blur-[100px] pointer-events-none" />

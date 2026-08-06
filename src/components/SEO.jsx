@@ -164,7 +164,7 @@ const SEO = ({ title, description, datePublished = null, dateModified = null, br
         '/company':       { name: 'Company' },
         '/contact':       { name: 'Contact' },
         '/blog':          { name: 'Blog' },
-        '/pulsara-intel': { name: 'Pulsara Intel' },
+        '/pulsara-intel': { name: 'Clarus' },
         '/ai':            { name: 'AI Solutions' },
         '/privacy':       { name: 'Privacy Policy' },
       };
@@ -220,7 +220,7 @@ const SEO = ({ title, description, datePublished = null, dateModified = null, br
         {
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Pulsara Intelligence",
+          "name": "Clarus",
           "description": "Data intelligence platform consolidating scattered sources into real-time analytics dashboards and AI-powered reporting.",
           "brand": { "@type": "Brand", "name": "Pulsara AI" },
           "url": "https://pulsaraai.com/products"
@@ -240,7 +240,7 @@ const SEO = ({ title, description, datePublished = null, dateModified = null, br
       injectJSONLD('software-schema', {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Pulsara Intel",
+        "name": "Clarus",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "description": "AI-powered competitor monitoring platform for Turkish retail and F&B brands. Tracks Google Maps reviews, competitor prices, and generates weekly AI reports.",

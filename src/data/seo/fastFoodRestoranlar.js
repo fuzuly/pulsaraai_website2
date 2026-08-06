@@ -1,12 +1,12 @@
 export const fastFoodRestoranlarData = {
   breadcrumb: {
-    cat: 'Pulsara Intel',
+    cat: 'Clarus',
     catUrl: 'https://pulsaraai.com/pulsara-intel',
     page: 'Fast Food Restoranlar',
   },
   tr: {
     seo: {
-      title: 'Fast Food Rakip Analizi — Pulsara Intelligence',
+      title: 'Fast Food Rakip Analizi — Clarus',
       description:
         'Fast food zincirinizin rakiplerini otomatik izleyin. Kampanya değişikliklerini, fiyat savaşlarını ve yorum trendlerini haftalık AI raporuyla takip edin.',
     },
@@ -16,7 +16,7 @@ export const fastFoodRestoranlarData = {
       subheadline:
         'Rakip kampanyaları, menü değişiklikleri ve şikayet kategorilerini anlık takip edin. Cumartesi sabahı başlayan kampanyayı cuma akşamı öğrenin.',
       cta1: 'Pilot Başvurusu',
-      cta2: "Pulsara Intel'i İncele",
+      cta2: "Clarus'u İncele",
     },
     painPoints: {
       headline: 'Fast food zincirleri neden rakip takibinde geride kalıyor?',
@@ -36,7 +36,7 @@ export const fastFoodRestoranlarData = {
       ],
     },
     solution: {
-      headline: 'Pulsara Intelligence nasıl çalışır?',
+      headline: 'Clarus nasıl çalışır?',
       steps: [
         {
           n: '01',
@@ -89,7 +89,7 @@ export const fastFoodRestoranlarData = {
   },
   en: {
     seo: {
-      title: 'Fast Food Competitor Analysis — Pulsara Intelligence',
+      title: 'Fast Food Competitor Analysis — Clarus',
       description:
         'Monitor your fast food chain competitors automatically. Track campaign changes, price wars, and review trends with weekly AI reports.',
     },
@@ -99,7 +99,7 @@ export const fastFoodRestoranlarData = {
       subheadline:
         'Track competitor campaigns, menu changes, and complaint categories in real time. Learn about Saturday campaigns on Friday evening.',
       cta1: 'Apply for Pilot',
-      cta2: 'Explore Pulsara Intel',
+      cta2: 'Explore Clarus',
     },
     painPoints: {
       headline: 'Why fast food chains fall behind on competitor tracking',
@@ -119,7 +119,7 @@ export const fastFoodRestoranlarData = {
       ],
     },
     solution: {
-      headline: 'How Pulsara Intelligence works',
+      headline: 'How Clarus works',
       steps: [
         { n: '01', title: 'Select your sector', desc: 'Choose Fast Food. The platform automatically identifies 20 competitors in your area.' },
         { n: '02', title: 'Campaigns tracked instantly', desc: 'Instant SMS and email alert when a competitor price or campaign change is detected.' },

@@ -1,12 +1,12 @@
 export const restoranlarData = {
   breadcrumb: {
-    cat: 'Pulsara Intel',
+    cat: 'Clarus',
     catUrl: 'https://pulsaraai.com/pulsara-intel',
     page: 'Restoranlar',
   },
   tr: {
     seo: {
-      title: 'Restoran Rakip Takibi — Pulsara Intelligence',
+      title: 'Restoran Rakip Takibi — Clarus',
       description:
         'Restoranınızın rakiplerini otomatik izleyin. Google puan düşüşlerini, yorum trendlerini ve menü değişikliklerini haftalık AI raporu ile takip edin.',
     },
@@ -16,7 +16,7 @@ export const restoranlarData = {
       subheadline:
         "Google puan değişimlerini, yorum trendlerini ve rakip menü güncellemelerini anlık takip edin. Haftalık AI raporu her Pazartesi yönetiminize hazır.",
       cta1: 'Pilot Başvurusu',
-      cta2: "Pulsara Intel'i İncele",
+      cta2: "Clarus'u İncele",
     },
     painPoints: {
       headline: 'Restoran işletmecilerinin karşılaştığı 3 kritik problem',
@@ -36,7 +36,7 @@ export const restoranlarData = {
       ],
     },
     solution: {
-      headline: 'Pulsara Intelligence nasıl çalışır?',
+      headline: 'Clarus nasıl çalışır?',
       steps: [
         {
           n: '01',
@@ -104,7 +104,7 @@ export const restoranlarData = {
   },
   en: {
     seo: {
-      title: 'Restaurant Competitor Monitoring — Pulsara Intelligence',
+      title: 'Restaurant Competitor Monitoring — Clarus',
       description:
         'Monitor your restaurant competitors automatically. Track Google rating drops, review trends, and menu changes with weekly AI reports.',
     },
@@ -114,7 +114,7 @@ export const restoranlarData = {
       subheadline:
         'Track Google rating changes, review trends, and competitor menu updates in real time. Weekly AI report ready every Monday.',
       cta1: 'Apply for Pilot',
-      cta2: 'Explore Pulsara Intel',
+      cta2: 'Explore Clarus',
     },
     painPoints: {
       headline: '3 critical problems restaurant operators face',
@@ -134,7 +134,7 @@ export const restoranlarData = {
       ],
     },
     solution: {
-      headline: 'How Pulsara Intelligence works',
+      headline: 'How Clarus works',
       steps: [
         { n: '01', title: 'Select your sector', desc: 'Choose Restaurant. The platform automatically identifies 20 competitors in your area.' },
         { n: '02', title: 'AI analyzes reviews', desc: 'Turkish sentiment analysis separates review categories: food quality, service, delivery.' },

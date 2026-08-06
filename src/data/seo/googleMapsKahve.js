@@ -1,12 +1,12 @@
 export const googleMapsKahveData = {
   breadcrumb: {
-    cat: 'Pulsara Intel',
+    cat: 'Clarus',
     catUrl: 'https://pulsaraai.com/pulsara-intel',
     page: 'Kahve Dükkanları',
   },
   tr: {
     seo: {
-      title: 'Kahve Dükkanı Google Haritalar İzleme — Pulsara Intelligence',
+      title: 'Kahve Dükkanı Google Haritalar İzleme — Clarus',
       description:
         'Kahve dükkanınızın ve rakiplerinizin Google Haritalar puanlarını ve yorum trendlerini anlık izleyin. "En iyi kahve yakınımda" aramasında rakiplerinizin önüne geçin.',
     },
@@ -16,7 +16,7 @@ export const googleMapsKahveData = {
       subheadline:
         "Google Haritalar'daki puan değişimlerini, yorum hızını ve fotoğraf yükleme metriklerini anlık takip edin. Kahve sektöründe görünürlük savaşını veriye dayalı kazanın.",
       cta1: 'Pilot Başvurusu',
-      cta2: "Pulsara Intel'i İncele",
+      cta2: "Clarus'u İncele",
     },
     painPoints: {
       headline: 'Google Haritalar kahve sektörünü nasıl etkiliyor?',
@@ -36,7 +36,7 @@ export const googleMapsKahveData = {
       ],
     },
     solution: {
-      headline: 'Pulsara Intelligence nasıl çalışır?',
+      headline: 'Clarus nasıl çalışır?',
       steps: [
         {
           n: '01',
@@ -89,7 +89,7 @@ export const googleMapsKahveData = {
   },
   en: {
     seo: {
-      title: 'Coffee Shop Google Maps Monitoring — Pulsara Intelligence',
+      title: 'Coffee Shop Google Maps Monitoring — Clarus',
       description:
         'Monitor your coffee shop and competitors\' Google Maps ratings and review trends in real time. Win the "best coffee near me" search ranking.',
     },
@@ -99,7 +99,7 @@ export const googleMapsKahveData = {
       subheadline:
         'Track Google Maps rating changes, review velocity, and photo upload metrics in real time. Win the coffee sector visibility battle with data.',
       cta1: 'Apply for Pilot',
-      cta2: 'Explore Pulsara Intel',
+      cta2: 'Explore Clarus',
     },
     painPoints: {
       headline: 'How Google Maps affects the coffee sector',
@@ -119,7 +119,7 @@ export const googleMapsKahveData = {
       ],
     },
     solution: {
-      headline: 'How Pulsara Intelligence works',
+      headline: 'How Clarus works',
       steps: [
         { n: '01', title: 'Add your cafés', desc: 'Add your own branches and competitor cafés. 20 competitors auto-suggested.' },
         { n: '02', title: 'Ratings and reviews tracked', desc: 'Hourly scan tracks rating changes and review velocity in real time.' },

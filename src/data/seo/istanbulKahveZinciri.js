@@ -1,12 +1,12 @@
 export const istanbulKahveZinciriData = {
   breadcrumb: {
-    cat: 'Pulsara Intel',
+    cat: 'Clarus',
     catUrl: 'https://pulsaraai.com/pulsara-intel',
     page: 'Kahve Zinciri Rakip Analizi',
   },
   tr: {
     seo: {
-      title: "İstanbul Kahve Zinciri Rakip Analizi — Pulsara Intelligence",
+      title: "İstanbul Kahve Zinciri Rakip Analizi — Clarus",
       description:
         "İstanbul'daki kahve zinciri rakiplerinizi şube bazında izleyin. Avrupa ve Anadolu yakası fiyat dinamiklerini, AVM vs. cadde rekabetini ve Google yorum trendlerini anlık takip edin.",
     },
@@ -16,7 +16,7 @@ export const istanbulKahveZinciriData = {
       subheadline:
         "Avrupa yakası ile Anadolu yakası arasındaki fiyat asimetrisini, AVM ve cadde mağazası dinamiklerini ve rakip şube açılışlarını anlık takip edin.",
       cta1: 'Pilot Başvurusu',
-      cta2: "Pulsara Intel'i İncele",
+      cta2: "Clarus'u İncele",
     },
     painPoints: {
       headline: "İstanbul kahve zinciri işletmecilerinin özgün problemleri",
@@ -36,7 +36,7 @@ export const istanbulKahveZinciriData = {
       ],
     },
     solution: {
-      headline: 'Pulsara Intelligence nasıl çalışır?',
+      headline: 'Clarus nasıl çalışır?',
       steps: [
         {
           n: '01',
@@ -89,7 +89,7 @@ export const istanbulKahveZinciriData = {
   },
   en: {
     seo: {
-      title: 'Istanbul Coffee Chain Competitor Analysis — Pulsara Intelligence',
+      title: 'Istanbul Coffee Chain Competitor Analysis — Clarus',
       description:
         "Monitor Istanbul's coffee chain competitors at branch level. Track European and Asian side price dynamics, AVM vs. street competition, and Google review trends in real time.",
     },
@@ -99,7 +99,7 @@ export const istanbulKahveZinciriData = {
       subheadline:
         "Track the price asymmetry between European and Asian sides, AVM and street store dynamics, and competitor branch openings in real time.",
       cta1: 'Apply for Pilot',
-      cta2: 'Explore Pulsara Intel',
+      cta2: 'Explore Clarus',
     },
     painPoints: {
       headline: "Unique problems for Istanbul coffee chain operators",
@@ -119,7 +119,7 @@ export const istanbulKahveZinciriData = {
       ],
     },
     solution: {
-      headline: 'How Pulsara Intelligence works',
+      headline: 'How Clarus works',
       steps: [
         { n: '01', title: 'Add Istanbul branches', desc: 'Add your branches and competitor coffee chain branches. European and Asian sides segmented separately.' },
         { n: '02', title: 'Branch-level analysis', desc: 'Each branch monitored individually. Kadıköy competitor shows different metrics than Nişantaşı.' },

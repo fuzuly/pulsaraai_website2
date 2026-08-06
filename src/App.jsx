@@ -1490,7 +1490,7 @@ function BusinessApp() {
               </>
             } />
       
-            {/* Pulsara Intel product landing page */}
+            {/* Clarus product landing page */}
             <Route path="/pulsara-intel" element={
               <>
                 <Navbar />

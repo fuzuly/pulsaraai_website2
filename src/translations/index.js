@@ -10,7 +10,7 @@ export const translations = {
       partnerships: 'Technology Partnerships',
       contact: 'Contact',
       getStarted: 'Get Started',
-      intel: 'Pulsara Intel',
+      intel: 'Clarus',
     },
     common: {
       learnMore: 'Learn more',
@@ -52,7 +52,7 @@ export const translations = {
           ],
         },
         pulsaraIntel: {
-          name: 'Pulsara Intel',
+          name: 'Clarus',
           tagline: 'Competitor Intelligence Service',
           eyebrow: 'New',
           description: 'We monitor your competitors. You make the decisions. Weekly briefings, real-time action alerts, and monthly strategy reports — no dashboards, no manual work.',
@@ -67,7 +67,7 @@ export const translations = {
             'Real-time SMS/WhatsApp action alerts',
             'Monthly strategy report with recommendations',
           ],
-          cta: 'Explore Pulsara Intel',
+          cta: 'Explore Clarus',
         },
       },
       cta: {
@@ -125,7 +125,7 @@ export const translations = {
       partnerships: 'Teknoloji Ortaklıkları',
       contact: 'İletişim',
       getStarted: 'Başlayın',
-      intel: 'Pulsara Intel',
+      intel: 'Clarus',
     },
     common: {
       learnMore: 'Daha fazla bilgi',
@@ -167,7 +167,7 @@ export const translations = {
           ],
         },
         pulsaraIntel: {
-          name: 'Pulsara Intel',
+          name: 'Clarus',
           tagline: 'Rakip İstihbaratı Hizmeti',
           eyebrow: 'Yeni',
           description: 'Rakiplerinizi biz izleriz. Siz kararı verin. Haftalık brifing, anlık öneri uyarıları ve aylık strateji raporu — dashboard yok, manuel iş yok.',
@@ -182,7 +182,7 @@ export const translations = {
             'Anlık SMS/WhatsApp öneri uyarıları',
             'Aksiyon önerileri ile aylık strateji raporu',
           ],
-          cta: "Pulsara Intel'i Keşfet",
+          cta: "Clarus'u Keşfet",
         },
       },
       cta: {

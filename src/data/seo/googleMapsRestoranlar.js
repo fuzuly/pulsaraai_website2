@@ -1,12 +1,12 @@
 export const googleMapsRestoranlarData = {
   breadcrumb: {
-    cat: 'Pulsara Intel',
+    cat: 'Clarus',
     catUrl: 'https://pulsaraai.com/pulsara-intel',
     page: 'Restoranlar',
   },
   tr: {
     seo: {
-      title: 'Restoran Google Haritalar Yorum İzleme — Pulsara Intelligence',
+      title: 'Restoran Google Haritalar Yorum İzleme — Clarus',
       description:
         'Restoranınızın ve rakiplerinizin Google Haritalar puanlarını ve yorum trendlerini anlık izleyin. 4.0 eşiği kırılmadan önce harekete geçin.',
     },
@@ -16,7 +16,7 @@ export const googleMapsRestoranlarData = {
       subheadline:
         "Google Haritalar'daki puan değişimlerini, yorum hızını ve rakip puan dinamiklerini anlık takip edin. 4.0 eşiğinin altına düşmek görünürlüğünüzü yok eder — önceden önlem alın.",
       cta1: 'Pilot Başvurusu',
-      cta2: "Pulsara Intel'i İncele",
+      cta2: "Clarus'u İncele",
     },
     painPoints: {
       headline: 'Google Haritalar restoran işletmecilerini nasıl etkiliyor?',
@@ -36,7 +36,7 @@ export const googleMapsRestoranlarData = {
       ],
     },
     solution: {
-      headline: 'Pulsara Intelligence nasıl çalışır?',
+      headline: 'Clarus nasıl çalışır?',
       steps: [
         {
           n: '01',
@@ -89,7 +89,7 @@ export const googleMapsRestoranlarData = {
   },
   en: {
     seo: {
-      title: 'Restaurant Google Maps Review Monitoring — Pulsara Intelligence',
+      title: 'Restaurant Google Maps Review Monitoring — Clarus',
       description:
         'Monitor your restaurant and competitors\' Google Maps ratings and review trends in real time. Act before the 4.0 threshold is breached.',
     },
@@ -99,7 +99,7 @@ export const googleMapsRestoranlarData = {
       subheadline:
         'Track Google Maps rating changes, review velocity, and competitor rating dynamics in real time. Dropping below 4.0 destroys your visibility — act before it happens.',
       cta1: 'Apply for Pilot',
-      cta2: 'Explore Pulsara Intel',
+      cta2: 'Explore Clarus',
     },
     painPoints: {
       headline: 'How Google Maps affects restaurant operators',
@@ -119,7 +119,7 @@ export const googleMapsRestoranlarData = {
       ],
     },
     solution: {
-      headline: 'How Pulsara Intelligence works',
+      headline: 'How Clarus works',
       steps: [
         { n: '01', title: 'Add restaurants', desc: 'Add your own restaurants and competitors you want to track to the system.' },
         { n: '02', title: 'Ratings monitored live', desc: 'Every restaurant\'s Google Maps rating scanned hourly. Instant alert on change.' },

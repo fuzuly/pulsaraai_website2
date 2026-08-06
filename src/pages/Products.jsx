@@ -71,7 +71,7 @@ const content = {
       {
         badge: 'Veri & Analitik',
         badgeColor: 'bg-indigo-100 text-indigo-700',
-        name: 'Pulsara Intelligence',
+        name: 'Clarus',
         tagline: 'Ham veriden iş kararına',
         taglineColor: 'text-indigo-600',
         description: 'Dağınık veri kaynaklarını birleştiren, gerçek zamanlı analitik paneller ve AI destekli raporlama ile kurumsal karar alma süreçlerini hızlandıran veri zekası platformu.',
@@ -133,7 +133,7 @@ const content = {
       {
         badge: 'Data & Analytics',
         badgeColor: 'bg-indigo-100 text-indigo-700',
-        name: 'Pulsara Intelligence',
+        name: 'Clarus',
         tagline: 'From raw data to business decisions',
         taglineColor: 'text-indigo-600',
         description: 'A data intelligence platform that consolidates scattered data sources, accelerating enterprise decision-making with real-time analytics dashboards and AI-powered reporting.',

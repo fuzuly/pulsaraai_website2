@@ -1,12 +1,12 @@
 export const kahveZincirleriData = {
   breadcrumb: {
-    cat: 'Pulsara Intel',
+    cat: 'Clarus',
     catUrl: 'https://pulsaraai.com/pulsara-intel',
     page: 'Kahve Zincirleri',
   },
   tr: {
     seo: {
-      title: 'Kahve Zinciri Rakip Takibi — Pulsara Intelligence',
+      title: 'Kahve Zinciri Rakip Takibi — Clarus',
       description:
         'Kahve zincirinizin tüm rakiplerini otomatik izleyin. Fiyat değişimleri, Google Maps yorumları ve haftalık AI raporları — hepsi tek platformda.',
     },
@@ -16,7 +16,7 @@ export const kahveZincirleriData = {
       subheadline:
         'Fiyat değişimlerini, Google Maps yorumlarını ve rakip şube açılışlarını anlık takip edin. Haftalık AI raporu her Pazartesi hazır.',
       cta1: 'Pilot Başvurusu',
-      cta2: "Pulsara Intel'i İncele",
+      cta2: "Clarus'u İncele",
     },
     painPoints: {
       headline: 'Kahve zincirlerinin karşılaştığı 3 kritik problem',
@@ -36,7 +36,7 @@ export const kahveZincirleriData = {
       ],
     },
     solution: {
-      headline: 'Pulsara Intelligence nasıl çalışır?',
+      headline: 'Clarus nasıl çalışır?',
       steps: [
         {
           n: '01',
@@ -104,7 +104,7 @@ export const kahveZincirleriData = {
   },
   en: {
     seo: {
-      title: 'Coffee Chain Competitor Monitoring — Pulsara Intelligence',
+      title: 'Coffee Chain Competitor Monitoring — Clarus',
       description:
         'Monitor all your coffee chain competitors automatically. Price changes, Google Maps reviews, and weekly AI reports — all in one platform.',
     },
@@ -114,7 +114,7 @@ export const kahveZincirleriData = {
       subheadline:
         'Track price changes, Google Maps reviews, and competitor branch openings in real time. Weekly AI report ready every Monday.',
       cta1: 'Apply for Pilot',
-      cta2: 'Explore Pulsara Intel',
+      cta2: 'Explore Clarus',
     },
     painPoints: {
       headline: '3 critical problems coffee chains face',
@@ -134,7 +134,7 @@ export const kahveZincirleriData = {
       ],
     },
     solution: {
-      headline: 'How Pulsara Intelligence works',
+      headline: 'How Clarus works',
       steps: [
         {
           n: '01',

@@ -109,7 +109,7 @@ const Solutions = () => {
   return (
     <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 bg-white">
       <SEO 
-        title="Pulsara Intelligence Platform , Enterprise Big Data & AI Intelligence"
+        title="Clarus Platform , Enterprise Big Data & AI Intelligence"
         description="Pulsara unifies behavioral, operational, and organizational data into a single AI intelligence layer for enterprises, institutions, and governments."
       />
       <div className="container mx-auto px-4 sm:px-6">
