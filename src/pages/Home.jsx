@@ -299,15 +299,6 @@ const Home = () => {
               <div className="relative z-10 flex flex-col h-full p-6 sm:p-8 lg:p-10">
                 {/* Header */}
                 <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-5">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-semibold tracking-wide uppercase">
-                      <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
-                      {t.products.pulsaraIntel.eyebrow}
-                    </span>
-                    <span className="inline-block px-3 py-1 bg-slate-800 text-slate-400 rounded-full text-xs font-semibold">
-                      {t.products.pulsaraIntel.tagline}
-                    </span>
-                  </div>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white mb-4 leading-snug">
                     {t.products.pulsaraIntel.name}
                   </h3>

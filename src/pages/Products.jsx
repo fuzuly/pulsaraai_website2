@@ -28,7 +28,6 @@ const content = {
       title: 'Pulsara Ürünleri , Kurumsal AI Platformları',
       description: 'Wellbeing, işgücü planlama ve veri analitiği için kurumsal yapay zeka platformları.',
     },
-    eyebrow: 'Ürünlerimiz',
     heading: 'Ürünlerimiz',
     subtitle: 'İşletmenizin her katmanı için kurumsal yapay zeka çözümleri',
     cta: {
@@ -90,7 +89,6 @@ const content = {
       title: 'Pulsara Products , Enterprise AI Platforms',
       description: 'Enterprise AI platforms for wellbeing, workforce planning, and data analytics. Built for scale.',
     },
-    eyebrow: 'Our Products',
     heading: 'Our Products',
     subtitle: 'Enterprise AI solutions for every layer of your business',
     cta: {
@@ -221,9 +219,6 @@ const Products = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-violet-100 text-violet-700 text-xs font-semibold tracking-widest uppercase">
-              {c.eyebrow}
-            </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug mb-4">
               {c.heading}
             </h1>

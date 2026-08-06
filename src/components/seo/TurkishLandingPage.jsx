@@ -120,12 +120,6 @@ const TurkishLandingPage = ({ data }) => {
             variants={stagger}
             className="max-w-3xl"
           >
-            <motion.p
-              variants={fadeUp}
-              className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-4"
-            >
-              {c.hero.eyebrow}
-            </motion.p>
             <motion.h1
               variants={fadeUp}
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6"

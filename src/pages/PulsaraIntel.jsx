@@ -44,7 +44,6 @@ const content = {
       cta2: 'Nasıl Çalışır',
     },
     problem: {
-      eyebrow: 'Sorun',
       headline: 'Rekabeti takip etmek tam zamanlı bir iş.',
       sub: 'Rakipleriniz hareket ediyor. Siz operasyonla meşgulsünüz.',
       cards: [
@@ -63,7 +62,6 @@ const content = {
       ],
     },
     deliver: {
-      eyebrow: 'Ne Alıyorsunuz',
       headline: 'Analizi biz yaparız.\nSize sadece karar gelir.',
       sub: 'Clarus bir araç değil. Her hafta masa başınızda hazır olan rakip istihbarat departmanınız.',
       items: [
@@ -88,7 +86,6 @@ const content = {
       ],
     },
     process: {
-      eyebrow: 'Nasıl Çalışır',
       headline: 'Bir şey yapmanıza gerek yok.',
       steps: [
         { n: '01', title: 'Onboarding (1 gün)', desc: 'Sektörünüzü, rakiplerinizi ve önceliklerinizi öğreniriz. Sonrasını biz hallederiz.' },
@@ -177,7 +174,6 @@ const content = {
       cta2: 'See How It Works',
     },
     problem: {
-      eyebrow: 'The Problem',
       headline: 'Competitor intelligence is a full-time job.',
       sub: "Your competitors are moving. You're busy running the business.",
       cards: [
@@ -196,7 +192,6 @@ const content = {
       ],
     },
     deliver: {
-      eyebrow: 'What You Receive',
       headline: 'We do the analysis.\nYou get the decisions.',
       sub: "Clarus is not a tool. It's your competitor intelligence department — ready every week, without any effort from your team.",
       items: [
@@ -221,7 +216,6 @@ const content = {
       ],
     },
     process: {
-      eyebrow: 'How It Works',
       headline: "You don't have to do anything.",
       steps: [
         { n: '01', title: 'Onboarding (1 day)', desc: 'We learn your sector, competitors, and priorities. Then we handle everything.' },
@@ -568,9 +562,6 @@ const PulsaraIntel = () => {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="text-center mb-16">
-              <span className="inline-block mb-4 px-3 py-1 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-semibold tracking-wide uppercase">
-                {c.problem.eyebrow}
-              </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">{c.problem.headline}</h2>
               <p className="text-slate-400 text-lg max-w-xl mx-auto">{c.problem.sub}</p>
             </motion.div>
@@ -609,9 +600,6 @@ const PulsaraIntel = () => {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="text-center mb-16">
-              <span className="inline-block mb-4 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-semibold tracking-wide uppercase">
-                {c.deliver.eyebrow}
-              </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 whitespace-pre-line">{c.deliver.headline}</h2>
               <p className="text-slate-400 text-lg max-w-2xl mx-auto">{c.deliver.sub}</p>
             </motion.div>
@@ -661,9 +649,6 @@ const PulsaraIntel = () => {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="text-center mb-20">
-              <span className="inline-block mb-4 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-semibold tracking-wide uppercase">
-                {c.process.eyebrow}
-              </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white">{c.process.headline}</h2>
             </motion.div>
 
