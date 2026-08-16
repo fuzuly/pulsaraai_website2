@@ -14,17 +14,19 @@ import Products from './pages/Products.jsx';
 import Services from './pages/Services.jsx';
 import Company from './pages/Company.jsx';
 import Ortakliklar from './pages/Ortakliklar.jsx';
-import PulsaraIntel from './pages/PulsaraIntel.jsx';
+// Clarus hidden from the live site — imports kept commented for easy restore
+// import PulsaraIntel from './pages/PulsaraIntel.jsx';
 import BlogList from './pages/BlogList.jsx';
 import BlogDetail from './pages/BlogDetail.jsx';
 import Privacy from './pages/Privacy.jsx';
 import AI from './pages/AI.jsx';
-import KahveZincirleriPage from './pages/tr/KahveZincirleriPage.jsx';
-import RestoranlarRakipTakip from './pages/tr/RestoranlarRakipTakip.jsx';
-import FastFoodRakipTakip from './pages/tr/FastFoodRakipTakip.jsx';
-import GoogleMapsRestoranlar from './pages/tr/GoogleMapsRestoranlar.jsx';
-import GoogleMapsKahve from './pages/tr/GoogleMapsKahve.jsx';
-import IstanbulKahveZinciri from './pages/tr/IstanbulKahveZinciri.jsx';
+// Clarus-based Turkish SEO landing pages — hidden with the Clarus product
+// import KahveZincirleriPage from './pages/tr/KahveZincirleriPage.jsx';
+// import RestoranlarRakipTakip from './pages/tr/RestoranlarRakipTakip.jsx';
+// import FastFoodRakipTakip from './pages/tr/FastFoodRakipTakip.jsx';
+// import GoogleMapsRestoranlar from './pages/tr/GoogleMapsRestoranlar.jsx';
+// import GoogleMapsKahve from './pages/tr/GoogleMapsKahve.jsx';
+// import IstanbulKahveZinciri from './pages/tr/IstanbulKahveZinciri.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -1490,7 +1492,7 @@ function BusinessApp() {
               </>
             } />
       
-            {/* Clarus product landing page */}
+            {/* Clarus product landing page — hidden from the live site
             <Route path="/pulsara-intel" element={
               <>
                 <Navbar />
@@ -1498,6 +1500,7 @@ function BusinessApp() {
                 <Footer />
               </>
             } />
+            */}
 
             {/* AI solutions page */}
             <Route path="/ai" element={
@@ -1517,7 +1520,7 @@ function BusinessApp() {
               </>
             } />
 
-            {/* Turkish SEO landing pages */}
+            {/* Turkish SEO landing pages — Clarus content, hidden from the live site
             <Route path="/tr/rakip-takip/kahve-zincirleri" element={
               <><Navbar /><KahveZincirleriPage /><Footer /></>
             } />
@@ -1536,6 +1539,7 @@ function BusinessApp() {
             <Route path="/tr/istanbul/kahve-zinciri-rakip-analizi" element={
               <><Navbar /><IstanbulKahveZinciri /><Footer /></>
             } />
+            */}
 
             {/* Business site (old version) */}
             <Route path="/business" element={<BusinessApp />} />

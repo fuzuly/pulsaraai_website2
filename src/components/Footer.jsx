@@ -22,7 +22,7 @@ const Footer = () => {
       links: [
         { name: 'Wellbeing Manager', path: '/products' },
         { name: 'Roster Manager', path: '/products' },
-        { name: 'Clarus', path: '/pulsara-intel' },
+        // { name: 'Clarus', path: '/pulsara-intel' },  // Clarus hidden
       ],
     },
     {

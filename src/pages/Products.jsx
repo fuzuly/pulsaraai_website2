@@ -67,21 +67,6 @@ const content = {
         ],
         prominent: false,
       },
-      {
-        badge: 'Veri & Analitik',
-        badgeColor: 'bg-indigo-100 text-indigo-700',
-        name: 'Clarus',
-        tagline: 'Ham veriden iş kararına',
-        taglineColor: 'text-indigo-600',
-        description: 'Dağınık veri kaynaklarını birleştiren, gerçek zamanlı analitik paneller ve AI destekli raporlama ile kurumsal karar alma süreçlerini hızlandıran veri zekası platformu.',
-        features: [
-          'Uçtan uca rakip analizi',
-          'Fiyat analizi, sosyal medya analizi, haber analizi, web sitesi analizi',
-          'AI destekli anomali tespiti ve tahminleme',
-          'Özelleştirilebilir KPI takip panelleri',
-        ],
-        prominent: false,
-      },
     ],
   },
   en: {
@@ -125,21 +110,6 @@ const content = {
           'Skill, contract, and compliance-aware shifts',
           'Real-time coverage and overtime visibility',
           'Integrations with HR and time-tracking tools',
-        ],
-        prominent: false,
-      },
-      {
-        badge: 'Data & Analytics',
-        badgeColor: 'bg-indigo-100 text-indigo-700',
-        name: 'Clarus',
-        tagline: 'From raw data to business decisions',
-        taglineColor: 'text-indigo-600',
-        description: 'A data intelligence platform that consolidates scattered data sources, accelerating enterprise decision-making with real-time analytics dashboards and AI-powered reporting.',
-        features: [
-          'End-to-end competitor analysis',
-          'Price analysis, social media analysis, news analysis, website analysis',
-          'AI-powered anomaly detection and forecasting',
-          'Customizable KPI tracking panels',
         ],
         prominent: false,
       },
@@ -238,7 +208,7 @@ const Products = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
           >
             {c.products.map((product, i) => (
               <ProductCard key={i} {...product} learnMore={c.learnMore} />

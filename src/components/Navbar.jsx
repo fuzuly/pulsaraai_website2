@@ -28,7 +28,7 @@ const Navbar = () => {
   const navLinks = [
     { name: t.nav.home, path: '/' },
     { name: t.nav.products, path: '/products' },
-    { name: t.nav.intel, path: '/pulsara-intel' },
+    // { name: t.nav.intel, path: '/pulsara-intel' },  // Clarus hidden
     { name: t.nav.services, path: '/services' },
     { name: t.nav.partnerships, path: '/ortakliklar' },
     { name: t.nav.company, path: '/company' },

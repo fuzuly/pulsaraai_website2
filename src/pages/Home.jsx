@@ -27,11 +27,11 @@ const Home = () => {
         ? 'Kurumsal AI Platformları ile Verimliliği Artırın'
         : 'Increase Efficiency with Enterprise AI Platforms',
       description1: language === 'tr'
-        ? 'Pulsara\'nın AI platformları, işgücü yönetimi, Wellbeing takibi ve rakip zekası için kurumsal düzeyde çözümler sunar. Yapay zeka destekli sistemlerle operasyonlarınızı optimize edin.'
-        : 'Pulsara\'s AI platforms deliver enterprise-grade solutions for workforce management, wellbeing tracking, and competitive intelligence. Optimize your operations with AI-powered systems.',
+        ? 'Pulsara\'nın AI platformları, işgücü yönetimi, Wellbeing takibi ve veri analitiği için kurumsal düzeyde çözümler sunar. Yapay zeka destekli sistemlerle operasyonlarınızı optimize edin.'
+        : 'Pulsara\'s AI platforms deliver enterprise-grade solutions for workforce management, wellbeing tracking, and data analytics. Optimize your operations with AI-powered systems.',
       description2: language === 'tr'
-        ? 'Wellbeing Manager, Roster Manager ve Clarus gibi platformlarımız, verilerinizi tek bir yerde toplayarak gerçek zamanlı içgörüler ve otomatik karar destek sistemleri sağlar.'
-        : 'Our platforms like Wellbeing Manager, Roster Manager, and Clarus centralize your data to provide real-time insights and automated decision support systems.',
+        ? 'Wellbeing Manager ve Roster Manager gibi platformlarımız, verilerinizi tek bir yerde toplayarak gerçek zamanlı içgörüler ve otomatik karar destek sistemleri sağlar.'
+        : 'Our platforms like Wellbeing Manager and Roster Manager centralize your data to provide real-time insights and automated decision support systems.',
       hint: language === 'tr'
         ? 'AI platformları ile işgücü yönetimini dijitalleştirerek tüm süreçleri tek bir platformda gerçek zamanlı olarak takip edebilirsiniz.'
         : 'Digitize workforce management with AI platforms to track all processes in real-time on a single platform.',
@@ -150,8 +150,8 @@ const Home = () => {
   return (
     <div className="bg-white text-slate-900 min-h-screen">
       <SEO 
-        title="Pulsara AI , Enterprise AI Solutions for Workforce & Intelligence"
-        description="AI platforms for workforce wellbeing, scheduling, and competitive intelligence. Built for modern enterprises."
+        title="Pulsara AI , Enterprise AI Solutions for Workforce & Analytics"
+        description="AI platforms for workforce wellbeing, scheduling, and data analytics. Built for modern enterprises."
       />
       {/* Hero Section - Full Screen Video */}
       <HeroVideoHeader />
@@ -239,10 +239,10 @@ const Home = () => {
               {t.products.subtitle}
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
 
-            {/* Left column: Wellbeing + Roster stacked */}
-            <div className="flex flex-col gap-6">
+            {/* Wellbeing + Roster (cards flow directly into the grid) */}
+            <div className="contents">
               <div className="bg-white rounded-xl p-5 sm:p-6 border border-gray-200 hover:shadow-lg transition-shadow flex-1">
                 <span className="inline-block px-3 py-1.5 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold mb-4">
                   {t.products.wellbeingManager.tagline}
@@ -290,63 +290,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right column: Clarus — dark, col-span-2, full height */}
-            <div className="lg:col-span-2 relative bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:shadow-[0_0_50px_-10px_rgba(168,85,247,0.35)] transition-all duration-500 group flex flex-col">
-              {/* Ambient orbs */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600/15 rounded-full blur-[100px] pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-600/10 rounded-full blur-[90px] pointer-events-none" />
-
-              <div className="relative z-10 flex flex-col h-full p-6 sm:p-8 lg:p-10">
-                {/* Header */}
-                <div className="mb-6">
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white mb-4 leading-snug">
-                    {t.products.pulsaraIntel.name}
-                  </h3>
-                  <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg">
-                    {t.products.pulsaraIntel.description}
-                  </p>
-                </div>
-
-                {/* Mini briefing preview */}
-                <div className="bg-white/5 border border-white/10 rounded-xl p-4 mb-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">{t.products.pulsaraIntel.briefingLabel}</p>
-                    <span className="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">{t.products.pulsaraIntel.briefingDelivered}</span>
-                  </div>
-                  <div className="space-y-2">
-                    {t.products.pulsaraIntel.briefingItems.map((item, i) => (
-                      <div key={i} className={`rounded-lg p-3 border ${i === 0 ? 'bg-red-500/8 border-red-500/20' : 'bg-emerald-500/8 border-emerald-500/20'}`}>
-                        <p className={`text-xs font-bold mb-1 ${i === 0 ? 'text-red-300' : 'text-emerald-300'}`}>{item.label}</p>
-                        <p className="text-xs text-slate-400">🎯 <span className="text-purple-300 font-semibold">{item.rec}</span></p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Features */}
-                <ul className="space-y-2.5 mb-8 flex-1">
-                  {t.products.pulsaraIntel.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-3 text-slate-300 text-sm">
-                      <span className="w-4 h-4 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
-                        <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-                      </span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
-                <Link
-                  to="/pulsara-intel"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg shadow-[0_0_20px_rgba(147,51,234,0.25)] hover:shadow-[0_0_35px_rgba(147,51,234,0.5)] hover:scale-105 transition-all duration-300 w-fit text-sm sm:text-base"
-                >
-                  {t.products.pulsaraIntel.cta}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
 
           </div>
         </div>

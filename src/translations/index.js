@@ -10,7 +10,6 @@ export const translations = {
       partnerships: 'Technology Partnerships',
       contact: 'Contact',
       getStarted: 'Get Started',
-      intel: 'Clarus',
     },
     common: {
       learnMore: 'Learn more',
@@ -50,24 +49,6 @@ export const translations = {
             'Real-time coverage & overtime visibility',
             'Integrations with HR and time-tracking tools',
           ],
-        },
-        pulsaraIntel: {
-          name: 'Clarus',
-          tagline: 'Competitor Intelligence Service',
-          eyebrow: 'New',
-          description: 'We monitor your competitors. You make the decisions. Weekly briefings, real-time action alerts, and monthly strategy reports — no dashboards, no manual work.',
-          briefingLabel: 'Sample Weekly Briefing',
-          briefingDelivered: 'Delivered ✓',
-          briefingItems: [
-            { label: '⚠️ Price Move — Competitor A', rec: 'Our recommendation: Launch a loyalty campaign, don\'t match the price' },
-            { label: '📉 Review Surge — Competitor B', rec: 'Our recommendation: Highlight "Fast Service" in messaging' },
-          ],
-          features: [
-            'Weekly intelligence briefing every Monday',
-            'Real-time SMS/WhatsApp action alerts',
-            'Monthly strategy report with recommendations',
-          ],
-          cta: 'Explore Clarus',
         },
       },
       cta: {
@@ -125,7 +106,6 @@ export const translations = {
       partnerships: 'Teknoloji Ortaklıkları',
       contact: 'İletişim',
       getStarted: 'Başlayın',
-      intel: 'Clarus',
     },
     common: {
       learnMore: 'Daha fazla bilgi',
@@ -165,24 +145,6 @@ export const translations = {
             'Gerçek zamanlı kapsama ve fazla mesai görünürlüğü',
             'İK ve zaman takip araçları ile entegrasyonlar',
           ],
-        },
-        pulsaraIntel: {
-          name: 'Clarus',
-          tagline: 'Rakip İstihbaratı Hizmeti',
-          eyebrow: 'Yeni',
-          description: 'Rakiplerinizi biz izleriz. Siz kararı verin. Haftalık brifing, anlık öneri uyarıları ve aylık strateji raporu — dashboard yok, manuel iş yok.',
-          briefingLabel: 'Haftalık Brifing Örneği',
-          briefingDelivered: 'Teslim Edildi ✓',
-          briefingItems: [
-            { label: '⚠️ Fiyat Hamlesi — Rakip A', rec: 'Önerimiz: Sadık müşteri kampanyası başlatın, fiyata yanıt vermeyin' },
-            { label: '📉 Şikayet Artışı — Rakip B', rec: 'Önerimiz: "Hızlı Servis" mesajını öne çıkarın' },
-          ],
-          features: [
-            'Her Pazartesi haftalık rekabet brifing\'i',
-            'Anlık SMS/WhatsApp öneri uyarıları',
-            'Aksiyon önerileri ile aylık strateji raporu',
-          ],
-          cta: "Clarus'u Keşfet",
         },
       },
       cta: {
